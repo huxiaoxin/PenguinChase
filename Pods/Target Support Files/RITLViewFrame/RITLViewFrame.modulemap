@@ -1,0 +1,6 @@
+framework module RITLViewFrame {
+  umbrella header "RITLViewFrame-umbrella.h"
+
+  export *
+  module * { export * }
+}

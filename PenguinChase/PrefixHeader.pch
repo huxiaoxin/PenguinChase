@@ -1,0 +1,20 @@
+//
+//  PrefixHeader.pch
+//  PenguinChase
+//
+//  Created by zjlk03 on 2021/6/28.
+//
+
+#ifndef PrefixHeader_pch
+#define PrefixHeader_pch
+#import "Header.h"
+#import <UIKit/UIKit.h>
+#import <objc/runtime.h>
+#import "UIColor+CHRegex.h"
+#import <GKNavigationBarViewController.h>
+#import "PenguinChaseLoginTool.h"
+#import "NSString+CHRegex.h"
+// Include any system framework and library headers here that should be included in all compilation units.
+// You will also need to set the Prefix Header build setting of one or more of your targets to reference this file.
+
+#endif /* PrefixHeader_pch */

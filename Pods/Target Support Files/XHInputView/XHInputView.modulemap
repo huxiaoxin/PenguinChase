@@ -1,0 +1,6 @@
+framework module XHInputView {
+  umbrella header "XHInputView-umbrella.h"
+
+  export *
+  module * { export * }
+}

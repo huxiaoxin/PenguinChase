@@ -1,0 +1,74 @@
+platform :ios, '10.0'
+
+inhibit_all_warnings!
+use_frameworks!
+
+target 'PenguinChase' do
+
+  pod 'SDWebImage'
+  pod 'AFNetworking',            '4.0.0'
+  pod 'pop',                     '1.0.7'
+  pod 'Masonry'
+  pod 'glm',                     '0.9.4.6'
+  pod 'UriParser-cpp',           '0.1.3'
+  pod 'ZipArchive'
+  #pod 'ORAnalytics/Providers/Agnes',  :git => 'http://gitlab.mobile.lesports.com/Components/ORAnalytics-iOS.git'
+#    pod 'InMobiSDK',                 '9.0.7'
+  pod 'YYKit'
+  pod 'VTMagic',                 '1.2.4'
+  pod 'UIImage+ImageWithColor'
+  pod 'IQKeyboardManager', '6.5.5'
+  
+  pod 'SVProgressHUD', '~>2.2.5'
+  pod 'MJRefresh', '3.4.1'
+  
+  pod 'OC_CWCarousel', '~> 1.1.5'
+      
+  # 友盟统计
+  pod 'UMCommon'
+  pod 'UMDevice'
+  pod 'UMPush'
+  pod 'UMCSecurityPlugins'
+  
+  pod 'UMShare/UI'
+  pod 'UMShare/Social/WeChat'
+  pod 'UMShare/Social/QQ'
+  
+  # 友盟统计
+#    pod 'UMCAnalytics', '6.1.0'
+#    pod 'UMCommon', '2.1.4'
+#    pod 'UMPush', '3.2.4'
+#    pod 'UMCSecurityPlugins', '1.0.6'
+      
+  pod 'LBLelinkKit' #乐播投屏
+  
+  # 穿山甲SDK
+  pod 'Bytedance-UnionAD', '~> 3.3.6.2'
+
+  # 播放器
+  pod 'SJVideoPlayer'
+  pod 'SJUIKit'#, :podspec => 'https://gitee.com/changsanjiang/SJUIKit/raw/master/SJUIKit-YYModel.podspec'
+  # 边播边缓存的库
+  pod 'SJMediaCacheServer'
+  pod 'GKNavigationBarViewController', '~> 2.7.0'
+  pod 'SPPageMenu', '~> 3.5.0'
+  pod 'JXPagingView/Pager'
+  pod 'JXCategoryView'
+  pod 'KJBannerView' # 轮播图
+  pod 'KJBannerView/Downloader'
+  pod 'SDCycleScrollView','~> 1.80'
+  pod 'LCProgressHUD'
+  pod 'ZWLimitCounter',         '~> 0.0.4'
+  pod 'ZWPlaceHolder', '~> 0.0.2'
+  pod 'WHC_ModelSqliteKit', '~> 1.3.0'
+  pod 'HUPhotoBrowser', '~> 1.4.5'
+  pod 'LYEmptyView'
+  pod 'PYSearch'
+  pod 'RITLPhotos', '~> 2.3.3'
+  pod 'XHInputView', '~> 1.1.1'
+  pod 'QRCodeReaderViewController', :git => 'https://github.com/zhengjinghua/MQRCodeReaderViewController.git'
+  pod 'WMDragView', '~> 1.0.1'
+  pod 'GKPhotoBrowser', '~> 2.2.1'
+
+end 
+

@@ -1,0 +1,6 @@
+framework module RITLPhotos {
+  umbrella header "RITLPhotos-umbrella.h"
+
+  export *
+  module * { export * }
+}

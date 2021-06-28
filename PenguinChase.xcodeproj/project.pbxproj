@@ -3,12 +3,11 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
 		8A32A66B26845F480089F8BC /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 8A32A66A26845F480089F8BC /* AppDelegate.m */; };
-		8A32A66E26845F480089F8BC /* SceneDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 8A32A66D26845F480089F8BC /* SceneDelegate.m */; };
 		8A32A67126845F480089F8BC /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8A32A67026845F480089F8BC /* ViewController.m */; };
 		8A32A67426845F480089F8BC /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8A32A67226845F480089F8BC /* Main.storyboard */; };
 		8A32A67626845F4A0089F8BC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8A32A67526845F4A0089F8BC /* Assets.xcassets */; };
@@ -16,6 +15,31 @@
 		8A32A67C26845F4A0089F8BC /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 8A32A67B26845F4A0089F8BC /* main.m */; };
 		8A32A68626845F4A0089F8BC /* PenguinChaseTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 8A32A68526845F4A0089F8BC /* PenguinChaseTests.m */; };
 		8A32A69126845F4A0089F8BC /* PenguinChaseUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 8A32A69026845F4A0089F8BC /* PenguinChaseUITests.m */; };
+		8A5ABBF02689CCF400DF1108 /* UITextField+AddPlaceholder.m in Sources */ = {isa = PBXBuildFile; fileRef = 8A5ABBE02689CCEF00DF1108 /* UITextField+AddPlaceholder.m */; };
+		8A5ABBF12689CCF400DF1108 /* UIView+shadowPath.m in Sources */ = {isa = PBXBuildFile; fileRef = 8A5ABBE12689CCEF00DF1108 /* UIView+shadowPath.m */; };
+		8A5ABBF22689CCF400DF1108 /* WWStarView.m in Sources */ = {isa = PBXBuildFile; fileRef = 8A5ABBE52689CCF000DF1108 /* WWStarView.m */; };
+		8A5ABBF32689CCF400DF1108 /* UIViewController+IOS13.m in Sources */ = {isa = PBXBuildFile; fileRef = 8A5ABBE62689CCF100DF1108 /* UIViewController+IOS13.m */; };
+		8A5ABBF42689CCF400DF1108 /* UIView+ACSLayer.m in Sources */ = {isa = PBXBuildFile; fileRef = 8A5ABBE82689CCF100DF1108 /* UIView+ACSLayer.m */; };
+		8A5ABBF52689CCF400DF1108 /* LMJHorizontalScrollText.m in Sources */ = {isa = PBXBuildFile; fileRef = 8A5ABBE92689CCF200DF1108 /* LMJHorizontalScrollText.m */; };
+		8A5ABBF62689CCF400DF1108 /* UILabel+CDGPSpaceLb.m in Sources */ = {isa = PBXBuildFile; fileRef = 8A5ABBEB2689CCF200DF1108 /* UILabel+CDGPSpaceLb.m */; };
+		8A5ABBF72689CCF400DF1108 /* UIView+HZXFrame.m in Sources */ = {isa = PBXBuildFile; fileRef = 8A5ABBED2689CCF300DF1108 /* UIView+HZXFrame.m */; };
+		8A5ABBFD2689CD6800DF1108 /* UIColor+CHRegex.m in Sources */ = {isa = PBXBuildFile; fileRef = 8A5ABBFC2689CD6800DF1108 /* UIColor+CHRegex.m */; };
+		8A5ABC0A2689CE6900DF1108 /* PenguinChase_BaseTabbarViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8A5ABC092689CE6900DF1108 /* PenguinChase_BaseTabbarViewController.m */; };
+		8A5ABC132689CEA300DF1108 /* PenguinChase_BaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8A5ABC122689CEA300DF1108 /* PenguinChase_BaseViewController.m */; };
+		8A5ABC192689CEC300DF1108 /* PenguinChaseListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8A5ABC182689CEC300DF1108 /* PenguinChaseListViewController.m */; };
+		8A5ABC1F2689CEE100DF1108 /* PenguinChaseBaseTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 8A5ABC1E2689CEE100DF1108 /* PenguinChaseBaseTableViewCell.m */; };
+		8A5ABC252689CF3B00DF1108 /* PenguinChaseBaseCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 8A5ABC242689CF3B00DF1108 /* PenguinChaseBaseCollectionViewCell.m */; };
+		8A5ABC2B2689D12300DF1108 /* CHTabBar.m in Sources */ = {isa = PBXBuildFile; fileRef = 8A5ABC2A2689D12300DF1108 /* CHTabBar.m */; };
+		8A5ABC312689D13A00DF1108 /* CoreAnimationEffect.m in Sources */ = {isa = PBXBuildFile; fileRef = 8A5ABC302689D13A00DF1108 /* CoreAnimationEffect.m */; };
+		8A5ABC372689D16C00DF1108 /* PenguinChaseHomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8A5ABC362689D16C00DF1108 /* PenguinChaseHomeViewController.m */; };
+		8A5ABC3D2689D18600DF1108 /* PenguinChaseHuatiViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8A5ABC3C2689D18600DF1108 /* PenguinChaseHuatiViewController.m */; };
+		8A5ABC432689D1CF00DF1108 /* PenguinChaseMessageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8A5ABC422689D1CF00DF1108 /* PenguinChaseMessageViewController.m */; };
+		8A5ABC4C2689D1F500DF1108 /* PenguinChaseCenterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8A5ABC4B2689D1F500DF1108 /* PenguinChaseCenterViewController.m */; };
+		8A5ABC522689D22000DF1108 /* PenguinChaseFabuViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8A5ABC512689D22000DF1108 /* PenguinChaseFabuViewController.m */; };
+		8A5ABC5C2689D23E00DF1108 /* PenguinChaseLoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8A5ABC5B2689D23E00DF1108 /* PenguinChaseLoginViewController.m */; };
+		8A5ABC662689D26B00DF1108 /* PenguinChaseLoginTool.m in Sources */ = {isa = PBXBuildFile; fileRef = 8A5ABC652689D26B00DF1108 /* PenguinChaseLoginTool.m */; };
+		8A5ABC6F2689D2BF00DF1108 /* NSString+CHRegex.m in Sources */ = {isa = PBXBuildFile; fileRef = 8A5ABC6E2689D2BF00DF1108 /* NSString+CHRegex.m */; };
+		F5801DF0489BDCA8E8128039 /* Pods_PenguinChase.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 58ED390224B19FE7011F7049 /* Pods_PenguinChase.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,11 +60,11 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		07F36772430F51ABC7147DEB /* Pods-PenguinChase.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PenguinChase.debug.xcconfig"; path = "Target Support Files/Pods-PenguinChase/Pods-PenguinChase.debug.xcconfig"; sourceTree = "<group>"; };
+		58ED390224B19FE7011F7049 /* Pods_PenguinChase.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_PenguinChase.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		8A32A66626845F480089F8BC /* PenguinChase.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PenguinChase.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8A32A66926845F480089F8BC /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		8A32A66A26845F480089F8BC /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		8A32A66C26845F480089F8BC /* SceneDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SceneDelegate.h; sourceTree = "<group>"; };
-		8A32A66D26845F480089F8BC /* SceneDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SceneDelegate.m; sourceTree = "<group>"; };
 		8A32A66F26845F480089F8BC /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
 		8A32A67026845F480089F8BC /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		8A32A67326845F480089F8BC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -54,6 +78,57 @@
 		8A32A68C26845F4A0089F8BC /* PenguinChaseUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PenguinChaseUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		8A32A69026845F4A0089F8BC /* PenguinChaseUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PenguinChaseUITests.m; sourceTree = "<group>"; };
 		8A32A69226845F4A0089F8BC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		8A5ABBD42689CC2200DF1108 /* Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Header.h; sourceTree = "<group>"; };
+		8A5ABBD52689CC3100DF1108 /* PrefixHeader.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PrefixHeader.pch; sourceTree = "<group>"; };
+		8A5ABBE02689CCEF00DF1108 /* UITextField+AddPlaceholder.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UITextField+AddPlaceholder.m"; sourceTree = "<group>"; };
+		8A5ABBE12689CCEF00DF1108 /* UIView+shadowPath.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+shadowPath.m"; sourceTree = "<group>"; };
+		8A5ABBE22689CCEF00DF1108 /* UIView+ACSLayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+ACSLayer.h"; sourceTree = "<group>"; };
+		8A5ABBE32689CCF000DF1108 /* UITextField+AddPlaceholder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UITextField+AddPlaceholder.h"; sourceTree = "<group>"; };
+		8A5ABBE42689CCF000DF1108 /* WWStarView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WWStarView.h; sourceTree = "<group>"; };
+		8A5ABBE52689CCF000DF1108 /* WWStarView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WWStarView.m; sourceTree = "<group>"; };
+		8A5ABBE62689CCF100DF1108 /* UIViewController+IOS13.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIViewController+IOS13.m"; sourceTree = "<group>"; };
+		8A5ABBE72689CCF100DF1108 /* UIView+HZXFrame.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+HZXFrame.h"; sourceTree = "<group>"; };
+		8A5ABBE82689CCF100DF1108 /* UIView+ACSLayer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+ACSLayer.m"; sourceTree = "<group>"; };
+		8A5ABBE92689CCF200DF1108 /* LMJHorizontalScrollText.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LMJHorizontalScrollText.m; sourceTree = "<group>"; };
+		8A5ABBEA2689CCF200DF1108 /* UIViewController+IOS13.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIViewController+IOS13.h"; sourceTree = "<group>"; };
+		8A5ABBEB2689CCF200DF1108 /* UILabel+CDGPSpaceLb.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UILabel+CDGPSpaceLb.m"; sourceTree = "<group>"; };
+		8A5ABBEC2689CCF300DF1108 /* UILabel+CDGPSpaceLb.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UILabel+CDGPSpaceLb.h"; sourceTree = "<group>"; };
+		8A5ABBED2689CCF300DF1108 /* UIView+HZXFrame.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+HZXFrame.m"; sourceTree = "<group>"; };
+		8A5ABBEE2689CCF300DF1108 /* UIView+shadowPath.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+shadowPath.h"; sourceTree = "<group>"; };
+		8A5ABBEF2689CCF400DF1108 /* LMJHorizontalScrollText.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LMJHorizontalScrollText.h; sourceTree = "<group>"; };
+		8A5ABBFB2689CD6700DF1108 /* UIColor+CHRegex.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIColor+CHRegex.h"; sourceTree = "<group>"; };
+		8A5ABBFC2689CD6800DF1108 /* UIColor+CHRegex.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIColor+CHRegex.m"; sourceTree = "<group>"; };
+		8A5ABC082689CE6900DF1108 /* PenguinChase_BaseTabbarViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PenguinChase_BaseTabbarViewController.h; sourceTree = "<group>"; };
+		8A5ABC092689CE6900DF1108 /* PenguinChase_BaseTabbarViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PenguinChase_BaseTabbarViewController.m; sourceTree = "<group>"; };
+		8A5ABC112689CEA300DF1108 /* PenguinChase_BaseViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PenguinChase_BaseViewController.h; sourceTree = "<group>"; };
+		8A5ABC122689CEA300DF1108 /* PenguinChase_BaseViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PenguinChase_BaseViewController.m; sourceTree = "<group>"; };
+		8A5ABC172689CEC300DF1108 /* PenguinChaseListViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PenguinChaseListViewController.h; sourceTree = "<group>"; };
+		8A5ABC182689CEC300DF1108 /* PenguinChaseListViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PenguinChaseListViewController.m; sourceTree = "<group>"; };
+		8A5ABC1D2689CEE100DF1108 /* PenguinChaseBaseTableViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PenguinChaseBaseTableViewCell.h; sourceTree = "<group>"; };
+		8A5ABC1E2689CEE100DF1108 /* PenguinChaseBaseTableViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PenguinChaseBaseTableViewCell.m; sourceTree = "<group>"; };
+		8A5ABC232689CF3B00DF1108 /* PenguinChaseBaseCollectionViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PenguinChaseBaseCollectionViewCell.h; sourceTree = "<group>"; };
+		8A5ABC242689CF3B00DF1108 /* PenguinChaseBaseCollectionViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PenguinChaseBaseCollectionViewCell.m; sourceTree = "<group>"; };
+		8A5ABC292689D12200DF1108 /* CHTabBar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CHTabBar.h; sourceTree = "<group>"; };
+		8A5ABC2A2689D12300DF1108 /* CHTabBar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CHTabBar.m; sourceTree = "<group>"; };
+		8A5ABC2F2689D13A00DF1108 /* CoreAnimationEffect.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CoreAnimationEffect.h; sourceTree = "<group>"; };
+		8A5ABC302689D13A00DF1108 /* CoreAnimationEffect.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CoreAnimationEffect.m; sourceTree = "<group>"; };
+		8A5ABC352689D16C00DF1108 /* PenguinChaseHomeViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PenguinChaseHomeViewController.h; sourceTree = "<group>"; };
+		8A5ABC362689D16C00DF1108 /* PenguinChaseHomeViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PenguinChaseHomeViewController.m; sourceTree = "<group>"; };
+		8A5ABC3B2689D18600DF1108 /* PenguinChaseHuatiViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PenguinChaseHuatiViewController.h; sourceTree = "<group>"; };
+		8A5ABC3C2689D18600DF1108 /* PenguinChaseHuatiViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PenguinChaseHuatiViewController.m; sourceTree = "<group>"; };
+		8A5ABC412689D1CF00DF1108 /* PenguinChaseMessageViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PenguinChaseMessageViewController.h; sourceTree = "<group>"; };
+		8A5ABC422689D1CF00DF1108 /* PenguinChaseMessageViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PenguinChaseMessageViewController.m; sourceTree = "<group>"; };
+		8A5ABC4A2689D1F500DF1108 /* PenguinChaseCenterViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PenguinChaseCenterViewController.h; sourceTree = "<group>"; };
+		8A5ABC4B2689D1F500DF1108 /* PenguinChaseCenterViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PenguinChaseCenterViewController.m; sourceTree = "<group>"; };
+		8A5ABC502689D22000DF1108 /* PenguinChaseFabuViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PenguinChaseFabuViewController.h; sourceTree = "<group>"; };
+		8A5ABC512689D22000DF1108 /* PenguinChaseFabuViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PenguinChaseFabuViewController.m; sourceTree = "<group>"; };
+		8A5ABC5A2689D23E00DF1108 /* PenguinChaseLoginViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PenguinChaseLoginViewController.h; sourceTree = "<group>"; };
+		8A5ABC5B2689D23E00DF1108 /* PenguinChaseLoginViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PenguinChaseLoginViewController.m; sourceTree = "<group>"; };
+		8A5ABC642689D26B00DF1108 /* PenguinChaseLoginTool.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PenguinChaseLoginTool.h; sourceTree = "<group>"; };
+		8A5ABC652689D26B00DF1108 /* PenguinChaseLoginTool.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PenguinChaseLoginTool.m; sourceTree = "<group>"; };
+		8A5ABC6D2689D2BE00DF1108 /* NSString+CHRegex.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+CHRegex.h"; sourceTree = "<group>"; };
+		8A5ABC6E2689D2BF00DF1108 /* NSString+CHRegex.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+CHRegex.m"; sourceTree = "<group>"; };
+		C308773FEE156DB137E3421E /* Pods-PenguinChase.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PenguinChase.release.xcconfig"; path = "Target Support Files/Pods-PenguinChase/Pods-PenguinChase.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -61,6 +136,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F5801DF0489BDCA8E8128039 /* Pods_PenguinChase.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -81,6 +157,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		55636E24B4222819CDD2F629 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				58ED390224B19FE7011F7049 /* Pods_PenguinChase.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		8A32A65D26845F480089F8BC = {
 			isa = PBXGroup;
 			children = (
@@ -88,6 +172,8 @@
 				8A32A68426845F4A0089F8BC /* PenguinChaseTests */,
 				8A32A68F26845F4A0089F8BC /* PenguinChaseUITests */,
 				8A32A66726845F480089F8BC /* Products */,
+				C67917E0447A3906BEF8CFF5 /* Pods */,
+				55636E24B4222819CDD2F629 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -104,12 +190,14 @@
 		8A32A66826845F480089F8BC /* PenguinChase */ = {
 			isa = PBXGroup;
 			children = (
+				8A5ABC012689CDC400DF1108 /* PenguinChase_Vcs */,
+				8A5ABBDC2689CC8D00DF1108 /* PenguinChase_untils */,
 				8A32A66926845F480089F8BC /* AppDelegate.h */,
 				8A32A66A26845F480089F8BC /* AppDelegate.m */,
-				8A32A66C26845F480089F8BC /* SceneDelegate.h */,
-				8A32A66D26845F480089F8BC /* SceneDelegate.m */,
 				8A32A66F26845F480089F8BC /* ViewController.h */,
 				8A32A67026845F480089F8BC /* ViewController.m */,
+				8A5ABBD42689CC2200DF1108 /* Header.h */,
+				8A5ABBD52689CC3100DF1108 /* PrefixHeader.pch */,
 				8A32A67226845F480089F8BC /* Main.storyboard */,
 				8A32A67526845F4A0089F8BC /* Assets.xcassets */,
 				8A32A67726845F4A0089F8BC /* LaunchScreen.storyboard */,
@@ -137,6 +225,141 @@
 			path = PenguinChaseUITests;
 			sourceTree = "<group>";
 		};
+		8A5ABBDC2689CC8D00DF1108 /* PenguinChase_untils */ = {
+			isa = PBXGroup;
+			children = (
+				8A5ABC6D2689D2BE00DF1108 /* NSString+CHRegex.h */,
+				8A5ABC6E2689D2BF00DF1108 /* NSString+CHRegex.m */,
+				8A5ABC2F2689D13A00DF1108 /* CoreAnimationEffect.h */,
+				8A5ABC302689D13A00DF1108 /* CoreAnimationEffect.m */,
+				8A5ABC292689D12200DF1108 /* CHTabBar.h */,
+				8A5ABC2A2689D12300DF1108 /* CHTabBar.m */,
+				8A5ABBFB2689CD6700DF1108 /* UIColor+CHRegex.h */,
+				8A5ABBFC2689CD6800DF1108 /* UIColor+CHRegex.m */,
+				8A5ABBEF2689CCF400DF1108 /* LMJHorizontalScrollText.h */,
+				8A5ABBE92689CCF200DF1108 /* LMJHorizontalScrollText.m */,
+				8A5ABBEC2689CCF300DF1108 /* UILabel+CDGPSpaceLb.h */,
+				8A5ABBEB2689CCF200DF1108 /* UILabel+CDGPSpaceLb.m */,
+				8A5ABBE32689CCF000DF1108 /* UITextField+AddPlaceholder.h */,
+				8A5ABBE02689CCEF00DF1108 /* UITextField+AddPlaceholder.m */,
+				8A5ABBE22689CCEF00DF1108 /* UIView+ACSLayer.h */,
+				8A5ABBE82689CCF100DF1108 /* UIView+ACSLayer.m */,
+				8A5ABBE72689CCF100DF1108 /* UIView+HZXFrame.h */,
+				8A5ABBED2689CCF300DF1108 /* UIView+HZXFrame.m */,
+				8A5ABBEE2689CCF300DF1108 /* UIView+shadowPath.h */,
+				8A5ABBE12689CCEF00DF1108 /* UIView+shadowPath.m */,
+				8A5ABBEA2689CCF200DF1108 /* UIViewController+IOS13.h */,
+				8A5ABBE62689CCF100DF1108 /* UIViewController+IOS13.m */,
+				8A5ABBE42689CCF000DF1108 /* WWStarView.h */,
+				8A5ABBE52689CCF000DF1108 /* WWStarView.m */,
+			);
+			path = PenguinChase_untils;
+			sourceTree = "<group>";
+		};
+		8A5ABC012689CDC400DF1108 /* PenguinChase_Vcs */ = {
+			isa = PBXGroup;
+			children = (
+				8A5ABC632689D25700DF1108 /* PenguinChase_LoginModel */,
+				8A5ABC592689D23100DF1108 /* PenguinChase_Login */,
+				8A5ABC072689CE2000DF1108 /* PenguunChase_Base */,
+				8A5ABC062689CE1500DF1108 /* PenguinChase_center */,
+				8A5ABC052689CE0600DF1108 /* PenguinChase_fabu */,
+				8A5ABC042689CDF800DF1108 /* PenguinChase_msg */,
+				8A5ABC032689CDE100DF1108 /* PenguinChase_huati */,
+				8A5ABC022689CDD500DF1108 /* PenguinChase_hom */,
+			);
+			path = PenguinChase_Vcs;
+			sourceTree = "<group>";
+		};
+		8A5ABC022689CDD500DF1108 /* PenguinChase_hom */ = {
+			isa = PBXGroup;
+			children = (
+				8A5ABC352689D16C00DF1108 /* PenguinChaseHomeViewController.h */,
+				8A5ABC362689D16C00DF1108 /* PenguinChaseHomeViewController.m */,
+			);
+			path = PenguinChase_hom;
+			sourceTree = "<group>";
+		};
+		8A5ABC032689CDE100DF1108 /* PenguinChase_huati */ = {
+			isa = PBXGroup;
+			children = (
+				8A5ABC3B2689D18600DF1108 /* PenguinChaseHuatiViewController.h */,
+				8A5ABC3C2689D18600DF1108 /* PenguinChaseHuatiViewController.m */,
+			);
+			path = PenguinChase_huati;
+			sourceTree = "<group>";
+		};
+		8A5ABC042689CDF800DF1108 /* PenguinChase_msg */ = {
+			isa = PBXGroup;
+			children = (
+				8A5ABC412689D1CF00DF1108 /* PenguinChaseMessageViewController.h */,
+				8A5ABC422689D1CF00DF1108 /* PenguinChaseMessageViewController.m */,
+			);
+			path = PenguinChase_msg;
+			sourceTree = "<group>";
+		};
+		8A5ABC052689CE0600DF1108 /* PenguinChase_fabu */ = {
+			isa = PBXGroup;
+			children = (
+				8A5ABC502689D22000DF1108 /* PenguinChaseFabuViewController.h */,
+				8A5ABC512689D22000DF1108 /* PenguinChaseFabuViewController.m */,
+			);
+			path = PenguinChase_fabu;
+			sourceTree = "<group>";
+		};
+		8A5ABC062689CE1500DF1108 /* PenguinChase_center */ = {
+			isa = PBXGroup;
+			children = (
+				8A5ABC4A2689D1F500DF1108 /* PenguinChaseCenterViewController.h */,
+				8A5ABC4B2689D1F500DF1108 /* PenguinChaseCenterViewController.m */,
+			);
+			path = PenguinChase_center;
+			sourceTree = "<group>";
+		};
+		8A5ABC072689CE2000DF1108 /* PenguunChase_Base */ = {
+			isa = PBXGroup;
+			children = (
+				8A5ABC082689CE6900DF1108 /* PenguinChase_BaseTabbarViewController.h */,
+				8A5ABC092689CE6900DF1108 /* PenguinChase_BaseTabbarViewController.m */,
+				8A5ABC112689CEA300DF1108 /* PenguinChase_BaseViewController.h */,
+				8A5ABC122689CEA300DF1108 /* PenguinChase_BaseViewController.m */,
+				8A5ABC172689CEC300DF1108 /* PenguinChaseListViewController.h */,
+				8A5ABC182689CEC300DF1108 /* PenguinChaseListViewController.m */,
+				8A5ABC1D2689CEE100DF1108 /* PenguinChaseBaseTableViewCell.h */,
+				8A5ABC1E2689CEE100DF1108 /* PenguinChaseBaseTableViewCell.m */,
+				8A5ABC232689CF3B00DF1108 /* PenguinChaseBaseCollectionViewCell.h */,
+				8A5ABC242689CF3B00DF1108 /* PenguinChaseBaseCollectionViewCell.m */,
+			);
+			path = PenguunChase_Base;
+			sourceTree = "<group>";
+		};
+		8A5ABC592689D23100DF1108 /* PenguinChase_Login */ = {
+			isa = PBXGroup;
+			children = (
+				8A5ABC5A2689D23E00DF1108 /* PenguinChaseLoginViewController.h */,
+				8A5ABC5B2689D23E00DF1108 /* PenguinChaseLoginViewController.m */,
+			);
+			path = PenguinChase_Login;
+			sourceTree = "<group>";
+		};
+		8A5ABC632689D25700DF1108 /* PenguinChase_LoginModel */ = {
+			isa = PBXGroup;
+			children = (
+				8A5ABC642689D26B00DF1108 /* PenguinChaseLoginTool.h */,
+				8A5ABC652689D26B00DF1108 /* PenguinChaseLoginTool.m */,
+			);
+			path = PenguinChase_LoginModel;
+			sourceTree = "<group>";
+		};
+		C67917E0447A3906BEF8CFF5 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				07F36772430F51ABC7147DEB /* Pods-PenguinChase.debug.xcconfig */,
+				C308773FEE156DB137E3421E /* Pods-PenguinChase.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -144,9 +367,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 8A32A69526845F4A0089F8BC /* Build configuration list for PBXNativeTarget "PenguinChase" */;
 			buildPhases = (
+				3782A7E4C7A776915EC026FE /* [CP] Check Pods Manifest.lock */,
 				8A32A66226845F480089F8BC /* Sources */,
 				8A32A66326845F480089F8BC /* Frameworks */,
 				8A32A66426845F480089F8BC /* Resources */,
+				C7EC56FC51C42AB06125263E /* [CP] Embed Pods Frameworks */,
+				65C48EBBD9A72477245BDA1E /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -261,15 +487,97 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		3782A7E4C7A776915EC026FE /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-PenguinChase-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		65C48EBBD9A72477245BDA1E /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-PenguinChase/Pods-PenguinChase-resources-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Copy Pods Resources";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-PenguinChase/Pods-PenguinChase-resources-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-PenguinChase/Pods-PenguinChase-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		C7EC56FC51C42AB06125263E /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-PenguinChase/Pods-PenguinChase-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-PenguinChase/Pods-PenguinChase-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-PenguinChase/Pods-PenguinChase-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		8A32A66226845F480089F8BC /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 				8A32A67126845F480089F8BC /* ViewController.m in Sources */,
+				8A5ABC662689D26B00DF1108 /* PenguinChaseLoginTool.m in Sources */,
+				8A5ABBF02689CCF400DF1108 /* UITextField+AddPlaceholder.m in Sources */,
+				8A5ABC372689D16C00DF1108 /* PenguinChaseHomeViewController.m in Sources */,
+				8A5ABC1F2689CEE100DF1108 /* PenguinChaseBaseTableViewCell.m in Sources */,
+				8A5ABBFD2689CD6800DF1108 /* UIColor+CHRegex.m in Sources */,
+				8A5ABC2B2689D12300DF1108 /* CHTabBar.m in Sources */,
+				8A5ABC312689D13A00DF1108 /* CoreAnimationEffect.m in Sources */,
 				8A32A66B26845F480089F8BC /* AppDelegate.m in Sources */,
 				8A32A67C26845F4A0089F8BC /* main.m in Sources */,
-				8A32A66E26845F480089F8BC /* SceneDelegate.m in Sources */,
+				8A5ABC6F2689D2BF00DF1108 /* NSString+CHRegex.m in Sources */,
+				8A5ABC4C2689D1F500DF1108 /* PenguinChaseCenterViewController.m in Sources */,
+				8A5ABC252689CF3B00DF1108 /* PenguinChaseBaseCollectionViewCell.m in Sources */,
+				8A5ABC3D2689D18600DF1108 /* PenguinChaseHuatiViewController.m in Sources */,
+				8A5ABC522689D22000DF1108 /* PenguinChaseFabuViewController.m in Sources */,
+				8A5ABBF42689CCF400DF1108 /* UIView+ACSLayer.m in Sources */,
+				8A5ABBF52689CCF400DF1108 /* LMJHorizontalScrollText.m in Sources */,
+				8A5ABC192689CEC300DF1108 /* PenguinChaseListViewController.m in Sources */,
+				8A5ABC432689D1CF00DF1108 /* PenguinChaseMessageViewController.m in Sources */,
+				8A5ABC0A2689CE6900DF1108 /* PenguinChase_BaseTabbarViewController.m in Sources */,
+				8A5ABC5C2689D23E00DF1108 /* PenguinChaseLoginViewController.m in Sources */,
+				8A5ABBF72689CCF400DF1108 /* UIView+HZXFrame.m in Sources */,
+				8A5ABBF22689CCF400DF1108 /* WWStarView.m in Sources */,
+				8A5ABBF12689CCF400DF1108 /* UIView+shadowPath.m in Sources */,
+				8A5ABBF32689CCF400DF1108 /* UIViewController+IOS13.m in Sources */,
+				8A5ABBF62689CCF400DF1108 /* UILabel+CDGPSpaceLb.m in Sources */,
+				8A5ABC132689CEA300DF1108 /* PenguinChase_BaseViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -438,35 +746,47 @@
 		};
 		8A32A69626845F4A0089F8BC /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 07F36772430F51ABC7147DEB /* Pods-PenguinChase.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CODE_SIGN_STYLE = Automatic;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "$(SRCROOT)/PenguinChase/PrefixHeader.pch";
 				INFOPLIST_FILE = PenguinChase/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
+				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.penguinChasing.PenguinChase;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
 		8A32A69726845F4A0089F8BC /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = C308773FEE156DB137E3421E /* Pods-PenguinChase.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CODE_SIGN_STYLE = Automatic;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "$(SRCROOT)/PenguinChase/PrefixHeader.pch";
 				INFOPLIST_FILE = PenguinChase/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
+				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.penguinChasing.PenguinChase;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};

@@ -1,0 +1,6 @@
+framework module KJBannerView {
+  umbrella header "KJBannerView-umbrella.h"
+
+  export *
+  module * { export * }
+}

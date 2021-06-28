@@ -1,0 +1,486 @@
+PODS:
+  - AFNetworking (4.0.0):
+    - AFNetworking/NSURLSession (= 4.0.0)
+    - AFNetworking/Reachability (= 4.0.0)
+    - AFNetworking/Security (= 4.0.0)
+    - AFNetworking/Serialization (= 4.0.0)
+    - AFNetworking/UIKit (= 4.0.0)
+  - AFNetworking/NSURLSession (4.0.0):
+    - AFNetworking/Reachability
+    - AFNetworking/Security
+    - AFNetworking/Serialization
+  - AFNetworking/Reachability (4.0.0)
+  - AFNetworking/Security (4.0.0)
+  - AFNetworking/Serialization (4.0.0)
+  - AFNetworking/UIKit (4.0.0):
+    - AFNetworking/NSURLSession
+  - Bytedance-UnionAD (3.3.6.2)
+  - CocoaAsyncSocket (7.6.5)
+  - GKNavigationBarViewController (2.7.0)
+  - GKPhotoBrowser (2.2.1):
+    - GKPhotoBrowser/SD (= 2.2.1)
+  - GKPhotoBrowser/Core (2.2.1)
+  - GKPhotoBrowser/SD (2.2.1):
+    - GKPhotoBrowser/Core
+    - SDWebImage (~> 5.0)
+  - glm (0.9.4.6)
+  - HUPhotoBrowser (1.4.5):
+    - SVProgressHUD
+  - IQKeyboardManager (6.5.5)
+  - JXCategoryView (1.5.9)
+  - JXPagingView/Pager (2.1.0)
+  - KJBannerView (2.1.6):
+    - KJBannerView/KJBannerView (= 2.1.6)
+  - KJBannerView/Downloader (2.1.6):
+    - KJBannerView/KJBannerView
+  - KJBannerView/KJBannerView (2.1.6)
+  - LBLelinkKit (30507)
+  - LCProgressHUD (1.0.8):
+    - MBProgressHUD (~> 0.9.2)
+  - LYEmptyView (1.3.1)
+  - Masonry (1.1.0)
+  - MBProgressHUD (0.9.2)
+  - MJRefresh (3.4.1)
+  - OC_CWCarousel (1.1.7)
+  - pop (1.0.7)
+  - PYSearch (0.9.1)
+  - QRCodeReaderViewController (3.5.2)
+  - RITLKit (2.0.5):
+    - Masonry
+    - RITLKit/Category (= 2.0.5)
+    - RITLKit/ImagePicker (= 2.0.5)
+    - RITLKit/ScrollPageController (= 2.0.5)
+    - RITLKit/Utility (= 2.0.5)
+    - RITLKit/View (= 2.0.5)
+    - RITLKit/Web (= 2.0.5)
+    - RITLViewFrame
+  - RITLKit/Category (2.0.5):
+    - Masonry
+    - RITLKit/Utility
+    - RITLViewFrame
+  - RITLKit/ImagePicker (2.0.5):
+    - Masonry
+    - RITLViewFrame
+  - RITLKit/ScrollPageController (2.0.5):
+    - Masonry
+    - RITLKit/Category
+    - RITLKit/ScrollPageController/LLSegmentBar (= 2.0.5)
+    - RITLKit/Utility
+    - RITLViewFrame
+  - RITLKit/ScrollPageController/LLSegmentBar (2.0.5):
+    - Masonry
+    - RITLKit/Category
+    - RITLKit/Utility
+    - RITLViewFrame
+  - RITLKit/Utility (2.0.5):
+    - Masonry
+    - RITLKit/Utility/DownLoader (= 2.0.5)
+    - RITLKit/Utility/Filter (= 2.0.5)
+    - RITLKit/Utility/Reachability (= 2.0.5)
+    - RITLViewFrame
+  - RITLKit/Utility/DownLoader (2.0.5):
+    - Masonry
+    - RITLViewFrame
+  - RITLKit/Utility/Filter (2.0.5):
+    - Masonry
+    - RITLViewFrame
+  - RITLKit/Utility/Reachability (2.0.5):
+    - Masonry
+    - RITLViewFrame
+  - RITLKit/View (2.0.5):
+    - Masonry
+    - RITLKit/Category
+    - RITLKit/Utility
+    - RITLViewFrame
+  - RITLKit/Web (2.0.5):
+    - Masonry
+    - RITLKit/Category
+    - RITLKit/Utility
+    - RITLViewFrame
+  - RITLPhotos (2.3.3):
+    - Masonry
+    - RITLKit
+    - RITLPhotos/Protocol (= 2.3.3)
+    - RITLPhotos/RITLCollectionModule (= 2.3.3)
+    - RITLPhotos/RITLConfig (= 2.3.3)
+    - RITLPhotos/RITLData (= 2.3.3)
+    - RITLPhotos/RITLGroupModule (= 2.3.3)
+    - RITLPhotos/RITLHoriScrollModule (= 2.3.3)
+    - RITLPhotos/RITLPhotosCategory (= 2.3.3)
+    - RITLPhotos/RITLPhotosController (= 2.3.3)
+    - RITLPhotos/RITLPhotoStore (= 2.3.3)
+    - RITLPhotos/RITLViews (= 2.3.3)
+  - RITLPhotos/Protocol (2.3.3):
+    - Masonry
+    - RITLKit
+  - RITLPhotos/RITLCollectionModule (2.3.3):
+    - Masonry
+    - RITLKit
+    - RITLPhotos/RITLConfig
+    - RITLPhotos/RITLData
+    - RITLPhotos/RITLHoriScrollModule
+    - RITLPhotos/RITLPhotosCategory
+    - RITLPhotos/RITLPhotoStore
+    - RITLPhotos/RITLViews
+  - RITLPhotos/RITLConfig (2.3.3):
+    - Masonry
+    - RITLKit
+  - RITLPhotos/RITLData (2.3.3):
+    - Masonry
+    - RITLKit
+    - RITLPhotos/Protocol
+    - RITLPhotos/RITLPhotosCategory
+  - RITLPhotos/RITLGroupModule (2.3.3):
+    - Masonry
+    - RITLKit
+    - RITLPhotos/RITLCollectionModule
+    - RITLPhotos/RITLPhotosCategory
+    - RITLPhotos/RITLPhotoStore
+  - RITLPhotos/RITLHoriScrollModule (2.3.3):
+    - Masonry
+    - RITLKit
+    - RITLPhotos/RITLConfig
+    - RITLPhotos/RITLData
+    - RITLPhotos/RITLPhotosCategory
+    - RITLPhotos/RITLViews
+  - RITLPhotos/RITLPhotosCategory (2.3.3):
+    - Masonry
+    - RITLKit
+  - RITLPhotos/RITLPhotosController (2.3.3):
+    - Masonry
+    - RITLKit
+    - RITLPhotos/Protocol
+    - RITLPhotos/RITLCollectionModule
+    - RITLPhotos/RITLConfig
+    - RITLPhotos/RITLData
+    - RITLPhotos/RITLGroupModule
+  - RITLPhotos/RITLPhotoStore (2.3.3):
+    - Masonry
+    - RITLKit
+    - RITLPhotos/RITLPhotosCategory
+  - RITLPhotos/RITLViews (2.3.3):
+    - Masonry
+    - RITLKit
+    - RITLPhotos/RITLPhotosCategory
+  - RITLViewFrame (0.0.1)
+  - SDCycleScrollView (1.82):
+    - SDWebImage (>= 5.0.0)
+  - SDWebImage (5.11.1):
+    - SDWebImage/Core (= 5.11.1)
+  - SDWebImage/Core (5.11.1)
+  - SJBaseVideoPlayer (3.6.3):
+    - Masonry
+    - SJBaseVideoPlayer/AVPlayer (= 3.6.3)
+    - SJBaseVideoPlayer/Common (= 3.6.3)
+    - SJUIKit/AttributesFactory (>= 0.0.0.38)
+    - SJUIKit/ObserverHelper
+    - SJUIKit/Queues
+    - SJUIKit/SQLite3
+  - SJBaseVideoPlayer/AVPlayer (3.6.3):
+    - Masonry
+    - SJBaseVideoPlayer/Common
+    - SJUIKit/AttributesFactory (>= 0.0.0.38)
+    - SJUIKit/ObserverHelper
+    - SJUIKit/Queues
+    - SJUIKit/SQLite3
+  - SJBaseVideoPlayer/Common (3.6.3):
+    - Masonry
+    - SJBaseVideoPlayer/ResourceLoader
+    - SJUIKit/AttributesFactory (>= 0.0.0.38)
+    - SJUIKit/ObserverHelper
+    - SJUIKit/Queues
+    - SJUIKit/SQLite3
+  - SJBaseVideoPlayer/ResourceLoader (3.6.3):
+    - Masonry
+    - SJUIKit/AttributesFactory (>= 0.0.0.38)
+    - SJUIKit/ObserverHelper
+    - SJUIKit/Queues
+    - SJUIKit/SQLite3
+  - SJMediaCacheServer (1.6.3):
+    - SJMediaCacheServer/Core (= 1.6.3)
+    - SJMediaCacheServer/KTVCocoaHTTPServer (= 1.6.3)
+    - SJUIKit/SQLite3
+  - SJMediaCacheServer/Core (1.6.3):
+    - SJMediaCacheServer/KTVCocoaHTTPServer
+    - SJUIKit/SQLite3
+  - SJMediaCacheServer/KTVCocoaHTTPServer (1.6.3):
+    - CocoaAsyncSocket
+    - SJUIKit/SQLite3
+  - SJUIKit (0.0.0.52):
+    - SJUIKit/AsyncLoad (= 0.0.0.52)
+    - SJUIKit/AttributesFactory (= 0.0.0.52)
+    - SJUIKit/Base (= 0.0.0.52)
+    - SJUIKit/CornerMask (= 0.0.0.52)
+    - SJUIKit/Date (= 0.0.0.52)
+    - SJUIKit/ObserverHelper (= 0.0.0.52)
+    - SJUIKit/Other (= 0.0.0.52)
+    - SJUIKit/PageViewController (= 0.0.0.52)
+    - SJUIKit/Photo (= 0.0.0.52)
+    - SJUIKit/Queues (= 0.0.0.52)
+    - SJUIKit/Refresh (= 0.0.0.52)
+    - SJUIKit/SQLite3 (= 0.0.0.52)
+    - SJUIKit/Thread (= 0.0.0.52)
+    - SJUIKit/UIMaker (= 0.0.0.52)
+  - SJUIKit/AsyncLoad (0.0.0.52):
+    - SJUIKit/CornerMask
+  - SJUIKit/AttributesFactory (0.0.0.52):
+    - SJUIKit/AttributesFactory/Deprecated (= 0.0.0.52)
+    - SJUIKit/AttributesFactory/UIKitText (= 0.0.0.52)
+  - SJUIKit/AttributesFactory/Deprecated (0.0.0.52)
+  - SJUIKit/AttributesFactory/UIKitText (0.0.0.52)
+  - SJUIKit/Base (0.0.0.52):
+    - SJUIKit/Base/Core (= 0.0.0.52)
+    - SJUIKit/ObserverHelper
+  - SJUIKit/Base/Core (0.0.0.52):
+    - SJUIKit/ObserverHelper
+  - SJUIKit/CornerMask (0.0.0.52):
+    - SJUIKit/ObserverHelper
+  - SJUIKit/Date (0.0.0.52)
+  - SJUIKit/ObserverHelper (0.0.0.52)
+  - SJUIKit/Other (0.0.0.52):
+    - SJUIKit/Date
+  - SJUIKit/PageViewController (0.0.0.52):
+    - SJUIKit/PageViewController/PageMenuBar (= 0.0.0.52)
+    - SJUIKit/PageViewController/PageViewController (= 0.0.0.52)
+  - SJUIKit/PageViewController/PageMenuBar (0.0.0.52):
+    - SJUIKit/PageViewController/PageMenuBar/Core (= 0.0.0.52)
+  - SJUIKit/PageViewController/PageMenuBar/Core (0.0.0.52)
+  - SJUIKit/PageViewController/PageViewController (0.0.0.52):
+    - SJUIKit/PageViewController/PageViewController/Core (= 0.0.0.52)
+  - SJUIKit/PageViewController/PageViewController/Core (0.0.0.52)
+  - SJUIKit/Photo (0.0.0.52)
+  - SJUIKit/Queues (0.0.0.52)
+  - SJUIKit/Refresh (0.0.0.52):
+    - MJRefresh
+  - SJUIKit/SQLite3 (0.0.0.52):
+    - SJUIKit/SQLite3/Core (= 0.0.0.52)
+    - SJUIKit/SQLite3/Protocol (= 0.0.0.52)
+    - YYModel
+  - SJUIKit/SQLite3/Core (0.0.0.52):
+    - SJUIKit/SQLite3/Protocol
+    - YYModel
+  - SJUIKit/SQLite3/Protocol (0.0.0.52):
+    - YYModel
+  - SJUIKit/Thread (0.0.0.52)
+  - SJUIKit/UIMaker (0.0.0.52):
+    - SJUIKit/UIMaker/Core (= 0.0.0.52)
+  - SJUIKit/UIMaker/Core (0.0.0.52)
+  - SJVideoPlayer (3.3.2):
+    - SJBaseVideoPlayer (>= 3.6.0)
+    - SJVideoPlayer/Common (= 3.3.2)
+    - SJVideoPlayer/ControlLayers (= 3.3.2)
+    - SJVideoPlayer/ResourceLoader (= 3.3.2)
+  - SJVideoPlayer/Common (3.3.2):
+    - Masonry
+    - SJBaseVideoPlayer (>= 3.6.0)
+    - SJUIKit/AttributesFactory
+    - SJVideoPlayer/ResourceLoader
+  - SJVideoPlayer/ControlLayers (3.3.2):
+    - SJBaseVideoPlayer (>= 3.6.0)
+    - SJVideoPlayer/Common
+  - SJVideoPlayer/ResourceLoader (3.3.2):
+    - SJBaseVideoPlayer (>= 3.6.0)
+  - SPPageMenu (3.5.0)
+  - SVProgressHUD (2.2.5)
+  - "UIImage+ImageWithColor (1.4.0)"
+  - UMCommon (7.2.9):
+    - UMDevice
+  - UMCSecurityPlugins (1.0.6)
+  - UMDevice (1.2.0)
+  - UMPush (3.3.1):
+    - UMCommon
+  - UMShare/Core (6.10.2):
+    - UMCommon
+  - UMShare/Social/QQ (6.10.2):
+    - UMCommon
+    - UMShare/Core
+    - UMShare/Social/ReducedQQ
+  - UMShare/Social/ReducedQQ (6.10.2):
+    - UMCommon
+    - UMShare/Core
+  - UMShare/Social/ReducedWeChat (6.10.2):
+    - UMCommon
+    - UMShare/Core
+  - UMShare/Social/WeChat (6.10.2):
+    - UMCommon
+    - UMShare/Core
+    - UMShare/Social/ReducedWeChat
+  - UMShare/UI (6.10.2):
+    - UMCommon
+    - UMShare/Core
+  - UriParser-cpp (0.1.3)
+  - VTMagic (1.2.4):
+    - VTMagic/Core (= 1.2.4)
+  - VTMagic/Core (1.2.4)
+  - WHC_ModelSqliteKit (1.3.0):
+    - WHC_ModelSqliteKit/standard (= 1.3.0)
+  - WHC_ModelSqliteKit/standard (1.3.0)
+  - WMDragView (1.0.1)
+  - XHInputView (1.1.1)
+  - YYKit (1.0.9):
+    - YYKit/no-arc (= 1.0.9)
+  - YYKit/no-arc (1.0.9)
+  - YYModel (1.0.4)
+  - ZipArchive (1.4.0)
+  - ZWLimitCounter (0.0.4)
+  - ZWPlaceHolder (0.0.2)
+
+DEPENDENCIES:
+  - AFNetworking (= 4.0.0)
+  - Bytedance-UnionAD (~> 3.3.6.2)
+  - GKNavigationBarViewController (~> 2.7.0)
+  - GKPhotoBrowser (~> 2.2.1)
+  - glm (= 0.9.4.6)
+  - HUPhotoBrowser (~> 1.4.5)
+  - IQKeyboardManager (= 6.5.5)
+  - JXCategoryView
+  - JXPagingView/Pager
+  - KJBannerView
+  - KJBannerView/Downloader
+  - LBLelinkKit
+  - LCProgressHUD
+  - LYEmptyView
+  - Masonry
+  - MJRefresh (= 3.4.1)
+  - OC_CWCarousel (~> 1.1.5)
+  - pop (= 1.0.7)
+  - PYSearch
+  - QRCodeReaderViewController (from `https://github.com/zhengjinghua/MQRCodeReaderViewController.git`)
+  - RITLPhotos (~> 2.3.3)
+  - SDCycleScrollView (~> 1.80)
+  - SDWebImage
+  - SJMediaCacheServer
+  - SJUIKit
+  - SJVideoPlayer
+  - SPPageMenu (~> 3.5.0)
+  - SVProgressHUD (~> 2.2.5)
+  - "UIImage+ImageWithColor"
+  - UMCommon
+  - UMCSecurityPlugins
+  - UMDevice
+  - UMPush
+  - UMShare/Social/QQ
+  - UMShare/Social/WeChat
+  - UMShare/UI
+  - UriParser-cpp (= 0.1.3)
+  - VTMagic (= 1.2.4)
+  - WHC_ModelSqliteKit (~> 1.3.0)
+  - WMDragView (~> 1.0.1)
+  - XHInputView (~> 1.1.1)
+  - YYKit
+  - ZipArchive
+  - ZWLimitCounter (~> 0.0.4)
+  - ZWPlaceHolder (~> 0.0.2)
+
+SPEC REPOS:
+  trunk:
+    - AFNetworking
+    - Bytedance-UnionAD
+    - CocoaAsyncSocket
+    - GKNavigationBarViewController
+    - GKPhotoBrowser
+    - glm
+    - HUPhotoBrowser
+    - IQKeyboardManager
+    - JXCategoryView
+    - JXPagingView
+    - KJBannerView
+    - LBLelinkKit
+    - LCProgressHUD
+    - LYEmptyView
+    - Masonry
+    - MBProgressHUD
+    - MJRefresh
+    - OC_CWCarousel
+    - pop
+    - PYSearch
+    - RITLKit
+    - RITLPhotos
+    - RITLViewFrame
+    - SDCycleScrollView
+    - SDWebImage
+    - SJBaseVideoPlayer
+    - SJMediaCacheServer
+    - SJUIKit
+    - SJVideoPlayer
+    - SPPageMenu
+    - SVProgressHUD
+    - "UIImage+ImageWithColor"
+    - UMCommon
+    - UMCSecurityPlugins
+    - UMDevice
+    - UMPush
+    - UMShare
+    - UriParser-cpp
+    - VTMagic
+    - WHC_ModelSqliteKit
+    - WMDragView
+    - XHInputView
+    - YYKit
+    - YYModel
+    - ZipArchive
+    - ZWLimitCounter
+    - ZWPlaceHolder
+
+EXTERNAL SOURCES:
+  QRCodeReaderViewController:
+    :git: https://github.com/zhengjinghua/MQRCodeReaderViewController.git
+
+CHECKOUT OPTIONS:
+  QRCodeReaderViewController:
+    :commit: 6370cd1cd7b8f312df7d1b8ca912c05ff19498f1
+    :git: https://github.com/zhengjinghua/MQRCodeReaderViewController.git
+
+SPEC CHECKSUMS:
+  AFNetworking: d9fdf484a3c723ec3c558a41cc5754c7e845ee77
+  Bytedance-UnionAD: e9f83939e2a5d857e104f6a91035bbf504b603e5
+  CocoaAsyncSocket: 065fd1e645c7abab64f7a6a2007a48038fdc6a99
+  GKNavigationBarViewController: 72b8d2c6da7d1f02e44d5cf06b149b3616e48d9e
+  GKPhotoBrowser: 16a9f50f2a8ff253e576659a74ecf938fb700a39
+  glm: e22c8d9df10404059b19c2952f9fa44d9a9f3056
+  HUPhotoBrowser: 87a8333c111a4e71ebf5400bf66d0eeb522c0098
+  IQKeyboardManager: 3a8b9e603f8b0eeaf5f096a1f2b2cfcf121992ef
+  JXCategoryView: 2ef9ecfd3735158d009ce02d1f29811aa822da65
+  JXPagingView: ef48a5a2392252c68db7999de38f4761a2707e2a
+  KJBannerView: 5390246a5f1a5aa67f5428c7941a533a11b103b6
+  LBLelinkKit: 32acdff3f8dcb5e5de7978f1002022726017f4ad
+  LCProgressHUD: c79809d917bf9cc1cd1cdfc4d91a44c8dbfa5692
+  LYEmptyView: b6d418cfa38b78df0cf243f9a9c25ccbdc399922
+  Masonry: 678fab65091a9290e40e2832a55e7ab731aad201
+  MBProgressHUD: 1569cf7ace17a8bac47aabfbb8580a49690386d1
+  MJRefresh: 3153c59a363159092c08b2177ec3a7d09f90bfaf
+  OC_CWCarousel: 5467cc932e54f6ac60c8e94a42f35d4cbc452dc4
+  pop: 628ffc631644601567ee8bfaaaea493ebd7d0923
+  PYSearch: 76dee18eea3309b60921a5d6a69390a63a5dda15
+  QRCodeReaderViewController: 557e3291d8fe8adf20d62b7f6bd79a3941f8ec31
+  RITLKit: a7274cc67ca5ad6e1b1907bb3bf801e16e1e5b60
+  RITLPhotos: 82fc171958ca6d5aefec7ba4e1a73d12f96a94df
+  RITLViewFrame: 4e38e6333e6b4691c1980c3fcda9ff4d08f0d2c8
+  SDCycleScrollView: a0d74c3384caa72bdfc81470bdbc8c14b3e1fbcf
+  SDWebImage: a7f831e1a65eb5e285e3fb046a23fcfbf08e696d
+  SJBaseVideoPlayer: 99957bb0d0fe1ccb8d6710bd9db9f52640c56a32
+  SJMediaCacheServer: 74656385db09cf77d76a649143d1f870e344e4e9
+  SJUIKit: 8246b1001e616b0dbd090309fd58cdd609ae3fd4
+  SJVideoPlayer: 3a271ff92c7b9d611c537655fd1edcbae18b8587
+  SPPageMenu: da182aafcec55719d5c326103cc7716c1e48f311
+  SVProgressHUD: 1428aafac632c1f86f62aa4243ec12008d7a51d6
+  "UIImage+ImageWithColor": 891401f732f2f332fefe68c2332c6c955c2a879c
+  UMCommon: 28a05184e0766ea2c015ce9c56963356a38f9b1b
+  UMCSecurityPlugins: 0831a08f3988f3cea9f1d3a7626cd9bee4fef150
+  UMDevice: da050ba77e5075b1ec08303065722d25f599e483
+  UMPush: 7ef2ff2fcca16e4d5c7897183a78a0d26f920bfe
+  UMShare: ec11ef18fe90e7430466aced74fc305fe5e51618
+  UriParser-cpp: cbbe00080ee432ec4833dca863a7fc83adc9b01a
+  VTMagic: b49e5f456dbcbfd9a3588ba92417233a105bc193
+  WHC_ModelSqliteKit: dfafef3ee872dedd9823395291fc80bf37eac46d
+  WMDragView: 18f2c5d18c350ea4b0ac1cc64066abfe5caea443
+  XHInputView: d0dcd226f1df1d288326bdf8eb620221cc6ed3a7
+  YYKit: 7cda43304a8dc3696c449041e2cb3107b4e236e7
+  YYModel: 2a7fdd96aaa4b86a824e26d0c517de8928c04b30
+  ZipArchive: e25a4373192673e3229ac8d6e9f64a3e5713c966
+  ZWLimitCounter: 382d8a4f063980f18022749672b89e0558087007
+  ZWPlaceHolder: d55cce10c9930b48c31bf48e7f4748974a31f7e0
+
+PODFILE CHECKSUM: 5873431c061b7f862bb4db4b676c13da49c92e33
+
+COCOAPODS: 1.10.1

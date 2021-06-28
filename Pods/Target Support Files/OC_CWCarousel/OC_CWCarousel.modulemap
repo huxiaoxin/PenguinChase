@@ -1,0 +1,6 @@
+framework module OC_CWCarousel {
+  umbrella header "OC_CWCarousel-umbrella.h"
+
+  export *
+  module * { export * }
+}
