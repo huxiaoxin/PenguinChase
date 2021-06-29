@@ -9,7 +9,7 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
-@interface PenguinChaseListViewController : PenguinChase_BaseViewController
+@interface PenguinChaseListViewController : PenguinChase_BaseViewController<UITableViewDelegate,UITableViewDataSource>
 @property(nonatomic,strong) UITableView * PenguinChaseTableView;
 @end
 

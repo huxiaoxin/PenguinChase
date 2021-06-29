@@ -7,7 +7,7 @@
 
 #import "PenguinChaseListViewController.h"
 
-@interface PenguinChaseListViewController ()<UITableViewDelegate,UITableViewDataSource>
+@interface PenguinChaseListViewController ()
 
 @end
 
@@ -19,13 +19,14 @@
 }
 - (UITableView *)PenguinChaseTableView{
     if (!_PenguinChaseTableView) {
-        _PenguinChaseTableView =[[UITableView alloc]initWithFrame:CGRectMake(0, 0, GK_SCREEN_WIDTH, GK_SCREEN_HEIGHT-GK_SAFEAREA_BTM) style:UITableViewStylePlain];
+        _PenguinChaseTableView =[[UITableView alloc]initWithFrame:CGRectMake(0, GK_STATUSBAR_NAVBAR_HEIGHT, GK_SCREEN_WIDTH, GK_SCREEN_HEIGHT-GK_SAFEAREA_BTM-GK_STATUSBAR_NAVBAR_HEIGHT) style:UITableViewStylePlain];
         _PenguinChaseTableView.dataSource = self;
         _PenguinChaseTableView.delegate = self;
         _PenguinChaseTableView.backgroundView = nil;
         _PenguinChaseTableView.showsVerticalScrollIndicator=NO;
         _PenguinChaseTableView.separatorStyle = UITableViewCellSeparatorStyleNone;
         _PenguinChaseTableView.separatorColor = [UIColor clearColor];
+        _PenguinChaseTableView.backgroundColor = [UIColor clearColor];
     }
     return _PenguinChaseTableView;
 }

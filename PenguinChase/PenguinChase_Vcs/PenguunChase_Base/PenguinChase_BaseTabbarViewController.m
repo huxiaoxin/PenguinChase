@@ -30,7 +30,7 @@
     NSMutableArray *imageNormalArr;
     NSMutableArray *imageSelectedArr;
     NSArray *controArray;
-    titleArr = [NSMutableArray arrayWithObjects:@"首页",@"动态", @"",@"消息",@"我的", nil];
+    titleArr = [NSMutableArray arrayWithObjects:@"首页",@"话题", @"",@"消息",@"我的", nil];
     imageNormalArr = [NSMutableArray arrayWithObjects:@"carpVideo_home_nomal",@"carpVideo_DT_Nomal",@"fabu",@"CarpVideo_Msg_nomal",@"carpVideo_mine_nomal", nil];
     imageSelectedArr = [NSMutableArray arrayWithObjects:@"carpVideo_home_seltecd",@"carpVideo_DT_Seltecd",@"fabu",@"CarpVideo_Msg_selted",@"carpVideo_mine_seltecd", nil];
     controArray = @[[PenguinChaseHomeViewController new], [PenguinChaseHuatiViewController new], [PenguinChaseFabuViewController new],[PenguinChaseMessageViewController new], [PenguinChaseCenterViewController new]];

@@ -17,7 +17,8 @@
 -(instancetype)initWithStyle:(UITableViewCellStyle)style reuseIdentifier:(NSString *)reuseIdentifier{
     self = [super initWithStyle:style reuseIdentifier:reuseIdentifier];
     if (self) {
-        self.contentView.layer.shadowPath = [UIBezierPath bezierPathWithRect:self.contentView.bounds].CGPath;
+        self.selectionStyle =  UITableViewCellSelectionStyleNone;
+        self.backgroundColor = [UIColor clearColor];
         [self PenguinChaseAddSubViews];
     }
     return  self;

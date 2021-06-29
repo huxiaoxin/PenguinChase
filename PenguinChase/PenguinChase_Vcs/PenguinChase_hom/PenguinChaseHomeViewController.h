@@ -5,11 +5,11 @@
 //  Created by zjlk03 on 2021/6/28.
 //
 
-#import "PenguinChase_BaseViewController.h"
+#import "PenguinChaseListViewController.h"
 
 NS_ASSUME_NONNULL_BEGIN
 
-@interface PenguinChaseHomeViewController : PenguinChase_BaseViewController
+@interface PenguinChaseHomeViewController : PenguinChaseListViewController
 
 @end
 
