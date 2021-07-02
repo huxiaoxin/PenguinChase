@@ -187,7 +187,7 @@
 }
 #pragma mark--消息
 -(void)PenguinChaseVideoMessageBtnClick:(PenguinChaseVideoMessageBtn *)btn{
-    
+    [self.delegate PenguinChaseHomHeaderViewBtnsAction:btn.tag];
 }
 #pragma mark--搜索
 -(void)PenguinSearchTapClicks{
@@ -196,6 +196,7 @@
 #pragma mark--日历
 -(void)pengClandeViewClicks{
     NSLog(@"%s",__func__);
+    [self.delegate PenguinChaseHomHeaderViewWithClanderActions];
 }
 /*
 // Only override drawRect: if you perform custom drawing.

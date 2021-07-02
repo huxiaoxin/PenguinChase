@@ -17,7 +17,12 @@ NS_ASSUME_NONNULL_BEGIN
 @end
 
 typedef void(^PenguinChaseHomHeaderHeightBlock)(CGFloat headerHeight);
+@protocol PenguinChaseHomHeaderViewDelegate <NSObject>
+-(void)PenguinChaseHomHeaderViewBtnsAction:(NSInteger)btnInex;
+-(void)PenguinChaseHomHeaderViewWithClanderActions;
+@end
 @interface PenguinChaseHomHeaderView : UIView
+@property(nonatomic,weak) id <PenguinChaseHomHeaderViewDelegate>delegate;
 @property(nonatomic,copy) PenguinChaseHomHeaderHeightBlock headerBlock;
 @end
 

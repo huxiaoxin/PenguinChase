@@ -9,7 +9,9 @@
 #import "PenguinChaseHomHeaderView.h"
 #import "PenguinChaseHomeTableViewCell.h"
 #import "PenguinChaseHomeFooterView.h"
-@interface PenguinChaseHomeViewController ()
+#import "PenguinChaseHomeNewsViewController.h"
+#import "PenguinChaseDongtaiViewController.h"
+@interface PenguinChaseHomeViewController ()<PenguinChaseHomHeaderViewDelegate>
 @property(nonatomic,strong) PenguinChaseHomHeaderView  * PenguinChaseHeader;
 @property(nonatomic,strong) PenguinChaseHomeFooterView * PenguinChaseFooter;
 @end
@@ -73,6 +75,8 @@
 -(PenguinChaseHomHeaderView *)PenguinChaseHeader{
     if (!_PenguinChaseHeader) {
         _PenguinChaseHeader = [[PenguinChaseHomHeaderView alloc]initWithFrame:CGRectMake(0, 0, GK_SCREEN_WIDTH, RealWidth(150))];
+        _PenguinChaseHeader.delegate = self;
+        
     }
     return _PenguinChaseHeader;
 }
@@ -81,6 +85,27 @@
         _PenguinChaseFooter = [[PenguinChaseHomeFooterView alloc]initWithFrame:CGRectMake(0, 0, GK_SCREEN_WIDTH, RealWidth(10))];
     }
     return _PenguinChaseFooter;
+}
+#pragma mark--PenguinChaseHomHeaderViewDelegate
+-(void)PenguinChaseHomHeaderViewBtnsAction:(NSInteger)btnInex{
+    if (btnInex == 0) {
+        
+    }else if (btnInex == 1){
+        
+    }else if (btnInex == 2){
+        PenguinChaseHomeNewsViewController * penguinNewsVc = [[PenguinChaseHomeNewsViewController alloc]init];
+        penguinNewsVc.hidesBottomBarWhenPushed = YES;
+        [self.navigationController pushViewController:penguinNewsVc animated:YES];
+    }else if (btnInex == 3){
+        
+    }
+}
+#pragma mark--动态
+-(void)PenguinChaseHomHeaderViewWithClanderActions{
+    PenguinChaseDongtaiViewController * penguinDongtaVc = [[PenguinChaseDongtaiViewController alloc]init];
+    penguinDongtaVc.hidesBottomBarWhenPushed = YES;
+    [self.navigationController pushViewController:penguinDongtaVc animated:YES];
+    
 }
 /*
 #pragma mark - Navigation

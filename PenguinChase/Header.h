@@ -1,6 +1,6 @@
 #ifndef Header_h
 #define Header_h
-#define LGDMianColor          [UIColor colorWithHexString:@"#FFCF33"]
+#define LGDMianColor          [UIColor colorWithHexString:@"FCB211"]
 #define LGDGaryColor          [UIColor colorWithHexString:@"#9F9FA0"]
 #define LGDLightGaryColor     [UIColor colorWithHexString:@"#F5F5F5"]
 #define LGDBLackColor         [UIColor blackColor]

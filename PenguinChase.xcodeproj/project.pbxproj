@@ -24,6 +24,12 @@
 		8A496154268B177700CB02DD /* PenguinChaseHuatiSearchView.m in Sources */ = {isa = PBXBuildFile; fileRef = 8A496153268B177700CB02DD /* PenguinChaseHuatiSearchView.m */; };
 		8A49615D268B1DE500CB02DD /* PenguinHuatileftTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 8A49615C268B1DE500CB02DD /* PenguinHuatileftTableViewCell.m */; };
 		8A496163268B22D600CB02DD /* PenguinHuatiRigthTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 8A496162268B22D600CB02DD /* PenguinHuatiRigthTableViewCell.m */; };
+		8A5154B0268C0111001F5D52 /* PenguinChaseMessageTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 8A5154AF268C0111001F5D52 /* PenguinChaseMessageTableViewCell.m */; };
+		8A5154BF268C3D1A001F5D52 /* PenguinsystemMessageModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 8A5154BE268C3D1A001F5D52 /* PenguinsystemMessageModel.m */; };
+		8A5154C5268C4171001F5D52 /* PenguinChasesystemMessageTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 8A5154C4268C4171001F5D52 /* PenguinChasesystemMessageTableViewCell.m */; };
+		8A515550268C5427001F5D52 /* PenguinChaseHomeNewsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8A51554F268C5427001F5D52 /* PenguinChaseHomeNewsViewController.m */; };
+		8A515559268C5642001F5D52 /* PenguinChaseNewsTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 8A515558268C5642001F5D52 /* PenguinChaseNewsTableViewCell.m */; };
+		8A515560268C6EB5001F5D52 /* PenguinChaseDongtaiViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8A51555F268C6EB5001F5D52 /* PenguinChaseDongtaiViewController.m */; };
 		8A5ABBF02689CCF400DF1108 /* UITextField+AddPlaceholder.m in Sources */ = {isa = PBXBuildFile; fileRef = 8A5ABBE02689CCEF00DF1108 /* UITextField+AddPlaceholder.m */; };
 		8A5ABBF12689CCF400DF1108 /* UIView+shadowPath.m in Sources */ = {isa = PBXBuildFile; fileRef = 8A5ABBE12689CCEF00DF1108 /* UIView+shadowPath.m */; };
 		8A5ABBF22689CCF400DF1108 /* WWStarView.m in Sources */ = {isa = PBXBuildFile; fileRef = 8A5ABBE52689CCF000DF1108 /* WWStarView.m */; };
@@ -105,6 +111,18 @@
 		8A49615C268B1DE500CB02DD /* PenguinHuatileftTableViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PenguinHuatileftTableViewCell.m; sourceTree = "<group>"; };
 		8A496161268B22D500CB02DD /* PenguinHuatiRigthTableViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PenguinHuatiRigthTableViewCell.h; sourceTree = "<group>"; };
 		8A496162268B22D600CB02DD /* PenguinHuatiRigthTableViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PenguinHuatiRigthTableViewCell.m; sourceTree = "<group>"; };
+		8A5154AE268C0111001F5D52 /* PenguinChaseMessageTableViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PenguinChaseMessageTableViewCell.h; sourceTree = "<group>"; };
+		8A5154AF268C0111001F5D52 /* PenguinChaseMessageTableViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PenguinChaseMessageTableViewCell.m; sourceTree = "<group>"; };
+		8A5154BD268C3D1A001F5D52 /* PenguinsystemMessageModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PenguinsystemMessageModel.h; sourceTree = "<group>"; };
+		8A5154BE268C3D1A001F5D52 /* PenguinsystemMessageModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PenguinsystemMessageModel.m; sourceTree = "<group>"; };
+		8A5154C3268C4171001F5D52 /* PenguinChasesystemMessageTableViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PenguinChasesystemMessageTableViewCell.h; sourceTree = "<group>"; };
+		8A5154C4268C4171001F5D52 /* PenguinChasesystemMessageTableViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PenguinChasesystemMessageTableViewCell.m; sourceTree = "<group>"; };
+		8A51554E268C5427001F5D52 /* PenguinChaseHomeNewsViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PenguinChaseHomeNewsViewController.h; sourceTree = "<group>"; };
+		8A51554F268C5427001F5D52 /* PenguinChaseHomeNewsViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PenguinChaseHomeNewsViewController.m; sourceTree = "<group>"; };
+		8A515557268C5642001F5D52 /* PenguinChaseNewsTableViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PenguinChaseNewsTableViewCell.h; sourceTree = "<group>"; };
+		8A515558268C5642001F5D52 /* PenguinChaseNewsTableViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PenguinChaseNewsTableViewCell.m; sourceTree = "<group>"; };
+		8A51555E268C6EB5001F5D52 /* PenguinChaseDongtaiViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PenguinChaseDongtaiViewController.h; sourceTree = "<group>"; };
+		8A51555F268C6EB5001F5D52 /* PenguinChaseDongtaiViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PenguinChaseDongtaiViewController.m; sourceTree = "<group>"; };
 		8A5ABBD42689CC2200DF1108 /* Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Header.h; sourceTree = "<group>"; };
 		8A5ABBD52689CC3100DF1108 /* PrefixHeader.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PrefixHeader.pch; sourceTree = "<group>"; };
 		8A5ABBE02689CCEF00DF1108 /* UITextField+AddPlaceholder.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UITextField+AddPlaceholder.m"; sourceTree = "<group>"; };
@@ -252,6 +270,26 @@
 			path = PenguinChaseUITests;
 			sourceTree = "<group>";
 		};
+		8A51554D268C53CA001F5D52 /* PenguinChase_News */ = {
+			isa = PBXGroup;
+			children = (
+				8A51554E268C5427001F5D52 /* PenguinChaseHomeNewsViewController.h */,
+				8A51554F268C5427001F5D52 /* PenguinChaseHomeNewsViewController.m */,
+				8A515557268C5642001F5D52 /* PenguinChaseNewsTableViewCell.h */,
+				8A515558268C5642001F5D52 /* PenguinChaseNewsTableViewCell.m */,
+			);
+			path = PenguinChase_News;
+			sourceTree = "<group>";
+		};
+		8A51555D268C6E70001F5D52 /* PenguinChae_Dongtai */ = {
+			isa = PBXGroup;
+			children = (
+				8A51555E268C6EB5001F5D52 /* PenguinChaseDongtaiViewController.h */,
+				8A51555F268C6EB5001F5D52 /* PenguinChaseDongtaiViewController.m */,
+			);
+			path = PenguinChae_Dongtai;
+			sourceTree = "<group>";
+		};
 		8A5ABBDC2689CC8D00DF1108 /* PenguinChase_untils */ = {
 			isa = PBXGroup;
 			children = (
@@ -303,6 +341,8 @@
 		8A5ABC022689CDD500DF1108 /* PenguinChase_hom */ = {
 			isa = PBXGroup;
 			children = (
+				8A51555D268C6E70001F5D52 /* PenguinChae_Dongtai */,
+				8A51554D268C53CA001F5D52 /* PenguinChase_News */,
 				8A5ABC352689D16C00DF1108 /* PenguinChaseHomeViewController.h */,
 				8A5ABC362689D16C00DF1108 /* PenguinChaseHomeViewController.m */,
 				8A4960EC268AA91400CB02DD /* PenguinChaseHomHeaderView.h */,
@@ -339,6 +379,12 @@
 			children = (
 				8A5ABC412689D1CF00DF1108 /* PenguinChaseMessageViewController.h */,
 				8A5ABC422689D1CF00DF1108 /* PenguinChaseMessageViewController.m */,
+				8A5154AE268C0111001F5D52 /* PenguinChaseMessageTableViewCell.h */,
+				8A5154AF268C0111001F5D52 /* PenguinChaseMessageTableViewCell.m */,
+				8A5154C3268C4171001F5D52 /* PenguinChasesystemMessageTableViewCell.h */,
+				8A5154C4268C4171001F5D52 /* PenguinChasesystemMessageTableViewCell.m */,
+				8A5154BD268C3D1A001F5D52 /* PenguinsystemMessageModel.h */,
+				8A5154BE268C3D1A001F5D52 /* PenguinsystemMessageModel.m */,
 			);
 			path = PenguinChase_msg;
 			sourceTree = "<group>";
@@ -600,6 +646,7 @@
 				8A5ABC662689D26B00DF1108 /* PenguinChaseLoginTool.m in Sources */,
 				8A5ABBF02689CCF400DF1108 /* UITextField+AddPlaceholder.m in Sources */,
 				8A5ABC372689D16C00DF1108 /* PenguinChaseHomeViewController.m in Sources */,
+				8A515559268C5642001F5D52 /* PenguinChaseNewsTableViewCell.m in Sources */,
 				8A496145268AFAA400CB02DD /* PenguinChaseHomeFooterView.m in Sources */,
 				8A5ABC1F2689CEE100DF1108 /* PenguinChaseBaseTableViewCell.m in Sources */,
 				8A5ABBFD2689CD6800DF1108 /* UIColor+CHRegex.m in Sources */,
@@ -617,12 +664,17 @@
 				8A5ABBF42689CCF400DF1108 /* UIView+ACSLayer.m in Sources */,
 				8A5ABBF52689CCF400DF1108 /* LMJHorizontalScrollText.m in Sources */,
 				8A5ABC192689CEC300DF1108 /* PenguinChaseListViewController.m in Sources */,
+				8A5154B0268C0111001F5D52 /* PenguinChaseMessageTableViewCell.m in Sources */,
+				8A515560268C6EB5001F5D52 /* PenguinChaseDongtaiViewController.m in Sources */,
 				8A5ABC432689D1CF00DF1108 /* PenguinChaseMessageViewController.m in Sources */,
+				8A5154BF268C3D1A001F5D52 /* PenguinsystemMessageModel.m in Sources */,
 				8A496163268B22D600CB02DD /* PenguinHuatiRigthTableViewCell.m in Sources */,
 				8A5ABC0A2689CE6900DF1108 /* PenguinChase_BaseTabbarViewController.m in Sources */,
+				8A5154C5268C4171001F5D52 /* PenguinChasesystemMessageTableViewCell.m in Sources */,
 				8A4960EE268AA91400CB02DD /* PenguinChaseHomHeaderView.m in Sources */,
 				8A496154268B177700CB02DD /* PenguinChaseHuatiSearchView.m in Sources */,
 				8A5ABC5C2689D23E00DF1108 /* PenguinChaseLoginViewController.m in Sources */,
+				8A515550268C5427001F5D52 /* PenguinChaseHomeNewsViewController.m in Sources */,
 				8A5ABBF72689CCF400DF1108 /* UIView+HZXFrame.m in Sources */,
 				8A5ABBF22689CCF400DF1108 /* WWStarView.m in Sources */,
 				8A5ABBF12689CCF400DF1108 /* UIView+shadowPath.m in Sources */,

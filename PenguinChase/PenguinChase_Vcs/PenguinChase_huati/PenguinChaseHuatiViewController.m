@@ -20,21 +20,21 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    self.gk_navTitle = @"全部话题";
+    self.gk_navTitle = @"全部分类";
     self.gk_navLineHidden = YES;
     [self.view addSubview:self.PenguinChase_SearchView];
     [self.view addSubview:self.PenguinSearchLeftTableView];
-    [self.view addSubview:self.PenguinSearchRightTableiew];
     [self.view addSubview:self.PenguinVerticline];
+    [self.view addSubview:self.PenguinSearchRightTableiew];
+
     // Do any additional setup after loading the view.
 }
 - (UITableView *)PenguinSearchLeftTableView{
     if (!_PenguinSearchLeftTableView) {
-        _PenguinSearchLeftTableView = [[UITableView alloc]initWithFrame:CGRectMake(0, CGRectGetMaxY(_PenguinChase_SearchView.frame)+RealWidth(10), RealWidth(80), CGRectGetHeight(self.view.frame)-CGRectGetMaxY(_PenguinChase_SearchView.frame)-GK_TABBAR_HEIGHT-RealWidth(10)) style:UITableViewStylePlain];
+        _PenguinSearchLeftTableView = [[UITableView alloc]initWithFrame:CGRectMake(0, CGRectGetMaxY(_PenguinChase_SearchView.frame)+RealWidth(10), RealWidth(80), GK_SCREEN_HEIGHT-CGRectGetMaxY(_PenguinChase_SearchView.frame)-GK_TABBAR_HEIGHT-RealWidth(10)) style:UITableViewStylePlain];
         _PenguinSearchLeftTableView.showsVerticalScrollIndicator = NO;
         _PenguinSearchLeftTableView.showsHorizontalScrollIndicator = NO;
-        _PenguinSearchLeftTableView.separatorStyle = UITableViewCellSelectionStyleNone;
-        _PenguinSearchLeftTableView.backgroundColor = [UIColor clearColor];
+        _PenguinSearchLeftTableView.backgroundColor = [UIColor whiteColor];
         _PenguinSearchLeftTableView.separatorStyle = UITableViewCellSelectionStyleNone;
         _PenguinSearchLeftTableView.delegate = self;
         _PenguinSearchLeftTableView.dataSource = self;
@@ -70,7 +70,7 @@
     return _PenguinChase_SearchView;
 }
 -(NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section{
-    return 10;
+    return 8;
 }
 -(UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
     if (tableView == self.PenguinSearchLeftTableView) {
@@ -82,11 +82,13 @@
     }
 
 }
+-(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
+}
 -(CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath{
     if (tableView == self.PenguinSearchLeftTableView) {
         return RealWidth(40);
     }else{
-        return RealWidth(120);
+        return RealWidth(145);
     }
 }
 /*
