@@ -16,11 +16,21 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     [self initGKNavConfigers];
+    [self setUpFixiOS11];
     self.window = [[UIWindow alloc]initWithFrame:[UIScreen mainScreen].bounds];
     [self.window makeKeyAndVisible];
     self.window.rootViewController = [NSClassFromString(@"PenguinChase_BaseTabbarViewController") new];
 
     return YES;
+}
+#pragma mark - 适配
+- (void)setUpFixiOS11 {
+    if (@available(ios 11.0,*)) {
+        UIScrollView.appearance.contentInsetAdjustmentBehavior = UIScrollViewContentInsetAdjustmentNever;
+        UITableView.appearance.estimatedRowHeight = 0;
+        UITableView.appearance.estimatedSectionFooterHeight = 0;
+        UITableView.appearance.estimatedSectionHeaderHeight = 0;
+    }
 }
 -(void)initGKNavConfigers{
     GKNavigationBarConfigure *DongwangConfigers = [GKNavigationBarConfigure sharedInstance];

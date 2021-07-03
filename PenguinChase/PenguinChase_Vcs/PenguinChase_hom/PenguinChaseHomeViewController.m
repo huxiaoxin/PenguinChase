@@ -11,6 +11,10 @@
 #import "PenguinChaseHomeFooterView.h"
 #import "PenguinChaseHomeNewsViewController.h"
 #import "PenguinChaseDongtaiViewController.h"
+#import "PenguinChaseVideoDetailViewController.h"
+#import "PenguinChaseKefuViewController.h"
+#import "PenguinChaseBangdanViewController.h"
+#import "PenguinGoodVideoViewController.h"
 @interface PenguinChaseHomeViewController ()<PenguinChaseHomHeaderViewDelegate>
 @property(nonatomic,strong) PenguinChaseHomHeaderView  * PenguinChaseHeader;
 @property(nonatomic,strong) PenguinChaseHomeFooterView * PenguinChaseFooter;
@@ -68,6 +72,11 @@
 -(CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath{
     return RealWidth(120);
 }
+-(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
+    PenguinChaseVideoDetailViewController * penguinChaseDetailVc  = [[PenguinChaseVideoDetailViewController alloc]init];
+    penguinChaseDetailVc.hidesBottomBarWhenPushed = YES;
+    [self.navigationController pushViewController:penguinChaseDetailVc animated:YES];
+}
 #pragma mark--消息
 -(void)PenguinMessageBtnClick{
     NSLog(@"%s",__func__);
@@ -88,16 +97,24 @@
 }
 #pragma mark--PenguinChaseHomHeaderViewDelegate
 -(void)PenguinChaseHomHeaderViewBtnsAction:(NSInteger)btnInex{
+    NSLog(@"btnInex------%ld",btnInex);
     if (btnInex == 0) {
-        
+        PenguinChaseBangdanViewController * penguinChaseBangdanVc = [[PenguinChaseBangdanViewController alloc]init];
+        penguinChaseBangdanVc.hidesBottomBarWhenPushed = YES;
+        [self.navigationController pushViewController:penguinChaseBangdanVc animated:YES];
     }else if (btnInex == 1){
         
+        PenguinGoodVideoViewController * penguinGoodVc =[[PenguinGoodVideoViewController alloc]init];
+        penguinGoodVc.hidesBottomBarWhenPushed = YES;
+        [self.navigationController pushViewController:penguinGoodVc animated:YES];
     }else if (btnInex == 2){
         PenguinChaseHomeNewsViewController * penguinNewsVc = [[PenguinChaseHomeNewsViewController alloc]init];
         penguinNewsVc.hidesBottomBarWhenPushed = YES;
         [self.navigationController pushViewController:penguinNewsVc animated:YES];
     }else if (btnInex == 3){
-        
+        PenguinChaseKefuViewController * penguinKefuVc = [[PenguinChaseKefuViewController alloc]init];
+        penguinKefuVc.hidesBottomBarWhenPushed = YES;
+        [self.navigationController pushViewController:penguinKefuVc animated:YES];
     }
 }
 #pragma mark--动态
