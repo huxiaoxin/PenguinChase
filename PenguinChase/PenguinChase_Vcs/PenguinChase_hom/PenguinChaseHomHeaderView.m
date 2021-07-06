@@ -114,14 +114,14 @@
         [self layoutIfNeeded];
         
         NSArray * PenguinTitleArr = @[@"热门榜单",@"甄选好片",@"影视资讯",@"在线客服"];
-        NSArray * PenguinColorArr = @[@"",@"",@"",@""];
+        NSArray * PenguinColorArr = @[@"e0620d",@"FCB211",@"FC0E49",@"F8460F"];
         for (int index = 0; index < PenguinTitleArr.count; index++) {
             PenguinChaseVideoMessageBtn * PenguinBtn = [[PenguinChaseVideoMessageBtn alloc]initWithFrame:CGRectMake(GK_SCREEN_WIDTH/PenguinTitleArr.count*index, CGRectGetMaxY(_PenguinSDCView.frame)+RealWidth(15), GK_SCREEN_WIDTH/PenguinTitleArr.count, RealWidth(60))];
             PenguinBtn.tag = index;
-            PenguinBtn.PenguinChase_ImgView.backgroundColor = LGDMianColor;
+//            PenguinBtn.PenguinChase_ImgView.backgroundColor = LGDMianColor;
             [PenguinBtn addTarget:self action:@selector(PenguinChaseVideoMessageBtnClick:) forControlEvents:UIControlEventTouchUpInside];
             PenguinBtn.PenguinChaseBtomlb.text = PenguinTitleArr[index];
-            PenguinBtn.PenguinChase_ContentView.backgroundColor = [UIColor colorWithHexString:PenguinColorArr[index]];
+            PenguinBtn.PenguinChase_ContentView.backgroundColor = [UIColor colorWithHexString:PenguinColorArr[index] Alpha:0.3];
             PenguinBtn.PenguinChase_ImgView.image = [UIImage imageNamed:PenguinTitleArr[index]];
             [self addSubview:PenguinBtn];
             self.PenguinBtn = PenguinBtn;
@@ -181,7 +181,10 @@
         _PenguinSDCView = [[SDCycleScrollView alloc]init];
         _PenguinSDCView.bannerImageViewContentMode = UIViewContentModeScaleAspectFill;
         _PenguinSDCView.layer.cornerRadius = RealWidth(5);
+        _PenguinSDCView.showPageControl = NO;
         _PenguinSDCView.layer.masksToBounds = YES;
+        _PenguinSDCView.imageURLStringsGroup = @[@"https://img2.doubanio.com/view/photo/l/public/p2664120673.jpg",@"https://img2.doubanio.com/view/photo/l/public/p2664120671.jpg"];
+        _PenguinSDCView.titlesGroup = @[@"3123123123",@"312312312312"];
     }
     return _PenguinSDCView;
 }
@@ -191,11 +194,10 @@
 }
 #pragma mark--搜索
 -(void)PenguinSearchTapClicks{
-    NSLog(@"%s",__func__);
+    [self.delegate PenguinChaseHomHeaderViewSearchAction];
 }
 #pragma mark--日历
 -(void)pengClandeViewClicks{
-    NSLog(@"%s",__func__);
     [self.delegate PenguinChaseHomHeaderViewWithClanderActions];
 }
 /*

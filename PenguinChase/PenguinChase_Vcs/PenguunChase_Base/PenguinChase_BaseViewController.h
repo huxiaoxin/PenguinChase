@@ -10,7 +10,7 @@
 NS_ASSUME_NONNULL_BEGIN
 
 @interface PenguinChase_BaseViewController : GKNavigationBarViewController
-
+-(void)PenguinChase_showLoginVc;
 @end
 
 NS_ASSUME_NONNULL_END

@@ -20,6 +20,7 @@ typedef void(^PenguinChaseHomHeaderHeightBlock)(CGFloat headerHeight);
 @protocol PenguinChaseHomHeaderViewDelegate <NSObject>
 -(void)PenguinChaseHomHeaderViewBtnsAction:(NSInteger)btnInex;
 -(void)PenguinChaseHomHeaderViewWithClanderActions;
+-(void)PenguinChaseHomHeaderViewSearchAction;
 @end
 @interface PenguinChaseHomHeaderView : UIView
 @property(nonatomic,weak) id <PenguinChaseHomHeaderViewDelegate>delegate;

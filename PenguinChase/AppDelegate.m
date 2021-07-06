@@ -38,7 +38,7 @@
     DongwangConfigers.backgroundColor = [UIColor whiteColor];
     DongwangConfigers.backStyle = GKNavigationBarBackStyleBlack;
     DongwangConfigers.titleColor = [UIColor blackColor];
-    DongwangConfigers.titleFont = [UIFont systemFontOfSize:15];
+    DongwangConfigers.titleFont = [UIFont boldSystemFontOfSize:18];
     [IQKeyboardManager sharedManager].shouldResignOnTouchOutside = YES;
    
 }

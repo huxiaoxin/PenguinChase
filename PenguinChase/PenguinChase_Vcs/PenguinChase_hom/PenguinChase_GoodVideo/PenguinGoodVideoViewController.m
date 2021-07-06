@@ -6,9 +6,9 @@
 //
 
 #import "PenguinGoodVideoViewController.h"
+#import "PenguinChaseHomeTableViewCell.h"
 
 @interface PenguinGoodVideoViewController ()
-
 @end
 
 @implementation PenguinGoodVideoViewController
@@ -19,6 +19,16 @@
     // Do any additional setup after loading the view.
 }
 
+-(NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section{
+    return 10;
+}
+-(UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
+    PenguinChaseHomeTableViewCell * PenguinCell = [PenguinChaseHomeTableViewCell PenguinChasecreateCellWithTheTableView:tableView AndTheIndexPath:indexPath];
+    return PenguinCell;
+}
+-(CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath{
+    return RealWidth(120);
+}
 /*
 #pragma mark - Navigation
 

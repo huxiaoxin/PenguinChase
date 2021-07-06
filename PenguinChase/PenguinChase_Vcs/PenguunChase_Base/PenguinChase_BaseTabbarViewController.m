@@ -10,6 +10,7 @@
 #import "PenguinChaseCenterViewController.h"
 #import "PenguinChaseFabuViewController.h"
 #import "PenguinChaseLoginViewController.h"
+
 @interface PenguinChase_BaseTabbarViewController ()<UITabBarControllerDelegate>
 @property (nonatomic, strong)UITabBarItem *lastItem; // 标记上一次点击的TabBarItem
 @end
@@ -31,8 +32,8 @@
     NSMutableArray *imageSelectedArr;
     NSArray *controArray;
     titleArr = [NSMutableArray arrayWithObjects:@"首页",@"分类", @"",@"消息",@"我的", nil];
-    imageNormalArr = [NSMutableArray arrayWithObjects:@"carpVideo_home_nomal",@"carpVideo_DT_Nomal",@"fabu",@"CarpVideo_Msg_nomal",@"carpVideo_mine_nomal", nil];
-    imageSelectedArr = [NSMutableArray arrayWithObjects:@"carpVideo_home_seltecd",@"carpVideo_DT_Seltecd",@"fabu",@"CarpVideo_Msg_selted",@"carpVideo_mine_seltecd", nil];
+    imageNormalArr = [NSMutableArray arrayWithObjects:@"shouyeHom_nomal",@"fenlei_nomal",@"fabu-",@"xiaoxi_nomal",@"gerenzhongxin_nomal", nil];
+    imageSelectedArr = [NSMutableArray arrayWithObjects:@"shouyeHom_sel",@"fenlei_sel",@"fabu-",@"xiaoxi_sel",@"gerenzhongxin_sel", nil];
     controArray = @[[PenguinChaseHomeViewController new], [PenguinChaseHuatiViewController new], [PenguinChaseFabuViewController new],[PenguinChaseMessageViewController new], [PenguinChaseCenterViewController new]];
     for (int i = 0; i < titleArr.count; i++) {
         UINavigationController *nav = [UINavigationController rootVC:controArray[i] translationScale:YES];
@@ -44,7 +45,7 @@
 - (BOOL)tabBarController:(UITabBarController *)tabBarController shouldSelectViewController:(UIViewController *)viewController {
     UINavigationController * baseNav  = (UINavigationController *)viewController;
     if ([NSStringFromClass(baseNav.topViewController.class) isEqualToString:@"PenguinChaseFabuViewController"]) {
-        if ([PenguinChaseLoginTool PenguinChaseLoginToolCheckuserIslgoin]) {
+        if (![PenguinChaseLoginTool PenguinChaseLoginToolCheckuserIslgoin]) {
             dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(0.001 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
                 PenguinChaseLoginViewController  * carpVc = [[PenguinChaseLoginViewController alloc]init];
                 
@@ -55,10 +56,19 @@
             
             return NO;
         }else{
-            return YES;
+            dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(0.001 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+                PenguinChaseFabuViewController  * carpVc = [[PenguinChaseFabuViewController alloc]init];
+                
+                UINavigationController * nav = [UINavigationController rootVC:carpVc translationScale:YES];
+                
+                [self presentViewController:nav animated:YES completion:nil];
+            });
+            
+            return NO;
         }
         
     }else{
+        
         return YES;
     }
 }

@@ -18,7 +18,7 @@
         self.layer.masksToBounds = YES;
         
         UILabel * PenguinSeachlb = [UILabel new];
-        PenguinSeachlb.text = @"请输入您感兴趣的话题";
+        PenguinSeachlb.text = @"请输入您感兴趣的电影";
         PenguinSeachlb.font = [UIFont systemFontOfSize:12];
         PenguinSeachlb.textColor = LGDGaryColor;
         [self addSubview:PenguinSeachlb];

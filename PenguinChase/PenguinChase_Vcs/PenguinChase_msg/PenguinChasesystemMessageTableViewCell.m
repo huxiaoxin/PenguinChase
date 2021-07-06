@@ -23,7 +23,7 @@
     [_penguinChaseIconImgView mas_makeConstraints:^(MASConstraintMaker *make) {
         make.left.mas_equalTo(RealWidth(10));
         make.centerY.mas_equalTo(self.contentView);
-        make.size.mas_equalTo(CGSizeMake(RealWidth(40), RealWidth(40)));
+        make.size.mas_equalTo(CGSizeMake(RealWidth(38), RealWidth(38)));
     }];
     [_PenguinTitlelb mas_makeConstraints:^(MASConstraintMaker *make) {
         make.centerY.mas_equalTo(self.contentView);
@@ -48,6 +48,25 @@
     _PenguinTitlelb.text = penguinMessageModel.Name;
     _PenguinRedNumslb.text  =penguinMessageModel.messageNums;
     _PenguinRedNumslb.hidden =  ![penguinMessageModel.messageNums integerValue];
+    if ([penguinMessageModel.Name isEqual:@"系统消息"]) {
+        _penguinChaseIconImgView.layer.cornerRadius  = RealWidth(19);
+        
+        [_penguinChaseIconImgView mas_updateConstraints:^(MASConstraintMaker *make) {
+            make.size.mas_equalTo(CGSizeMake(RealWidth(38), RealWidth(38)));
+        }];
+    } else if ([penguinMessageModel.Name isEqual:@"在线客服"]){
+        _penguinChaseIconImgView.layer.cornerRadius  = RealWidth(19);
+        
+        [_penguinChaseIconImgView mas_updateConstraints:^(MASConstraintMaker *make) {
+            make.size.mas_equalTo(CGSizeMake(RealWidth(38), RealWidth(38)));
+        }];
+    }else{
+        _penguinChaseIconImgView.layer.cornerRadius  = RealWidth(20);
+
+        [_penguinChaseIconImgView mas_updateConstraints:^(MASConstraintMaker *make) {
+            make.size.mas_equalTo(CGSizeMake(RealWidth(40), RealWidth(40)));
+        }];
+    }
     
 }
 - (UILabel *)PenguinRedNumslb{
@@ -66,9 +85,9 @@
 - (UIImageView *)penguinChaseIconImgView{
     if (!_penguinChaseIconImgView) {
         _penguinChaseIconImgView = [UIImageView new];
-        _penguinChaseIconImgView.layer.cornerRadius = RealWidth(20);
+        _penguinChaseIconImgView.layer.cornerRadius = RealWidth(19);
         _penguinChaseIconImgView.layer.masksToBounds = YES;
-        _penguinChaseIconImgView.backgroundColor = LGDMianColor;
+//        _penguinChaseIconImgView.backgroundColor = LGDMianColor;
     }
     return _penguinChaseIconImgView;
 }

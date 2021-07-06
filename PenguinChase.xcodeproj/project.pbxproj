@@ -41,6 +41,18 @@
 		8A515550268C5427001F5D52 /* PenguinChaseHomeNewsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8A51554F268C5427001F5D52 /* PenguinChaseHomeNewsViewController.m */; };
 		8A515559268C5642001F5D52 /* PenguinChaseNewsTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 8A515558268C5642001F5D52 /* PenguinChaseNewsTableViewCell.m */; };
 		8A515560268C6EB5001F5D52 /* PenguinChaseDongtaiViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8A51555F268C6EB5001F5D52 /* PenguinChaseDongtaiViewController.m */; };
+		8A59703126942E43006D3675 /* PenguinChaseSearchingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8A59703026942E43006D3675 /* PenguinChaseSearchingViewController.m */; };
+		8A5970FD26943E95006D3675 /* PenguinCenterBtn.m in Sources */ = {isa = PBXBuildFile; fileRef = 8A5970FC26943E95006D3675 /* PenguinCenterBtn.m */; };
+		8A59714326944F63006D3675 /* PenguinChaseSugestionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8A59714226944F63006D3675 /* PenguinChaseSugestionViewController.m */; };
+		8A59714926944F95006D3675 /* PenguinChaseAdviceCollectionCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 8A59714826944F95006D3675 /* PenguinChaseAdviceCollectionCell.m */; };
+		8A59715326945717006D3675 /* PenguinaboutUsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8A59715226945717006D3675 /* PenguinaboutUsViewController.m */; };
+		8A59715B2694574F006D3675 /* PenguinAbout.html in Resources */ = {isa = PBXBuildFile; fileRef = 8A59715A2694574F006D3675 /* PenguinAbout.html */; };
+		8A59716526945A64006D3675 /* PenguinChaseMyFallowViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8A59716426945A64006D3675 /* PenguinChaseMyFallowViewController.m */; };
+		8A59716F26945B39006D3675 /* PengUinChaseWatchedViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8A59716E26945B39006D3675 /* PengUinChaseWatchedViewController.m */; };
+		8A59717926945B74006D3675 /* PenguinChase_MySendViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8A59717826945B74006D3675 /* PenguinChase_MySendViewController.m */; };
+		8A59718326945BB6006D3675 /* PenginChaseMyColltecdViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8A59718226945BB6006D3675 /* PenginChaseMyColltecdViewController.m */; };
+		8A59718D26945BEE006D3675 /* PenguinChase_MyInfoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8A59718C26945BEE006D3675 /* PenguinChase_MyInfoViewController.m */; };
+		8A59719626945CB1006D3675 /* PenguinhaseSendZoneCollectionCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 8A59719426945CB1006D3675 /* PenguinhaseSendZoneCollectionCell.m */; };
 		8A5ABBF02689CCF400DF1108 /* UITextField+AddPlaceholder.m in Sources */ = {isa = PBXBuildFile; fileRef = 8A5ABBE02689CCEF00DF1108 /* UITextField+AddPlaceholder.m */; };
 		8A5ABBF12689CCF400DF1108 /* UIView+shadowPath.m in Sources */ = {isa = PBXBuildFile; fileRef = 8A5ABBE12689CCEF00DF1108 /* UIView+shadowPath.m */; };
 		8A5ABBF22689CCF400DF1108 /* WWStarView.m in Sources */ = {isa = PBXBuildFile; fileRef = 8A5ABBE52689CCF000DF1108 /* WWStarView.m */; };
@@ -65,6 +77,21 @@
 		8A5ABC5C2689D23E00DF1108 /* PenguinChaseLoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8A5ABC5B2689D23E00DF1108 /* PenguinChaseLoginViewController.m */; };
 		8A5ABC662689D26B00DF1108 /* PenguinChaseLoginTool.m in Sources */ = {isa = PBXBuildFile; fileRef = 8A5ABC652689D26B00DF1108 /* PenguinChaseLoginTool.m */; };
 		8A5ABC6F2689D2BF00DF1108 /* NSString+CHRegex.m in Sources */ = {isa = PBXBuildFile; fileRef = 8A5ABC6E2689D2BF00DF1108 /* NSString+CHRegex.m */; };
+		8A7190A526929539004F4953 /* PenguinCase_GoodVideoHeaderView.m in Sources */ = {isa = PBXBuildFile; fileRef = 8A7190A426929539004F4953 /* PenguinCase_GoodVideoHeaderView.m */; };
+		8A7190AE2692AFAF004F4953 /* PenguinChaseDongtaiTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 8A7190AD2692AFAF004F4953 /* PenguinChaseDongtaiTableViewCell.m */; };
+		8A7190B42692DAF6004F4953 /* PenguinChaseDongtaiCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 8A7190B32692DAF6004F4953 /* PenguinChaseDongtaiCollectionViewCell.m */; };
+		8A7190BA2692DCBD004F4953 /* PenguinChaseDongtaiBtn.m in Sources */ = {isa = PBXBuildFile; fileRef = 8A7190B92692DCBD004F4953 /* PenguinChaseDongtaiBtn.m */; };
+		8A7190C12692E088004F4953 /* PenguinChaseComentListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8A7190C02692E088004F4953 /* PenguinChaseComentListViewController.m */; };
+		8A7190CA2692E1BC004F4953 /* PenguinChaseComentListTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 8A7190C92692E1BC004F4953 /* PenguinChaseComentListTableViewCell.m */; };
+		8A7190D52692F98D004F4953 /* PenguinChaseJubaoVideoWarningModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 8A7190D12692F98C004F4953 /* PenguinChaseJubaoVideoWarningModel.m */; };
+		8A7190D62692F98D004F4953 /* PenguinChaseJubaoLitsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8A7190D22692F98C004F4953 /* PenguinChaseJubaoLitsViewController.m */; };
+		8A7190D72692F98D004F4953 /* PenguinChaseVideowarningTabeCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 8A7190D32692F98C004F4953 /* PenguinChaseVideowarningTabeCell.m */; };
+		8A71911C2693008A004F4953 /* PenguinChaseZanComentViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8A71911B2693008A004F4953 /* PenguinChaseZanComentViewController.m */; };
+		8A71912E2693037B004F4953 /* PenguinChaseVideoNotiCationTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 8A7191282693037A004F4953 /* PenguinChaseVideoNotiCationTableViewCell.m */; };
+		8A71912F2693037B004F4953 /* PenguinChaseNotifiCationDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8A71912B2693037A004F4953 /* PenguinChaseNotifiCationDetailViewController.m */; };
+		8A7191302693037B004F4953 /* PenguinChaseNotificationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8A71912D2693037B004F4953 /* PenguinChaseNotificationViewController.m */; };
+		8A71913F26930681004F4953 /* PenguinCenterListTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 8A71913E26930681004F4953 /* PenguinCenterListTableViewCell.m */; };
+		8A719145269306A7004F4953 /* PenguinCenterHeaderView.m in Sources */ = {isa = PBXBuildFile; fileRef = 8A719144269306A7004F4953 /* PenguinCenterHeaderView.m */; };
 		F5801DF0489BDCA8E8128039 /* Pods_PenguinChase.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 58ED390224B19FE7011F7049 /* Pods_PenguinChase.framework */; };
 /* End PBXBuildFile section */
 
@@ -156,6 +183,29 @@
 		8A515558268C5642001F5D52 /* PenguinChaseNewsTableViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PenguinChaseNewsTableViewCell.m; sourceTree = "<group>"; };
 		8A51555E268C6EB5001F5D52 /* PenguinChaseDongtaiViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PenguinChaseDongtaiViewController.h; sourceTree = "<group>"; };
 		8A51555F268C6EB5001F5D52 /* PenguinChaseDongtaiViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PenguinChaseDongtaiViewController.m; sourceTree = "<group>"; };
+		8A59702F26942E43006D3675 /* PenguinChaseSearchingViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PenguinChaseSearchingViewController.h; sourceTree = "<group>"; };
+		8A59703026942E43006D3675 /* PenguinChaseSearchingViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PenguinChaseSearchingViewController.m; sourceTree = "<group>"; };
+		8A5970FB26943E95006D3675 /* PenguinCenterBtn.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PenguinCenterBtn.h; sourceTree = "<group>"; };
+		8A5970FC26943E95006D3675 /* PenguinCenterBtn.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PenguinCenterBtn.m; sourceTree = "<group>"; };
+		8A59714126944F63006D3675 /* PenguinChaseSugestionViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PenguinChaseSugestionViewController.h; sourceTree = "<group>"; };
+		8A59714226944F63006D3675 /* PenguinChaseSugestionViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PenguinChaseSugestionViewController.m; sourceTree = "<group>"; };
+		8A59714726944F95006D3675 /* PenguinChaseAdviceCollectionCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PenguinChaseAdviceCollectionCell.h; sourceTree = "<group>"; };
+		8A59714826944F95006D3675 /* PenguinChaseAdviceCollectionCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PenguinChaseAdviceCollectionCell.m; sourceTree = "<group>"; };
+		8A59715126945717006D3675 /* PenguinaboutUsViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PenguinaboutUsViewController.h; sourceTree = "<group>"; };
+		8A59715226945717006D3675 /* PenguinaboutUsViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PenguinaboutUsViewController.m; sourceTree = "<group>"; };
+		8A59715A2694574F006D3675 /* PenguinAbout.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = PenguinAbout.html; sourceTree = "<group>"; };
+		8A59716326945A64006D3675 /* PenguinChaseMyFallowViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PenguinChaseMyFallowViewController.h; sourceTree = "<group>"; };
+		8A59716426945A64006D3675 /* PenguinChaseMyFallowViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PenguinChaseMyFallowViewController.m; sourceTree = "<group>"; };
+		8A59716D26945B39006D3675 /* PengUinChaseWatchedViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PengUinChaseWatchedViewController.h; sourceTree = "<group>"; };
+		8A59716E26945B39006D3675 /* PengUinChaseWatchedViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PengUinChaseWatchedViewController.m; sourceTree = "<group>"; };
+		8A59717726945B74006D3675 /* PenguinChase_MySendViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PenguinChase_MySendViewController.h; sourceTree = "<group>"; };
+		8A59717826945B74006D3675 /* PenguinChase_MySendViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PenguinChase_MySendViewController.m; sourceTree = "<group>"; };
+		8A59718126945BB6006D3675 /* PenginChaseMyColltecdViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PenginChaseMyColltecdViewController.h; sourceTree = "<group>"; };
+		8A59718226945BB6006D3675 /* PenginChaseMyColltecdViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PenginChaseMyColltecdViewController.m; sourceTree = "<group>"; };
+		8A59718B26945BEE006D3675 /* PenguinChase_MyInfoViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PenguinChase_MyInfoViewController.h; sourceTree = "<group>"; };
+		8A59718C26945BEE006D3675 /* PenguinChase_MyInfoViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PenguinChase_MyInfoViewController.m; sourceTree = "<group>"; };
+		8A59719426945CB1006D3675 /* PenguinhaseSendZoneCollectionCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PenguinhaseSendZoneCollectionCell.m; sourceTree = "<group>"; };
+		8A59719526945CB1006D3675 /* PenguinhaseSendZoneCollectionCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PenguinhaseSendZoneCollectionCell.h; sourceTree = "<group>"; };
 		8A5ABBD42689CC2200DF1108 /* Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Header.h; sourceTree = "<group>"; };
 		8A5ABBD52689CC3100DF1108 /* PrefixHeader.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PrefixHeader.pch; sourceTree = "<group>"; };
 		8A5ABBE02689CCEF00DF1108 /* UITextField+AddPlaceholder.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UITextField+AddPlaceholder.m"; sourceTree = "<group>"; };
@@ -206,6 +256,36 @@
 		8A5ABC652689D26B00DF1108 /* PenguinChaseLoginTool.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PenguinChaseLoginTool.m; sourceTree = "<group>"; };
 		8A5ABC6D2689D2BE00DF1108 /* NSString+CHRegex.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+CHRegex.h"; sourceTree = "<group>"; };
 		8A5ABC6E2689D2BF00DF1108 /* NSString+CHRegex.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+CHRegex.m"; sourceTree = "<group>"; };
+		8A7190A326929539004F4953 /* PenguinCase_GoodVideoHeaderView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PenguinCase_GoodVideoHeaderView.h; sourceTree = "<group>"; };
+		8A7190A426929539004F4953 /* PenguinCase_GoodVideoHeaderView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PenguinCase_GoodVideoHeaderView.m; sourceTree = "<group>"; };
+		8A7190AC2692AFAF004F4953 /* PenguinChaseDongtaiTableViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PenguinChaseDongtaiTableViewCell.h; sourceTree = "<group>"; };
+		8A7190AD2692AFAF004F4953 /* PenguinChaseDongtaiTableViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PenguinChaseDongtaiTableViewCell.m; sourceTree = "<group>"; };
+		8A7190B22692DAF6004F4953 /* PenguinChaseDongtaiCollectionViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PenguinChaseDongtaiCollectionViewCell.h; sourceTree = "<group>"; };
+		8A7190B32692DAF6004F4953 /* PenguinChaseDongtaiCollectionViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PenguinChaseDongtaiCollectionViewCell.m; sourceTree = "<group>"; };
+		8A7190B82692DCBD004F4953 /* PenguinChaseDongtaiBtn.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PenguinChaseDongtaiBtn.h; sourceTree = "<group>"; };
+		8A7190B92692DCBD004F4953 /* PenguinChaseDongtaiBtn.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PenguinChaseDongtaiBtn.m; sourceTree = "<group>"; };
+		8A7190BF2692E088004F4953 /* PenguinChaseComentListViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PenguinChaseComentListViewController.h; sourceTree = "<group>"; };
+		8A7190C02692E088004F4953 /* PenguinChaseComentListViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PenguinChaseComentListViewController.m; sourceTree = "<group>"; };
+		8A7190C82692E1BC004F4953 /* PenguinChaseComentListTableViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PenguinChaseComentListTableViewCell.h; sourceTree = "<group>"; };
+		8A7190C92692E1BC004F4953 /* PenguinChaseComentListTableViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PenguinChaseComentListTableViewCell.m; sourceTree = "<group>"; };
+		8A7190CF2692F98C004F4953 /* PenguinChaseJubaoLitsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PenguinChaseJubaoLitsViewController.h; sourceTree = "<group>"; };
+		8A7190D02692F98C004F4953 /* PenguinChaseJubaoVideoWarningModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PenguinChaseJubaoVideoWarningModel.h; sourceTree = "<group>"; };
+		8A7190D12692F98C004F4953 /* PenguinChaseJubaoVideoWarningModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PenguinChaseJubaoVideoWarningModel.m; sourceTree = "<group>"; };
+		8A7190D22692F98C004F4953 /* PenguinChaseJubaoLitsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PenguinChaseJubaoLitsViewController.m; sourceTree = "<group>"; };
+		8A7190D32692F98C004F4953 /* PenguinChaseVideowarningTabeCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PenguinChaseVideowarningTabeCell.m; sourceTree = "<group>"; };
+		8A7190D42692F98D004F4953 /* PenguinChaseVideowarningTabeCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PenguinChaseVideowarningTabeCell.h; sourceTree = "<group>"; };
+		8A71911A2693008A004F4953 /* PenguinChaseZanComentViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PenguinChaseZanComentViewController.h; sourceTree = "<group>"; };
+		8A71911B2693008A004F4953 /* PenguinChaseZanComentViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PenguinChaseZanComentViewController.m; sourceTree = "<group>"; };
+		8A7191282693037A004F4953 /* PenguinChaseVideoNotiCationTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PenguinChaseVideoNotiCationTableViewCell.m; sourceTree = "<group>"; };
+		8A7191292693037A004F4953 /* PenguinChaseNotifiCationDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PenguinChaseNotifiCationDetailViewController.h; sourceTree = "<group>"; };
+		8A71912A2693037A004F4953 /* PenguinChaseVideoNotiCationTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PenguinChaseVideoNotiCationTableViewCell.h; sourceTree = "<group>"; };
+		8A71912B2693037A004F4953 /* PenguinChaseNotifiCationDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PenguinChaseNotifiCationDetailViewController.m; sourceTree = "<group>"; };
+		8A71912C2693037B004F4953 /* PenguinChaseNotificationViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PenguinChaseNotificationViewController.h; sourceTree = "<group>"; };
+		8A71912D2693037B004F4953 /* PenguinChaseNotificationViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PenguinChaseNotificationViewController.m; sourceTree = "<group>"; };
+		8A71913D26930681004F4953 /* PenguinCenterListTableViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PenguinCenterListTableViewCell.h; sourceTree = "<group>"; };
+		8A71913E26930681004F4953 /* PenguinCenterListTableViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PenguinCenterListTableViewCell.m; sourceTree = "<group>"; };
+		8A719143269306A7004F4953 /* PenguinCenterHeaderView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PenguinCenterHeaderView.h; sourceTree = "<group>"; };
+		8A719144269306A7004F4953 /* PenguinCenterHeaderView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PenguinCenterHeaderView.m; sourceTree = "<group>"; };
 		C308773FEE156DB137E3421E /* Pods-PenguinChase.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PenguinChase.release.xcconfig"; path = "Target Support Files/Pods-PenguinChase/Pods-PenguinChase.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -367,10 +447,96 @@
 		8A51555D268C6E70001F5D52 /* PenguinChae_Dongtai */ = {
 			isa = PBXGroup;
 			children = (
+				8A71911926930061004F4953 /* PenguinCase_ZanAndComent */,
+				8A7190CE2692F887004F4953 /* PenguinCase_JubaoList */,
+				8A7190BE2692E05F004F4953 /* PenguinCase_ComentList */,
+				8A7190A326929539004F4953 /* PenguinCase_GoodVideoHeaderView.h */,
+				8A7190A426929539004F4953 /* PenguinCase_GoodVideoHeaderView.m */,
 				8A51555E268C6EB5001F5D52 /* PenguinChaseDongtaiViewController.h */,
 				8A51555F268C6EB5001F5D52 /* PenguinChaseDongtaiViewController.m */,
+				8A7190AC2692AFAF004F4953 /* PenguinChaseDongtaiTableViewCell.h */,
+				8A7190AD2692AFAF004F4953 /* PenguinChaseDongtaiTableViewCell.m */,
+				8A7190B22692DAF6004F4953 /* PenguinChaseDongtaiCollectionViewCell.h */,
+				8A7190B32692DAF6004F4953 /* PenguinChaseDongtaiCollectionViewCell.m */,
+				8A7190B82692DCBD004F4953 /* PenguinChaseDongtaiBtn.h */,
+				8A7190B92692DCBD004F4953 /* PenguinChaseDongtaiBtn.m */,
 			);
 			path = PenguinChae_Dongtai;
+			sourceTree = "<group>";
+		};
+		8A59702E26942E2D006D3675 /* PenguinChase_search */ = {
+			isa = PBXGroup;
+			children = (
+				8A59702F26942E43006D3675 /* PenguinChaseSearchingViewController.h */,
+				8A59703026942E43006D3675 /* PenguinChaseSearchingViewController.m */,
+			);
+			path = PenguinChase_search;
+			sourceTree = "<group>";
+		};
+		8A59714026944F16006D3675 /* PenguinChase_SugestionVc */ = {
+			isa = PBXGroup;
+			children = (
+				8A59714126944F63006D3675 /* PenguinChaseSugestionViewController.h */,
+				8A59714226944F63006D3675 /* PenguinChaseSugestionViewController.m */,
+				8A59714726944F95006D3675 /* PenguinChaseAdviceCollectionCell.h */,
+				8A59714826944F95006D3675 /* PenguinChaseAdviceCollectionCell.m */,
+			);
+			path = PenguinChase_SugestionVc;
+			sourceTree = "<group>";
+		};
+		8A59715026945708006D3675 /* PenguinChase_aboutus */ = {
+			isa = PBXGroup;
+			children = (
+				8A59715126945717006D3675 /* PenguinaboutUsViewController.h */,
+				8A59715226945717006D3675 /* PenguinaboutUsViewController.m */,
+				8A59715A2694574F006D3675 /* PenguinAbout.html */,
+			);
+			path = PenguinChase_aboutus;
+			sourceTree = "<group>";
+		};
+		8A59716226945A4A006D3675 /* PenguinChase_MyFaloow */ = {
+			isa = PBXGroup;
+			children = (
+				8A59716326945A64006D3675 /* PenguinChaseMyFallowViewController.h */,
+				8A59716426945A64006D3675 /* PenguinChaseMyFallowViewController.m */,
+			);
+			path = PenguinChase_MyFaloow;
+			sourceTree = "<group>";
+		};
+		8A59716C26945B29006D3675 /* PenguinChase_Watched */ = {
+			isa = PBXGroup;
+			children = (
+				8A59716D26945B39006D3675 /* PengUinChaseWatchedViewController.h */,
+				8A59716E26945B39006D3675 /* PengUinChaseWatchedViewController.m */,
+			);
+			path = PenguinChase_Watched;
+			sourceTree = "<group>";
+		};
+		8A59717626945B69006D3675 /* PenguinChase_Send */ = {
+			isa = PBXGroup;
+			children = (
+				8A59717726945B74006D3675 /* PenguinChase_MySendViewController.h */,
+				8A59717826945B74006D3675 /* PenguinChase_MySendViewController.m */,
+			);
+			path = PenguinChase_Send;
+			sourceTree = "<group>";
+		};
+		8A59718026945BA6006D3675 /* PenguinChase_Mycolltecd */ = {
+			isa = PBXGroup;
+			children = (
+				8A59718126945BB6006D3675 /* PenginChaseMyColltecdViewController.h */,
+				8A59718226945BB6006D3675 /* PenginChaseMyColltecdViewController.m */,
+			);
+			path = PenguinChase_Mycolltecd;
+			sourceTree = "<group>";
+		};
+		8A59718A26945BDF006D3675 /* PenguinChase_info */ = {
+			isa = PBXGroup;
+			children = (
+				8A59718B26945BEE006D3675 /* PenguinChase_MyInfoViewController.h */,
+				8A59718C26945BEE006D3675 /* PenguinChase_MyInfoViewController.m */,
+			);
+			path = PenguinChase_info;
 			sourceTree = "<group>";
 		};
 		8A5ABBDC2689CC8D00DF1108 /* PenguinChase_untils */ = {
@@ -425,6 +591,7 @@
 		8A5ABC022689CDD500DF1108 /* PenguinChase_hom */ = {
 			isa = PBXGroup;
 			children = (
+				8A59702E26942E2D006D3675 /* PenguinChase_search */,
 				4A25565226904E2100033DFD /* PenguinChase_GoodVideo */,
 				4A2556482690214800033DFD /* PenginChase_Bangdan */,
 				4A25563E26900CD600033DFD /* PenguinChase_kefu */,
@@ -464,6 +631,7 @@
 		8A5ABC042689CDF800DF1108 /* PenguinChase_msg */ = {
 			isa = PBXGroup;
 			children = (
+				8A7191272693036C004F4953 /* PenguinChase_systemMessage */,
 				8A5ABC412689D1CF00DF1108 /* PenguinChaseMessageViewController.h */,
 				8A5ABC422689D1CF00DF1108 /* PenguinChaseMessageViewController.m */,
 				8A5154AE268C0111001F5D52 /* PenguinChaseMessageTableViewCell.h */,
@@ -481,6 +649,8 @@
 			children = (
 				8A5ABC502689D22000DF1108 /* PenguinChaseFabuViewController.h */,
 				8A5ABC512689D22000DF1108 /* PenguinChaseFabuViewController.m */,
+				8A59719526945CB1006D3675 /* PenguinhaseSendZoneCollectionCell.h */,
+				8A59719426945CB1006D3675 /* PenguinhaseSendZoneCollectionCell.m */,
 			);
 			path = PenguinChase_fabu;
 			sourceTree = "<group>";
@@ -488,8 +658,21 @@
 		8A5ABC062689CE1500DF1108 /* PenguinChase_center */ = {
 			isa = PBXGroup;
 			children = (
+				8A59718A26945BDF006D3675 /* PenguinChase_info */,
+				8A59718026945BA6006D3675 /* PenguinChase_Mycolltecd */,
+				8A59717626945B69006D3675 /* PenguinChase_Send */,
+				8A59716C26945B29006D3675 /* PenguinChase_Watched */,
+				8A59716226945A4A006D3675 /* PenguinChase_MyFaloow */,
+				8A59715026945708006D3675 /* PenguinChase_aboutus */,
+				8A59714026944F16006D3675 /* PenguinChase_SugestionVc */,
 				8A5ABC4A2689D1F500DF1108 /* PenguinChaseCenterViewController.h */,
 				8A5ABC4B2689D1F500DF1108 /* PenguinChaseCenterViewController.m */,
+				8A71913D26930681004F4953 /* PenguinCenterListTableViewCell.h */,
+				8A71913E26930681004F4953 /* PenguinCenterListTableViewCell.m */,
+				8A719143269306A7004F4953 /* PenguinCenterHeaderView.h */,
+				8A719144269306A7004F4953 /* PenguinCenterHeaderView.m */,
+				8A5970FB26943E95006D3675 /* PenguinCenterBtn.h */,
+				8A5970FC26943E95006D3675 /* PenguinCenterBtn.m */,
 			);
 			path = PenguinChase_center;
 			sourceTree = "<group>";
@@ -527,6 +710,52 @@
 				8A5ABC652689D26B00DF1108 /* PenguinChaseLoginTool.m */,
 			);
 			path = PenguinChase_LoginModel;
+			sourceTree = "<group>";
+		};
+		8A7190BE2692E05F004F4953 /* PenguinCase_ComentList */ = {
+			isa = PBXGroup;
+			children = (
+				8A7190BF2692E088004F4953 /* PenguinChaseComentListViewController.h */,
+				8A7190C02692E088004F4953 /* PenguinChaseComentListViewController.m */,
+				8A7190C82692E1BC004F4953 /* PenguinChaseComentListTableViewCell.h */,
+				8A7190C92692E1BC004F4953 /* PenguinChaseComentListTableViewCell.m */,
+			);
+			path = PenguinCase_ComentList;
+			sourceTree = "<group>";
+		};
+		8A7190CE2692F887004F4953 /* PenguinCase_JubaoList */ = {
+			isa = PBXGroup;
+			children = (
+				8A7190CF2692F98C004F4953 /* PenguinChaseJubaoLitsViewController.h */,
+				8A7190D22692F98C004F4953 /* PenguinChaseJubaoLitsViewController.m */,
+				8A7190D02692F98C004F4953 /* PenguinChaseJubaoVideoWarningModel.h */,
+				8A7190D12692F98C004F4953 /* PenguinChaseJubaoVideoWarningModel.m */,
+				8A7190D42692F98D004F4953 /* PenguinChaseVideowarningTabeCell.h */,
+				8A7190D32692F98C004F4953 /* PenguinChaseVideowarningTabeCell.m */,
+			);
+			path = PenguinCase_JubaoList;
+			sourceTree = "<group>";
+		};
+		8A71911926930061004F4953 /* PenguinCase_ZanAndComent */ = {
+			isa = PBXGroup;
+			children = (
+				8A71911A2693008A004F4953 /* PenguinChaseZanComentViewController.h */,
+				8A71911B2693008A004F4953 /* PenguinChaseZanComentViewController.m */,
+			);
+			path = PenguinCase_ZanAndComent;
+			sourceTree = "<group>";
+		};
+		8A7191272693036C004F4953 /* PenguinChase_systemMessage */ = {
+			isa = PBXGroup;
+			children = (
+				8A71912A2693037A004F4953 /* PenguinChaseVideoNotiCationTableViewCell.h */,
+				8A7191282693037A004F4953 /* PenguinChaseVideoNotiCationTableViewCell.m */,
+				8A7191292693037A004F4953 /* PenguinChaseNotifiCationDetailViewController.h */,
+				8A71912B2693037A004F4953 /* PenguinChaseNotifiCationDetailViewController.m */,
+				8A71912C2693037B004F4953 /* PenguinChaseNotificationViewController.h */,
+				8A71912D2693037B004F4953 /* PenguinChaseNotificationViewController.m */,
+			);
+			path = PenguinChase_systemMessage;
 			sourceTree = "<group>";
 		};
 		C67917E0447A3906BEF8CFF5 /* Pods */ = {
@@ -645,6 +874,7 @@
 			files = (
 				8A32A67926845F4A0089F8BC /* LaunchScreen.storyboard in Resources */,
 				8A32A67626845F4A0089F8BC /* Assets.xcassets in Resources */,
+				8A59715B2694574F006D3675 /* PenguinAbout.html in Resources */,
 				8A32A67426845F480089F8BC /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -730,53 +960,79 @@
 			buildActionMask = 2147483647;
 			files = (
 				8A32A67126845F480089F8BC /* ViewController.m in Sources */,
+				8A59715326945717006D3675 /* PenguinaboutUsViewController.m in Sources */,
 				8A5ABC662689D26B00DF1108 /* PenguinChaseLoginTool.m in Sources */,
+				8A71911C2693008A004F4953 /* PenguinChaseZanComentViewController.m in Sources */,
 				4A2556392690039500033DFD /* PenguinChaseVideodetailCollectionViewCell.m in Sources */,
 				8A5ABBF02689CCF400DF1108 /* UITextField+AddPlaceholder.m in Sources */,
 				8A5ABC372689D16C00DF1108 /* PenguinChaseHomeViewController.m in Sources */,
 				8A515559268C5642001F5D52 /* PenguinChaseNewsTableViewCell.m in Sources */,
+				8A59714326944F63006D3675 /* PenguinChaseSugestionViewController.m in Sources */,
 				8A496145268AFAA400CB02DD /* PenguinChaseHomeFooterView.m in Sources */,
 				8A5ABC1F2689CEE100DF1108 /* PenguinChaseBaseTableViewCell.m in Sources */,
+				8A71912E2693037B004F4953 /* PenguinChaseVideoNotiCationTableViewCell.m in Sources */,
 				4A25564B2690215B00033DFD /* PenguinChaseBangdanViewController.m in Sources */,
 				4A25564626900D6000033DFD /* CarpVideoKefuModel.m in Sources */,
+				8A7190D52692F98D004F4953 /* PenguinChaseJubaoVideoWarningModel.m in Sources */,
 				8A5ABBFD2689CD6800DF1108 /* UIColor+CHRegex.m in Sources */,
 				8A5ABC2B2689D12300DF1108 /* CHTabBar.m in Sources */,
+				8A7190AE2692AFAF004F4953 /* PenguinChaseDongtaiTableViewCell.m in Sources */,
 				4A25563C26900B0200033DFD /* PenginChaseVideoDetailTableViewCell.m in Sources */,
+				8A7190BA2692DCBD004F4953 /* PenguinChaseDongtaiBtn.m in Sources */,
+				8A7190A526929539004F4953 /* PenguinCase_GoodVideoHeaderView.m in Sources */,
+				8A59716F26945B39006D3675 /* PengUinChaseWatchedViewController.m in Sources */,
+				8A719145269306A7004F4953 /* PenguinCenterHeaderView.m in Sources */,
+				8A7190D62692F98D004F4953 /* PenguinChaseJubaoLitsViewController.m in Sources */,
 				8A5ABC312689D13A00DF1108 /* CoreAnimationEffect.m in Sources */,
 				8A32A66B26845F480089F8BC /* AppDelegate.m in Sources */,
+				8A71912F2693037B004F4953 /* PenguinChaseNotifiCationDetailViewController.m in Sources */,
+				8A7190B42692DAF6004F4953 /* PenguinChaseDongtaiCollectionViewCell.m in Sources */,
 				8A32A67C26845F4A0089F8BC /* main.m in Sources */,
 				4A25564126900CF300033DFD /* PenguinChaseKefuViewController.m in Sources */,
+				8A59717926945B74006D3675 /* PenguinChase_MySendViewController.m in Sources */,
 				8A5ABC6F2689D2BF00DF1108 /* NSString+CHRegex.m in Sources */,
+				8A7190D72692F98D004F4953 /* PenguinChaseVideowarningTabeCell.m in Sources */,
+				8A7190C12692E088004F4953 /* PenguinChaseComentListViewController.m in Sources */,
 				8A5ABC4C2689D1F500DF1108 /* PenguinChaseCenterViewController.m in Sources */,
 				8A4960F4268AAAEF00CB02DD /* JRWaterFallLayout.m in Sources */,
 				4A255636268FF78600033DFD /* PenguinChaseVideoDetailHeader.m in Sources */,
 				8A5ABC252689CF3B00DF1108 /* PenguinChaseBaseCollectionViewCell.m in Sources */,
 				8A5ABC3D2689D18600DF1108 /* PenguinChaseHuatiViewController.m in Sources */,
+				8A59719626945CB1006D3675 /* PenguinhaseSendZoneCollectionCell.m in Sources */,
 				8A49613F268AC9F100CB02DD /* PenguinChaseHomeTableViewCell.m in Sources */,
 				8A5ABC522689D22000DF1108 /* PenguinChaseFabuViewController.m in Sources */,
 				8A5ABBF42689CCF400DF1108 /* UIView+ACSLayer.m in Sources */,
 				8A5ABBF52689CCF400DF1108 /* LMJHorizontalScrollText.m in Sources */,
 				8A5ABC192689CEC300DF1108 /* PenguinChaseListViewController.m in Sources */,
+				8A59718D26945BEE006D3675 /* PenguinChase_MyInfoViewController.m in Sources */,
+				8A7191302693037B004F4953 /* PenguinChaseNotificationViewController.m in Sources */,
 				8A5154B0268C0111001F5D52 /* PenguinChaseMessageTableViewCell.m in Sources */,
 				8A515560268C6EB5001F5D52 /* PenguinChaseDongtaiViewController.m in Sources */,
 				8A5ABC432689D1CF00DF1108 /* PenguinChaseMessageViewController.m in Sources */,
+				8A59718326945BB6006D3675 /* PenginChaseMyColltecdViewController.m in Sources */,
 				4A255633268FF6E500033DFD /* PenguinChaseVideoDetailViewController.m in Sources */,
 				8A5154BF268C3D1A001F5D52 /* PenguinsystemMessageModel.m in Sources */,
+				8A5970FD26943E95006D3675 /* PenguinCenterBtn.m in Sources */,
+				8A59716526945A64006D3675 /* PenguinChaseMyFallowViewController.m in Sources */,
 				4A25564E2690233700033DFD /* PenguinChaseBangdanTableViewCell.m in Sources */,
 				8A496163268B22D600CB02DD /* PenguinHuatiRigthTableViewCell.m in Sources */,
 				8A5ABC0A2689CE6900DF1108 /* PenguinChase_BaseTabbarViewController.m in Sources */,
 				4A2556512690460A00033DFD /* PenguinChaseWantBtn.m in Sources */,
 				8A5154C5268C4171001F5D52 /* PenguinChasesystemMessageTableViewCell.m in Sources */,
+				8A71913F26930681004F4953 /* PenguinCenterListTableViewCell.m in Sources */,
 				4A25564726900D6000033DFD /* CarpVideoKefuTableViewCell.m in Sources */,
 				8A4960EE268AA91400CB02DD /* PenguinChaseHomHeaderView.m in Sources */,
 				8A496154268B177700CB02DD /* PenguinChaseHuatiSearchView.m in Sources */,
 				8A5ABC5C2689D23E00DF1108 /* PenguinChaseLoginViewController.m in Sources */,
 				8A515550268C5427001F5D52 /* PenguinChaseHomeNewsViewController.m in Sources */,
+				8A7190CA2692E1BC004F4953 /* PenguinChaseComentListTableViewCell.m in Sources */,
+				8A59703126942E43006D3675 /* PenguinChaseSearchingViewController.m in Sources */,
 				4A25565526904E4A00033DFD /* PenguinGoodVideoViewController.m in Sources */,
 				8A5ABBF72689CCF400DF1108 /* UIView+HZXFrame.m in Sources */,
 				8A5ABBF22689CCF400DF1108 /* WWStarView.m in Sources */,
 				8A5ABBF12689CCF400DF1108 /* UIView+shadowPath.m in Sources */,
 				8A5ABBF32689CCF400DF1108 /* UIViewController+IOS13.m in Sources */,
+				8A59714926944F95006D3675 /* PenguinChaseAdviceCollectionCell.m in Sources */,
 				8A5ABBF62689CCF400DF1108 /* UILabel+CDGPSpaceLb.m in Sources */,
 				8A496136268ABBA600CB02DD /* PenguinChaseVideoMessageBtn.m in Sources */,
 				8A49614B268B006A00CB02DD /* PenguinChaseHomeCollectionViewCell.m in Sources */,

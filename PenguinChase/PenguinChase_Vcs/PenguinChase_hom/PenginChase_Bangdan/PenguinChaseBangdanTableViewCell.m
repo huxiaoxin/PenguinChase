@@ -73,7 +73,7 @@
         make.right.mas_equalTo(-RealWidth(15));
     }];
     [_wantBtn mas_makeConstraints:^(MASConstraintMaker *make) {
-        make.centerY.mas_equalTo(_starView.mas_centerY).offset(-RealWidth(5));
+        make.centerY.mas_equalTo(_starView.mas_centerY).offset(-RealWidth(10));
         make.right.mas_equalTo(-RealWidth(15));
         make.bottom.mas_equalTo(_wantBtn.PenguinBtomlb.mas_bottom);
     }];
