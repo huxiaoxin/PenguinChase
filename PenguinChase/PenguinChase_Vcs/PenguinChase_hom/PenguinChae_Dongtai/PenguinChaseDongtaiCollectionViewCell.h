@@ -10,6 +10,7 @@
 NS_ASSUME_NONNULL_BEGIN
 
 @interface PenguinChaseDongtaiCollectionViewCell : PenguinChaseBaseCollectionViewCell
+@property(nonatomic,strong) UIImageView * penguinPhotoImgView;
 
 @end
 

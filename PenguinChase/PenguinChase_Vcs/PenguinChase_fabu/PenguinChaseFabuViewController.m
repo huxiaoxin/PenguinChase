@@ -126,7 +126,7 @@
     PenguinChasePhotoVc.configuration.maxCount = 5;
     PenguinChasePhotoVc.configuration.containVideo = false;
     PenguinChasePhotoVc.photo_delegate = self;
-    [self presentViewController:PenguinChasePhotoVc animated:true completion:^{}];
+    [self presentViewController:PenguinChasePhotoVc  animated:true completion:^{}];
 }
 
 #pragma mark--发布

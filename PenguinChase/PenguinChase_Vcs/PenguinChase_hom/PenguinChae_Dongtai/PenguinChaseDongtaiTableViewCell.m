@@ -8,6 +8,7 @@
 #import "PenguinChaseDongtaiTableViewCell.h"
 #import "PenguinChaseDongtaiCollectionViewCell.h"
 #import "PenguinChaseDongtaiBtn.h"
+#import <GKPhotoBrowser.h>
 @interface PenguinChaseDongtaiTableViewCell ()<UICollectionViewDelegate,UICollectionViewDataSource>
 @property(nonatomic,strong) UIImageView * PenguinChaseThubimgView;
 @property(nonatomic,strong) UILabel     * PenguinChaseNamelb;
@@ -99,6 +100,11 @@
         _PenguinChaseThubimgView.layer.cornerRadius = RealWidth(20);
         _PenguinChaseThubimgView.layer.masksToBounds = YES;
         _PenguinChaseThubimgView.backgroundColor = LGDMianColor;
+        _PenguinChaseThubimgView.userInteractionEnabled = YES;
+        
+        UITapGestureRecognizer * PenguinInfoTap = [[UITapGestureRecognizer alloc]initWithTarget:self action:@selector(PenguinChaseThubimgViewClick)];
+        [_PenguinChaseThubimgView addGestureRecognizer:PenguinInfoTap];
+        
     }
     return _PenguinChaseThubimgView;
 }
@@ -164,13 +170,26 @@
     return _PenguinBtomline;
 }
 - (NSInteger)collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section{
-    return 3;
+    return _pengModel.imgArr.count;
 }
 
 // The cell that is returned must be retrieved from a call to -dequeueReusableCellWithReuseIdentifier:forIndexPath:
 - (__kindof UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath{
     PenguinChaseDongtaiCollectionViewCell * PenguinPhotoCell = [PenguinChaseDongtaiCollectionViewCell PenguinChasecreatTheCollectView:collectionView AndTheIndexPath:indexPath];
+    [PenguinPhotoCell.penguinPhotoImgView sd_setImageWithURL:[NSURL URLWithString:_pengModel.imgArr[indexPath.row]] placeholderImage:[UIImage imageNamed:@"zhanweitu"]];
     return PenguinPhotoCell;
+}
+-(void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath{
+    NSMutableArray *photos = [NSMutableArray new];
+    [_pengModel.imgArr enumerateObjectsUsingBlock:^(id  _Nonnull obj, NSUInteger idx, BOOL * _Nonnull stop) {
+       GKPhoto *photo = [GKPhoto new];
+       photo.url = [NSURL URLWithString:obj];
+       [photos addObject:photo];
+    }];
+    GKPhotoBrowser *browser = [GKPhotoBrowser photoBrowserWithPhotos:photos currentIndex:indexPath.row];
+    browser.showStyle = GKPhotoBrowserShowStyleNone;
+    [browser showFromVC:[AppDelegate shareDelegate].window.rootViewController.gk_visibleViewControllerIfExist];
+
 }
 - (PenguinChaseDongtaiBtn *)PenguinJubaoBtn{
     if (!_PenguinJubaoBtn) {
@@ -208,6 +227,39 @@
 
 -(void)PenguinJubaoBtnClick:(PenguinChaseDongtaiBtn * )dongtaiBtn{
     [self.delegate PenguinChaseDongtaiTableViewCellWithBtnActionIndex:dongtaiBtn.tag CellIndex:self.tag];
+}
+- (void)setPengModel:(PenguinChaseDongtaiModel *)pengModel{
+    _pengModel = pengModel;
+    [_PenguinChaseThubimgView sd_setImageWithURL:[NSURL URLWithString:pengModel.headerImgurl] placeholderImage:[UIImage imageNamed:@"zhanweitu"]];
+    _PenguinChaseNamelb.text = pengModel.userName;
+    _PenguinTimelb.text =  pengModel.time;
+    
+    if (pengModel.userLevel == 0) {
+        _PenguinChaseTaglb.hidden = YES;
+    }else if (pengModel.userLevel == 1){
+        _PenguinChaseTaglb.hidden = NO;
+        _PenguinChaseTaglb.text = @"新手用户";
+        _PenguinChaseTaglb.backgroundColor = LGDBlueColor;
+
+    }else{
+        _PenguinChaseTaglb.hidden = NO;
+        _PenguinChaseTaglb.text = @"老司机";
+        _PenguinChaseTaglb.backgroundColor = LGDMianColor;
+
+    }
+    [_PenguinContentlb setText:pengModel.content lineSpacing:1.5];
+    
+    [_PenguinCollectionView reloadData];
+//    if (pengModel.CellHeight == 0) {
+        [self setNeedsLayout];
+        [self layoutIfNeeded];
+        pengModel.CellHeight = CGRectGetMaxY(_PenguinBtomline.frame);
+//    }
+    
+    
+}
+-(void)PenguinChaseThubimgViewClick{
+    [self.delegate PenguinChaseDongtaiTableViewCellWithChatCellIndex:self.tag];
 }
 - (void)awakeFromNib {
     [super awakeFromNib];

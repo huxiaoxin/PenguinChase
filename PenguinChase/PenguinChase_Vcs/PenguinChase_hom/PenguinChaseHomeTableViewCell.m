@@ -151,6 +151,20 @@
 -(void)watchBtnClick{
     
 }
+- (void)setPenguinModel:(PenguinChaseVideoModel *)penguinModel{
+    _penguinModel = penguinModel;
+    [_PenguinThubImgView sd_setImageWithURL:[NSURL URLWithString:penguinModel.penguinChase_MoviewIocnurl] placeholderImage:[UIImage imageNamed:@"zhanweitu"]];
+    _PenguinTopTitle.text =  penguinModel.penguinChase_MoviewTitle;
+    NSMutableArray * tempArr = [NSMutableArray array];
+    for (NSDictionary * parmtwrDic in penguinModel.penguinChase_MoviewArtistArr) {
+        NSString * ArtiText  = [parmtwrDic objectForKey:@"title"];
+        [tempArr addObject:ArtiText];
+    }
+    _PenguinChaseMainArtistlb.text =  [tempArr componentsJoinedByString:@"|"];
+    _PenguinTimelb.text = penguinModel.penguinChase_MoviewTime;
+    
+    
+}
 - (void)awakeFromNib {
     [super awakeFromNib];
     // Initialization code

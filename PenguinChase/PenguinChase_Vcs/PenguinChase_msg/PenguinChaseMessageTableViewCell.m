@@ -68,7 +68,7 @@
 - (UIImageView *)PenguinMessageThubImgIcon{
     if (!_PenguinMessageThubImgIcon) {
         _PenguinMessageThubImgIcon = [UIImageView new];
-        _PenguinMessageThubImgIcon.backgroundColor = LGDMianColor;
+//        _PenguinMessageThubImgIcon.backgroundColor = LGDMianColor;
         _PenguinMessageThubImgIcon.layer.cornerRadius = RealWidth(20);
         _PenguinMessageThubImgIcon.layer.masksToBounds = YES;
     }
@@ -111,6 +111,20 @@
         _PenguinRedNumslb.layer.masksToBounds = YES;
     }
     return _PenguinRedNumslb;
+}
+- (void)setPenglistModel:(PenguinChatMessageListModel *)penglistModel{
+    _penglistModel = penglistModel;
+    
+    [_PenguinMessageThubImgIcon sd_setImageWithURL:[NSURL URLWithString:penglistModel.headerimgurl]];
+    _PenguinMessageToplb.text = penglistModel.username;
+    _PenguinMessageBtomlb.text = penglistModel.Content;
+    _PenguinMessageTimelb.text = penglistModel.time;
+    if (penglistModel.msgNum == 0) {
+        _PenguinRedNumslb.hidden= YES;
+    }else{
+        _PenguinRedNumslb.hidden = NO;
+        _PenguinRedNumslb.text = [NSString stringWithFormat:@"%ld",penglistModel.msgNum];
+    }
 }
 - (void)awakeFromNib {
     [super awakeFromNib];

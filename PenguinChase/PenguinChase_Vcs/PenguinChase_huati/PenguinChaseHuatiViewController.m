@@ -11,15 +11,22 @@
 #import "PenguinHuatiRigthTableViewCell.h"
 #import "PenguinChaseSearchingViewController.h"
 #import <PYSearch-umbrella.h>
+#import "PenguinHuatiLeftMoel.h"
 @interface PenguinChaseHuatiViewController ()<UITableViewDelegate,UITableViewDataSource,PYSearchViewControllerDelegate>
 @property(nonatomic,strong) PenguinChaseHuatiSearchView * PenguinChase_SearchView;
 @property(nonatomic,strong) UITableView * PenguinSearchLeftTableView;
 @property(nonatomic,strong) UITableView * PenguinSearchRightTableiew;
 @property(nonatomic,strong) UIView      * PenguinVerticline;
+@property(nonatomic,strong) NSMutableArray * PenguinLeftDataArr;
 @end
 
 @implementation PenguinChaseHuatiViewController
-
+- (NSMutableArray *)PenguinLeftDataArr{
+    if (!_PenguinLeftDataArr) {
+        _PenguinLeftDataArr = [NSMutableArray array];
+    }
+    return _PenguinLeftDataArr;
+}
 - (void)viewDidLoad {
     [super viewDidLoad];
     self.gk_navTitle = @"全部分类";
@@ -29,7 +36,32 @@
     [self.view addSubview:self.PenguinVerticline];
     [self.view addSubview:self.PenguinSearchRightTableiew];
 
+    
+    [LCProgressHUD showLoading:@""];
+    dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(0.4 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+        [LCProgressHUD hide];
+        NSArray * leftDataArr = [WHC_ModelSqlite query:[PenguinHuatiLeftMoel class]];
+        if (self.PenguinLeftDataArr.count > 0) {
+            [self.PenguinLeftDataArr removeAllObjects];
+        }
+        self.PenguinLeftDataArr = leftDataArr.mutableCopy;
+        [self.PenguinSearchLeftTableView reloadData];
+    });
+    
     // Do any additional setup after loading the view.
+}
+-(void)PenguinSearcleftHeaderCloikcs{
+
+    
+    dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(0.3 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+        NSArray * leftDataArr = [WHC_ModelSqlite query:[PenguinHuatiLeftMoel class]];
+        if (self.PenguinLeftDataArr.count > 0) {
+            [self.PenguinLeftDataArr removeAllObjects];
+        }
+        self.PenguinLeftDataArr = leftDataArr.mutableCopy;
+        [self.PenguinSearchLeftTableView reloadData];
+        [self.PenguinSearchLeftTableView.mj_header endRefreshing];
+    });
 }
 - (UITableView *)PenguinSearchLeftTableView{
     if (!_PenguinSearchLeftTableView) {
@@ -40,6 +72,7 @@
         _PenguinSearchLeftTableView.separatorStyle = UITableViewCellSelectionStyleNone;
         _PenguinSearchLeftTableView.delegate = self;
         _PenguinSearchLeftTableView.dataSource = self;
+        _PenguinSearchLeftTableView.mj_header =[MJRefreshNormalHeader headerWithRefreshingTarget:self refreshingAction:@selector(PenguinSearcleftHeaderCloikcs)];
     }
     return _PenguinSearchLeftTableView;
 }
@@ -109,11 +142,15 @@
     
 }
 -(NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section{
+    if (tableView == self.PenguinSearchLeftTableView) {
+        return self.PenguinLeftDataArr.count;
+    }
     return 8;
 }
 -(UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
     if (tableView == self.PenguinSearchLeftTableView) {
         PenguinHuatileftTableViewCell * penguinSearchCell = [PenguinHuatileftTableViewCell PenguinChasecreateCellWithTheTableView:tableView AndTheIndexPath:indexPath];
+        penguinSearchCell.pengModel = self.PenguinLeftDataArr[indexPath.row];
         return penguinSearchCell;
     }else{
         PenguinHuatiRigthTableViewCell * penguinRightCell = [PenguinHuatiRigthTableViewCell PenguinChasecreateCellWithTheTableView:tableView AndTheIndexPath:indexPath];
@@ -122,6 +159,14 @@
 
 }
 -(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
+    if (tableView  == self.PenguinSearchLeftTableView) {
+        for (PenguinHuatiLeftMoel * model in self.PenguinLeftDataArr) {
+            model.isSeltecd = NO;
+        }
+        PenguinHuatiLeftMoel * pengModel = self.PenguinLeftDataArr[indexPath.row];
+        pengModel.isSeltecd = YES;
+        [self.PenguinSearchLeftTableView reloadData];
+    }
 }
 -(CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath{
     if (tableView == self.PenguinSearchLeftTableView) {

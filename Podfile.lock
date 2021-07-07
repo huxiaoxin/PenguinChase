@@ -282,6 +282,7 @@ PODS:
     - SJBaseVideoPlayer (>= 3.6.0)
   - SPPageMenu (3.5.0)
   - SVProgressHUD (2.2.5)
+  - UICountingLabel (1.4.1)
   - "UIImage+ImageWithColor (1.4.0)"
   - UMCommon (7.2.9):
     - UMDevice
@@ -354,6 +355,7 @@ DEPENDENCIES:
   - SJVideoPlayer
   - SPPageMenu (~> 3.5.0)
   - SVProgressHUD (~> 2.2.5)
+  - UICountingLabel (~> 1.4.1)
   - "UIImage+ImageWithColor"
   - UMCommon
   - UMCSecurityPlugins
@@ -405,6 +407,7 @@ SPEC REPOS:
     - SJVideoPlayer
     - SPPageMenu
     - SVProgressHUD
+    - UICountingLabel
     - "UIImage+ImageWithColor"
     - UMCommon
     - UMCSecurityPlugins
@@ -464,6 +467,7 @@ SPEC CHECKSUMS:
   SJVideoPlayer: 3a271ff92c7b9d611c537655fd1edcbae18b8587
   SPPageMenu: da182aafcec55719d5c326103cc7716c1e48f311
   SVProgressHUD: 1428aafac632c1f86f62aa4243ec12008d7a51d6
+  UICountingLabel: faf890b505d96312e324a86718f031fafffb0ccb
   "UIImage+ImageWithColor": 891401f732f2f332fefe68c2332c6c955c2a879c
   UMCommon: 28a05184e0766ea2c015ce9c56963356a38f9b1b
   UMCSecurityPlugins: 0831a08f3988f3cea9f1d3a7626cd9bee4fef150
@@ -481,6 +485,6 @@ SPEC CHECKSUMS:
   ZWLimitCounter: 382d8a4f063980f18022749672b89e0558087007
   ZWPlaceHolder: d55cce10c9930b48c31bf48e7f4748974a31f7e0
 
-PODFILE CHECKSUM: 5873431c061b7f862bb4db4b676c13da49c92e33
+PODFILE CHECKSUM: 517de3e1377e9ab66a8a1d847fa15460147377e3
 
 COCOAPODS: 1.10.1

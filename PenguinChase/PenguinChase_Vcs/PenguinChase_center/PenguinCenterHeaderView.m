@@ -21,10 +21,11 @@
 @implementation PenguinCenterHeaderView
 -(instancetype)initWithFrame:(CGRect)frame{
     if (self = [super initWithFrame:frame]) {
+//        self.backgroundColor = LGDMianColor;
         [self addSubview:self.penguinBackImgView];
         [_penguinBackImgView addSubview:self.PenguinuserimgView];
         [_penguinBackImgView addSubview:self.PenguinNamelb];
-        [_penguinBackImgView addSubview:self.PenguinContentView];
+        [self addSubview:self.PenguinContentView];
         
         [_PenguinContentView addSubview:self.MyFolwwbtn];
         [_PenguinContentView addSubview:self.MyWatchBtn];
@@ -158,6 +159,7 @@
     if (!_penguinBackImgView) {
         _penguinBackImgView = [UIImageView new];
         _penguinBackImgView.image = [UIImage imageNamed:@"centerback"];
+        _penguinBackImgView.userInteractionEnabled = YES;
     }
     return _penguinBackImgView;
 }
@@ -176,6 +178,7 @@
         _PenguinContentView = [UIView new];
         _PenguinContentView.layer.cornerRadius = RealWidth(5);
 //        _PenguinContentView.layer.masksToBounds = YES;
+        _PenguinContentView.userInteractionEnabled = YES;
         [_PenguinContentView setBackgroundColor:[UIColor whiteColor]];
     }
     return _PenguinContentView;

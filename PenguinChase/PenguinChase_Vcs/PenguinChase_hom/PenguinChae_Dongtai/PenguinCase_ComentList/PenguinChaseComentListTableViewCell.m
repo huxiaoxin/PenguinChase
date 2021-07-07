@@ -68,7 +68,6 @@
         _PenguinThubImgView = [UIImageView new];
         _PenguinThubImgView.layer.cornerRadius =RealWidth(18);
         _PenguinThubImgView.layer.masksToBounds = YES;
-        _PenguinThubImgView.backgroundColor = LGDMianColor;
     }
     return _PenguinThubImgView;
 }
@@ -106,12 +105,13 @@
         _penguinJubaoBtn = [UIButton buttonWithType:UIButtonTypeCustom];
         [_penguinJubaoBtn setBackgroundColor:[UIColor colorWithHexString:@"FCB211" Alpha:0.5]];
         _penguinJubaoBtn.layer.cornerRadius = RealWidth(5);
+        _penguinJubaoBtn.tag = 0;
         _penguinJubaoBtn.layer.masksToBounds = YES;
         [_penguinJubaoBtn setTitle:@"屏蔽" forState:UIControlStateNormal];
         _penguinJubaoBtn.titleLabel.textAlignment = NSTextAlignmentCenter;
         _penguinJubaoBtn.titleLabel.font = [UIFont boldSystemFontOfSize:12];
         [_penguinJubaoBtn setTitleColor:LGDMianColor forState:UIControlStateNormal];
-        [_penguinJubaoBtn addTarget:self action:@selector(penguinJubaoBtnClick) forControlEvents:UIControlEventTouchUpInside];
+        [_penguinJubaoBtn addTarget:self action:@selector(penguinJubaoBtnClick:) forControlEvents:UIControlEventTouchUpInside];
     }
     return _penguinJubaoBtn;
 }
@@ -121,11 +121,12 @@
         [_PenguinLaheiBtn setBackgroundColor:[UIColor colorWithHexString:@"20C826" Alpha:0.5]];
         _PenguinLaheiBtn.layer.cornerRadius = RealWidth(5);
         _PenguinLaheiBtn.layer.masksToBounds = YES;
+        _PenguinLaheiBtn.tag = 1;
         [_PenguinLaheiBtn setTitle:@"举报" forState:UIControlStateNormal];
         _PenguinLaheiBtn.titleLabel.textAlignment = NSTextAlignmentCenter;
         _PenguinLaheiBtn.titleLabel.font = [UIFont boldSystemFontOfSize:12];
         [_PenguinLaheiBtn setTitleColor:[UIColor colorWithHexString:@"20C826"] forState:UIControlStateNormal];
-        [_PenguinLaheiBtn addTarget:self action:@selector(penguinJubaoBtnClick) forControlEvents:UIControlEventTouchUpInside];
+        [_PenguinLaheiBtn addTarget:self action:@selector(penguinJubaoBtnClick:) forControlEvents:UIControlEventTouchUpInside];
     }
     return _PenguinLaheiBtn;
 }
@@ -136,8 +137,23 @@
     }
     return _penguinBtomline;
 }
--(void)penguinJubaoBtnClick{
+- (void)setPenguinModel:(PenguinChaseComentModel *)penguinModel{
+    _penguinModel = penguinModel;
+    [_PenguinThubImgView sd_setImageWithURL:[NSURL URLWithString:penguinModel.headerImgurl]];
+    _PenguinNamelb.text = penguinModel.userName;
+    [_PenguinContentlb setText:penguinModel.content lineSpacing:1.5];
+    if (penguinModel.CellHeight == 0) {
+     
+    }
+
+        [self.contentView setNeedsLayout];
+        [self.contentView layoutIfNeeded];
+        penguinModel.CellHeight = CGRectGetMaxY(self->_penguinBtomline.frame)-RealWidth(0);
+
     
+}
+-(void)penguinJubaoBtnClick:(UIButton *)btn{
+    [self.delegate PenguinChaseComentListTableViewCellWithbtnClikcIndex:btn.tag cellIndex:self.tag];
 }
 - (void)awakeFromNib {
     [super awakeFromNib];

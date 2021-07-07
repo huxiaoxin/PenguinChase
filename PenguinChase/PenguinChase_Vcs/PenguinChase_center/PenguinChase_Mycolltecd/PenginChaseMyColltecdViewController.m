@@ -6,7 +6,7 @@
 //
 
 #import "PenginChaseMyColltecdViewController.h"
-
+#import "PenguinChaseHomeTableViewCell.h"
 @interface PenginChaseMyColltecdViewController ()
 
 @end
@@ -15,9 +15,19 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    self.gk_navTitle = @"我的收藏";
     // Do any additional setup after loading the view.
 }
-
+-(NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section{
+    return 10;
+}
+-(UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
+    PenguinChaseHomeTableViewCell * PenguinCell = [PenguinChaseHomeTableViewCell PenguinChasecreateCellWithTheTableView:tableView AndTheIndexPath:indexPath];
+    return PenguinCell;
+}
+-(CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath{
+    return RealWidth(120);
+}
 /*
 #pragma mark - Navigation
 

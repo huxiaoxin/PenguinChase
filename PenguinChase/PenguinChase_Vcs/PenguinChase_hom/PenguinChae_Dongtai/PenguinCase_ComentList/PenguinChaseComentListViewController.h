@@ -6,11 +6,11 @@
 //
 
 #import "PenguinChaseListViewController.h"
-
+#import "PenguinChaseDongtaiModel.h"
 NS_ASSUME_NONNULL_BEGIN
 
 @interface PenguinChaseComentListViewController : PenguinChaseListViewController
-
+@property(nonatomic,strong) PenguinChaseDongtaiModel * pengModel;
 @end
 
 NS_ASSUME_NONNULL_END

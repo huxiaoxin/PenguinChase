@@ -12,8 +12,8 @@
 		4A2556392690039500033DFD /* PenguinChaseVideodetailCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 4A2556382690039500033DFD /* PenguinChaseVideodetailCollectionViewCell.m */; };
 		4A25563C26900B0200033DFD /* PenginChaseVideoDetailTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 4A25563B26900B0200033DFD /* PenginChaseVideoDetailTableViewCell.m */; };
 		4A25564126900CF300033DFD /* PenguinChaseKefuViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4A25564026900CF300033DFD /* PenguinChaseKefuViewController.m */; };
-		4A25564626900D6000033DFD /* CarpVideoKefuModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 4A25564326900D6000033DFD /* CarpVideoKefuModel.m */; };
-		4A25564726900D6000033DFD /* CarpVideoKefuTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 4A25564526900D6000033DFD /* CarpVideoKefuTableViewCell.m */; };
+		4A25564626900D6000033DFD /* PenguinChaseKefuModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 4A25564326900D6000033DFD /* PenguinChaseKefuModel.m */; };
+		4A25564726900D6000033DFD /* PenguinChaseKefuTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 4A25564526900D6000033DFD /* PenguinChaseKefuTableViewCell.m */; };
 		4A25564B2690215B00033DFD /* PenguinChaseBangdanViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4A25564A2690215B00033DFD /* PenguinChaseBangdanViewController.m */; };
 		4A25564E2690233700033DFD /* PenguinChaseBangdanTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 4A25564D2690233700033DFD /* PenguinChaseBangdanTableViewCell.m */; };
 		4A2556512690460A00033DFD /* PenguinChaseWantBtn.m in Sources */ = {isa = PBXBuildFile; fileRef = 4A2556502690460A00033DFD /* PenguinChaseWantBtn.m */; };
@@ -92,6 +92,18 @@
 		8A7191302693037B004F4953 /* PenguinChaseNotificationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8A71912D2693037B004F4953 /* PenguinChaseNotificationViewController.m */; };
 		8A71913F26930681004F4953 /* PenguinCenterListTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 8A71913E26930681004F4953 /* PenguinCenterListTableViewCell.m */; };
 		8A719145269306A7004F4953 /* PenguinCenterHeaderView.m in Sources */ = {isa = PBXBuildFile; fileRef = 8A719144269306A7004F4953 /* PenguinCenterHeaderView.m */; };
+		8AF8483126953AE80025CDE3 /* PenguinChaseMyInfoEditViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8AF8482D26953AE70025CDE3 /* PenguinChaseMyInfoEditViewController.m */; };
+		8AF8483226953AE80025CDE3 /* PenguinChaseMyinfoTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 8AF8482E26953AE70025CDE3 /* PenguinChaseMyinfoTableViewCell.m */; };
+		8AF8483E269540DD0025CDE3 /* AppDelegate+PenguinChaseSafeApp.m in Sources */ = {isa = PBXBuildFile; fileRef = 8AF8483D269540DD0025CDE3 /* AppDelegate+PenguinChaseSafeApp.m */; };
+		8AF84844269541110025CDE3 /* PenguinChaseDongtaiModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 8AF84843269541110025CDE3 /* PenguinChaseDongtaiModel.m */; };
+		8AF8484A269543010025CDE3 /* PenguinChaseComentModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 8AF84849269543010025CDE3 /* PenguinChaseComentModel.m */; };
+		8AF8485326956C2F0025CDE3 /* PenguinChatMessageListModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 8AF8485226956C2F0025CDE3 /* PenguinChatMessageListModel.m */; };
+		8AF8485A2695705D0025CDE3 /* PenguinChaseChatDetailToolsView.m in Sources */ = {isa = PBXBuildFile; fileRef = 8AF848592695705D0025CDE3 /* PenguinChaseChatDetailToolsView.m */; };
+		8AF848622695706F0025CDE3 /* PenguinChaseMessageDetailModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 8AF848602695706F0025CDE3 /* PenguinChaseMessageDetailModel.m */; };
+		8AF848632695706F0025CDE3 /* carpVideoMessageDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8AF848612695706F0025CDE3 /* carpVideoMessageDetailViewController.m */; };
+		8AF848AA269580E20025CDE3 /* PenguinChaseVideoModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 8AF848A9269580E20025CDE3 /* PenguinChaseVideoModel.m */; };
+		8AF848B0269584610025CDE3 /* PenguinHuatiLeftMoel.m in Sources */ = {isa = PBXBuildFile; fileRef = 8AF848AF269584610025CDE3 /* PenguinHuatiLeftMoel.m */; };
+		8AF848B626958A180025CDE3 /* PenguinChaseVideoComentModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 8AF848B526958A180025CDE3 /* PenguinChaseVideoComentModel.m */; };
 		F5801DF0489BDCA8E8128039 /* Pods_PenguinChase.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 58ED390224B19FE7011F7049 /* Pods_PenguinChase.framework */; };
 /* End PBXBuildFile section */
 
@@ -124,10 +136,10 @@
 		4A25563B26900B0200033DFD /* PenginChaseVideoDetailTableViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PenginChaseVideoDetailTableViewCell.m; sourceTree = "<group>"; };
 		4A25563F26900CF300033DFD /* PenguinChaseKefuViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PenguinChaseKefuViewController.h; sourceTree = "<group>"; };
 		4A25564026900CF300033DFD /* PenguinChaseKefuViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PenguinChaseKefuViewController.m; sourceTree = "<group>"; };
-		4A25564226900D6000033DFD /* CarpVideoKefuTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CarpVideoKefuTableViewCell.h; sourceTree = "<group>"; };
-		4A25564326900D6000033DFD /* CarpVideoKefuModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CarpVideoKefuModel.m; sourceTree = "<group>"; };
-		4A25564426900D6000033DFD /* CarpVideoKefuModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CarpVideoKefuModel.h; sourceTree = "<group>"; };
-		4A25564526900D6000033DFD /* CarpVideoKefuTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CarpVideoKefuTableViewCell.m; sourceTree = "<group>"; };
+		4A25564226900D6000033DFD /* PenguinChaseKefuTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PenguinChaseKefuTableViewCell.h; sourceTree = "<group>"; };
+		4A25564326900D6000033DFD /* PenguinChaseKefuModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PenguinChaseKefuModel.m; sourceTree = "<group>"; };
+		4A25564426900D6000033DFD /* PenguinChaseKefuModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PenguinChaseKefuModel.h; sourceTree = "<group>"; };
+		4A25564526900D6000033DFD /* PenguinChaseKefuTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PenguinChaseKefuTableViewCell.m; sourceTree = "<group>"; };
 		4A2556492690215B00033DFD /* PenguinChaseBangdanViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PenguinChaseBangdanViewController.h; sourceTree = "<group>"; };
 		4A25564A2690215B00033DFD /* PenguinChaseBangdanViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PenguinChaseBangdanViewController.m; sourceTree = "<group>"; };
 		4A25564C2690233700033DFD /* PenguinChaseBangdanTableViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PenguinChaseBangdanTableViewCell.h; sourceTree = "<group>"; };
@@ -286,6 +298,30 @@
 		8A71913E26930681004F4953 /* PenguinCenterListTableViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PenguinCenterListTableViewCell.m; sourceTree = "<group>"; };
 		8A719143269306A7004F4953 /* PenguinCenterHeaderView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PenguinCenterHeaderView.h; sourceTree = "<group>"; };
 		8A719144269306A7004F4953 /* PenguinCenterHeaderView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PenguinCenterHeaderView.m; sourceTree = "<group>"; };
+		8AF8482D26953AE70025CDE3 /* PenguinChaseMyInfoEditViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PenguinChaseMyInfoEditViewController.m; sourceTree = "<group>"; };
+		8AF8482E26953AE70025CDE3 /* PenguinChaseMyinfoTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PenguinChaseMyinfoTableViewCell.m; sourceTree = "<group>"; };
+		8AF8482F26953AE70025CDE3 /* PenguinChaseMyInfoEditViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PenguinChaseMyInfoEditViewController.h; sourceTree = "<group>"; };
+		8AF8483026953AE80025CDE3 /* PenguinChaseMyinfoTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PenguinChaseMyinfoTableViewCell.h; sourceTree = "<group>"; };
+		8AF8483C269540DD0025CDE3 /* AppDelegate+PenguinChaseSafeApp.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "AppDelegate+PenguinChaseSafeApp.h"; sourceTree = "<group>"; };
+		8AF8483D269540DD0025CDE3 /* AppDelegate+PenguinChaseSafeApp.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "AppDelegate+PenguinChaseSafeApp.m"; sourceTree = "<group>"; };
+		8AF84842269541110025CDE3 /* PenguinChaseDongtaiModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PenguinChaseDongtaiModel.h; sourceTree = "<group>"; };
+		8AF84843269541110025CDE3 /* PenguinChaseDongtaiModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PenguinChaseDongtaiModel.m; sourceTree = "<group>"; };
+		8AF84848269543010025CDE3 /* PenguinChaseComentModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PenguinChaseComentModel.h; sourceTree = "<group>"; };
+		8AF84849269543010025CDE3 /* PenguinChaseComentModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PenguinChaseComentModel.m; sourceTree = "<group>"; };
+		8AF8485126956C2F0025CDE3 /* PenguinChatMessageListModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PenguinChatMessageListModel.h; sourceTree = "<group>"; };
+		8AF8485226956C2F0025CDE3 /* PenguinChatMessageListModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PenguinChatMessageListModel.m; sourceTree = "<group>"; };
+		8AF848582695705D0025CDE3 /* PenguinChaseChatDetailToolsView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PenguinChaseChatDetailToolsView.h; sourceTree = "<group>"; };
+		8AF848592695705D0025CDE3 /* PenguinChaseChatDetailToolsView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PenguinChaseChatDetailToolsView.m; sourceTree = "<group>"; };
+		8AF8485E2695706E0025CDE3 /* PenguinChaseMessageDetailModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PenguinChaseMessageDetailModel.h; sourceTree = "<group>"; };
+		8AF8485F2695706F0025CDE3 /* carpVideoMessageDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = carpVideoMessageDetailViewController.h; sourceTree = "<group>"; };
+		8AF848602695706F0025CDE3 /* PenguinChaseMessageDetailModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PenguinChaseMessageDetailModel.m; sourceTree = "<group>"; };
+		8AF848612695706F0025CDE3 /* carpVideoMessageDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = carpVideoMessageDetailViewController.m; sourceTree = "<group>"; };
+		8AF848A8269580E20025CDE3 /* PenguinChaseVideoModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PenguinChaseVideoModel.h; sourceTree = "<group>"; };
+		8AF848A9269580E20025CDE3 /* PenguinChaseVideoModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PenguinChaseVideoModel.m; sourceTree = "<group>"; };
+		8AF848AE269584610025CDE3 /* PenguinHuatiLeftMoel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PenguinHuatiLeftMoel.h; sourceTree = "<group>"; };
+		8AF848AF269584610025CDE3 /* PenguinHuatiLeftMoel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PenguinHuatiLeftMoel.m; sourceTree = "<group>"; };
+		8AF848B426958A180025CDE3 /* PenguinChaseVideoComentModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PenguinChaseVideoComentModel.h; sourceTree = "<group>"; };
+		8AF848B526958A180025CDE3 /* PenguinChaseVideoComentModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PenguinChaseVideoComentModel.m; sourceTree = "<group>"; };
 		C308773FEE156DB137E3421E /* Pods-PenguinChase.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PenguinChase.release.xcconfig"; path = "Target Support Files/Pods-PenguinChase/Pods-PenguinChase.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -326,6 +362,8 @@
 				4A2556382690039500033DFD /* PenguinChaseVideodetailCollectionViewCell.m */,
 				4A25563A26900B0200033DFD /* PenginChaseVideoDetailTableViewCell.h */,
 				4A25563B26900B0200033DFD /* PenginChaseVideoDetailTableViewCell.m */,
+				8AF848B426958A180025CDE3 /* PenguinChaseVideoComentModel.h */,
+				8AF848B526958A180025CDE3 /* PenguinChaseVideoComentModel.m */,
 			);
 			path = PenguinChase_VideoDetail;
 			sourceTree = "<group>";
@@ -335,10 +373,10 @@
 			children = (
 				4A25563F26900CF300033DFD /* PenguinChaseKefuViewController.h */,
 				4A25564026900CF300033DFD /* PenguinChaseKefuViewController.m */,
-				4A25564426900D6000033DFD /* CarpVideoKefuModel.h */,
-				4A25564326900D6000033DFD /* CarpVideoKefuModel.m */,
-				4A25564226900D6000033DFD /* CarpVideoKefuTableViewCell.h */,
-				4A25564526900D6000033DFD /* CarpVideoKefuTableViewCell.m */,
+				4A25564426900D6000033DFD /* PenguinChaseKefuModel.h */,
+				4A25564326900D6000033DFD /* PenguinChaseKefuModel.m */,
+				4A25564226900D6000033DFD /* PenguinChaseKefuTableViewCell.h */,
+				4A25564526900D6000033DFD /* PenguinChaseKefuTableViewCell.m */,
 			);
 			path = PenguinChase_kefu;
 			sourceTree = "<group>";
@@ -402,6 +440,10 @@
 				8A5ABBDC2689CC8D00DF1108 /* PenguinChase_untils */,
 				8A32A66926845F480089F8BC /* AppDelegate.h */,
 				8A32A66A26845F480089F8BC /* AppDelegate.m */,
+				8AF8483C269540DD0025CDE3 /* AppDelegate+PenguinChaseSafeApp.h */,
+				8AF8483D269540DD0025CDE3 /* AppDelegate+PenguinChaseSafeApp.m */,
+				8AF848A8269580E20025CDE3 /* PenguinChaseVideoModel.h */,
+				8AF848A9269580E20025CDE3 /* PenguinChaseVideoModel.m */,
 				8A32A66F26845F480089F8BC /* ViewController.h */,
 				8A32A67026845F480089F8BC /* ViewController.m */,
 				8A5ABBD42689CC2200DF1108 /* Header.h */,
@@ -460,6 +502,8 @@
 				8A7190B32692DAF6004F4953 /* PenguinChaseDongtaiCollectionViewCell.m */,
 				8A7190B82692DCBD004F4953 /* PenguinChaseDongtaiBtn.h */,
 				8A7190B92692DCBD004F4953 /* PenguinChaseDongtaiBtn.m */,
+				8AF84842269541110025CDE3 /* PenguinChaseDongtaiModel.h */,
+				8AF84843269541110025CDE3 /* PenguinChaseDongtaiModel.m */,
 			);
 			path = PenguinChae_Dongtai;
 			sourceTree = "<group>";
@@ -535,6 +579,10 @@
 			children = (
 				8A59718B26945BEE006D3675 /* PenguinChase_MyInfoViewController.h */,
 				8A59718C26945BEE006D3675 /* PenguinChase_MyInfoViewController.m */,
+				8AF8482F26953AE70025CDE3 /* PenguinChaseMyInfoEditViewController.h */,
+				8AF8482D26953AE70025CDE3 /* PenguinChaseMyInfoEditViewController.m */,
+				8AF8483026953AE80025CDE3 /* PenguinChaseMyinfoTableViewCell.h */,
+				8AF8482E26953AE70025CDE3 /* PenguinChaseMyinfoTableViewCell.m */,
 			);
 			path = PenguinChase_info;
 			sourceTree = "<group>";
@@ -624,6 +672,8 @@
 				8A49615C268B1DE500CB02DD /* PenguinHuatileftTableViewCell.m */,
 				8A496161268B22D500CB02DD /* PenguinHuatiRigthTableViewCell.h */,
 				8A496162268B22D600CB02DD /* PenguinHuatiRigthTableViewCell.m */,
+				8AF848AE269584610025CDE3 /* PenguinHuatiLeftMoel.h */,
+				8AF848AF269584610025CDE3 /* PenguinHuatiLeftMoel.m */,
 			);
 			path = PenguinChase_huati;
 			sourceTree = "<group>";
@@ -631,6 +681,7 @@
 		8A5ABC042689CDF800DF1108 /* PenguinChase_msg */ = {
 			isa = PBXGroup;
 			children = (
+				8AF848572695701D0025CDE3 /* PenguinChase_ChatDetail */,
 				8A7191272693036C004F4953 /* PenguinChase_systemMessage */,
 				8A5ABC412689D1CF00DF1108 /* PenguinChaseMessageViewController.h */,
 				8A5ABC422689D1CF00DF1108 /* PenguinChaseMessageViewController.m */,
@@ -640,6 +691,8 @@
 				8A5154C4268C4171001F5D52 /* PenguinChasesystemMessageTableViewCell.m */,
 				8A5154BD268C3D1A001F5D52 /* PenguinsystemMessageModel.h */,
 				8A5154BE268C3D1A001F5D52 /* PenguinsystemMessageModel.m */,
+				8AF8485126956C2F0025CDE3 /* PenguinChatMessageListModel.h */,
+				8AF8485226956C2F0025CDE3 /* PenguinChatMessageListModel.m */,
 			);
 			path = PenguinChase_msg;
 			sourceTree = "<group>";
@@ -719,6 +772,8 @@
 				8A7190C02692E088004F4953 /* PenguinChaseComentListViewController.m */,
 				8A7190C82692E1BC004F4953 /* PenguinChaseComentListTableViewCell.h */,
 				8A7190C92692E1BC004F4953 /* PenguinChaseComentListTableViewCell.m */,
+				8AF84848269543010025CDE3 /* PenguinChaseComentModel.h */,
+				8AF84849269543010025CDE3 /* PenguinChaseComentModel.m */,
 			);
 			path = PenguinCase_ComentList;
 			sourceTree = "<group>";
@@ -756,6 +811,19 @@
 				8A71912D2693037B004F4953 /* PenguinChaseNotificationViewController.m */,
 			);
 			path = PenguinChase_systemMessage;
+			sourceTree = "<group>";
+		};
+		8AF848572695701D0025CDE3 /* PenguinChase_ChatDetail */ = {
+			isa = PBXGroup;
+			children = (
+				8AF848582695705D0025CDE3 /* PenguinChaseChatDetailToolsView.h */,
+				8AF848592695705D0025CDE3 /* PenguinChaseChatDetailToolsView.m */,
+				8AF8485E2695706E0025CDE3 /* PenguinChaseMessageDetailModel.h */,
+				8AF848602695706F0025CDE3 /* PenguinChaseMessageDetailModel.m */,
+				8AF8485F2695706F0025CDE3 /* carpVideoMessageDetailViewController.h */,
+				8AF848612695706F0025CDE3 /* carpVideoMessageDetailViewController.m */,
+			);
+			path = PenguinChase_ChatDetail;
 			sourceTree = "<group>";
 		};
 		C67917E0447A3906BEF8CFF5 /* Pods */ = {
@@ -961,6 +1029,7 @@
 			files = (
 				8A32A67126845F480089F8BC /* ViewController.m in Sources */,
 				8A59715326945717006D3675 /* PenguinaboutUsViewController.m in Sources */,
+				8AF848AA269580E20025CDE3 /* PenguinChaseVideoModel.m in Sources */,
 				8A5ABC662689D26B00DF1108 /* PenguinChaseLoginTool.m in Sources */,
 				8A71911C2693008A004F4953 /* PenguinChaseZanComentViewController.m in Sources */,
 				4A2556392690039500033DFD /* PenguinChaseVideodetailCollectionViewCell.m in Sources */,
@@ -972,30 +1041,38 @@
 				8A5ABC1F2689CEE100DF1108 /* PenguinChaseBaseTableViewCell.m in Sources */,
 				8A71912E2693037B004F4953 /* PenguinChaseVideoNotiCationTableViewCell.m in Sources */,
 				4A25564B2690215B00033DFD /* PenguinChaseBangdanViewController.m in Sources */,
-				4A25564626900D6000033DFD /* CarpVideoKefuModel.m in Sources */,
+				8AF8484A269543010025CDE3 /* PenguinChaseComentModel.m in Sources */,
+				4A25564626900D6000033DFD /* PenguinChaseKefuModel.m in Sources */,
 				8A7190D52692F98D004F4953 /* PenguinChaseJubaoVideoWarningModel.m in Sources */,
 				8A5ABBFD2689CD6800DF1108 /* UIColor+CHRegex.m in Sources */,
 				8A5ABC2B2689D12300DF1108 /* CHTabBar.m in Sources */,
 				8A7190AE2692AFAF004F4953 /* PenguinChaseDongtaiTableViewCell.m in Sources */,
 				4A25563C26900B0200033DFD /* PenginChaseVideoDetailTableViewCell.m in Sources */,
 				8A7190BA2692DCBD004F4953 /* PenguinChaseDongtaiBtn.m in Sources */,
+				8AF848632695706F0025CDE3 /* carpVideoMessageDetailViewController.m in Sources */,
 				8A7190A526929539004F4953 /* PenguinCase_GoodVideoHeaderView.m in Sources */,
 				8A59716F26945B39006D3675 /* PengUinChaseWatchedViewController.m in Sources */,
 				8A719145269306A7004F4953 /* PenguinCenterHeaderView.m in Sources */,
 				8A7190D62692F98D004F4953 /* PenguinChaseJubaoLitsViewController.m in Sources */,
 				8A5ABC312689D13A00DF1108 /* CoreAnimationEffect.m in Sources */,
+				8AF848622695706F0025CDE3 /* PenguinChaseMessageDetailModel.m in Sources */,
+				8AF8483226953AE80025CDE3 /* PenguinChaseMyinfoTableViewCell.m in Sources */,
 				8A32A66B26845F480089F8BC /* AppDelegate.m in Sources */,
 				8A71912F2693037B004F4953 /* PenguinChaseNotifiCationDetailViewController.m in Sources */,
 				8A7190B42692DAF6004F4953 /* PenguinChaseDongtaiCollectionViewCell.m in Sources */,
+				8AF8485326956C2F0025CDE3 /* PenguinChatMessageListModel.m in Sources */,
+				8AF8483E269540DD0025CDE3 /* AppDelegate+PenguinChaseSafeApp.m in Sources */,
 				8A32A67C26845F4A0089F8BC /* main.m in Sources */,
 				4A25564126900CF300033DFD /* PenguinChaseKefuViewController.m in Sources */,
 				8A59717926945B74006D3675 /* PenguinChase_MySendViewController.m in Sources */,
 				8A5ABC6F2689D2BF00DF1108 /* NSString+CHRegex.m in Sources */,
 				8A7190D72692F98D004F4953 /* PenguinChaseVideowarningTabeCell.m in Sources */,
+				8AF8485A2695705D0025CDE3 /* PenguinChaseChatDetailToolsView.m in Sources */,
 				8A7190C12692E088004F4953 /* PenguinChaseComentListViewController.m in Sources */,
 				8A5ABC4C2689D1F500DF1108 /* PenguinChaseCenterViewController.m in Sources */,
 				8A4960F4268AAAEF00CB02DD /* JRWaterFallLayout.m in Sources */,
 				4A255636268FF78600033DFD /* PenguinChaseVideoDetailHeader.m in Sources */,
+				8AF848B626958A180025CDE3 /* PenguinChaseVideoComentModel.m in Sources */,
 				8A5ABC252689CF3B00DF1108 /* PenguinChaseBaseCollectionViewCell.m in Sources */,
 				8A5ABC3D2689D18600DF1108 /* PenguinChaseHuatiViewController.m in Sources */,
 				8A59719626945CB1006D3675 /* PenguinhaseSendZoneCollectionCell.m in Sources */,
@@ -1016,15 +1093,18 @@
 				8A59716526945A64006D3675 /* PenguinChaseMyFallowViewController.m in Sources */,
 				4A25564E2690233700033DFD /* PenguinChaseBangdanTableViewCell.m in Sources */,
 				8A496163268B22D600CB02DD /* PenguinHuatiRigthTableViewCell.m in Sources */,
+				8AF84844269541110025CDE3 /* PenguinChaseDongtaiModel.m in Sources */,
 				8A5ABC0A2689CE6900DF1108 /* PenguinChase_BaseTabbarViewController.m in Sources */,
 				4A2556512690460A00033DFD /* PenguinChaseWantBtn.m in Sources */,
 				8A5154C5268C4171001F5D52 /* PenguinChasesystemMessageTableViewCell.m in Sources */,
 				8A71913F26930681004F4953 /* PenguinCenterListTableViewCell.m in Sources */,
-				4A25564726900D6000033DFD /* CarpVideoKefuTableViewCell.m in Sources */,
+				4A25564726900D6000033DFD /* PenguinChaseKefuTableViewCell.m in Sources */,
 				8A4960EE268AA91400CB02DD /* PenguinChaseHomHeaderView.m in Sources */,
+				8AF848B0269584610025CDE3 /* PenguinHuatiLeftMoel.m in Sources */,
 				8A496154268B177700CB02DD /* PenguinChaseHuatiSearchView.m in Sources */,
 				8A5ABC5C2689D23E00DF1108 /* PenguinChaseLoginViewController.m in Sources */,
 				8A515550268C5427001F5D52 /* PenguinChaseHomeNewsViewController.m in Sources */,
+				8AF8483126953AE80025CDE3 /* PenguinChaseMyInfoEditViewController.m in Sources */,
 				8A7190CA2692E1BC004F4953 /* PenguinChaseComentListTableViewCell.m in Sources */,
 				8A59703126942E43006D3675 /* PenguinChaseSearchingViewController.m in Sources */,
 				4A25565526904E4A00033DFD /* PenguinGoodVideoViewController.m in Sources */,
@@ -1212,6 +1292,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = G474WC6EAB;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "$(SRCROOT)/PenguinChase/PrefixHeader.pch";
 				INFOPLIST_FILE = PenguinChase/Info.plist;
@@ -1235,6 +1316,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = G474WC6EAB;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "$(SRCROOT)/PenguinChase/PrefixHeader.pch";
 				INFOPLIST_FILE = PenguinChase/Info.plist;

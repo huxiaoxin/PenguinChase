@@ -69,6 +69,6 @@ target 'PenguinChase' do
   pod 'QRCodeReaderViewController', :git => 'https://github.com/zhengjinghua/MQRCodeReaderViewController.git'
   pod 'WMDragView', '~> 1.0.1'
   pod 'GKPhotoBrowser', '~> 2.2.1'
-
+  pod 'UICountingLabel', '~> 1.4.1'
 end 
 

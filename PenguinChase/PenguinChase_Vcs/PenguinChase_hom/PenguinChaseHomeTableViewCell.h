@@ -10,7 +10,7 @@
 NS_ASSUME_NONNULL_BEGIN
 
 @interface PenguinChaseHomeTableViewCell : PenguinChaseBaseTableViewCell
-
+@property(nonatomic,strong) PenguinChaseVideoModel * penguinModel;
 @end
 
 NS_ASSUME_NONNULL_END

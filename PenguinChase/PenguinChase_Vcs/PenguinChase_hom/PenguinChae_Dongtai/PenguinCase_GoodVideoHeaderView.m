@@ -6,9 +6,10 @@
 //
 
 #import "PenguinCase_GoodVideoHeaderView.h"
+#import <UICountingLabel/UICountingLabel-umbrella.h>
 @interface PenguinCase_GoodVideoHeaderView ()
 @property(nonatomic,strong) UIImageView * penguinBackImgView;
-@property(nonatomic,strong) UILabel     * PenguinWendulb;
+@property(nonatomic,strong) UICountingLabel     * PenguinWendulb;
 @property(nonatomic,strong) UILabel     * PenguinLocationlb;
 @property(nonatomic,strong) UILabel     * PenguinRililb;
 @property(nonatomic,strong) UIView      * PenguinBtomView;
@@ -64,14 +65,16 @@
     }
     return _PenguinBtomView;
 }
-- (UILabel *)PenguinWendulb{
+- (UICountingLabel *)PenguinWendulb{
     if (!_PenguinWendulb) {
-        _PenguinWendulb = [UILabel new];
+        _PenguinWendulb = [UICountingLabel new];
         _PenguinWendulb.textColor = [UIColor whiteColor];
         _PenguinWendulb.font = [UIFont boldSystemFontOfSize:40];
-        _PenguinWendulb.text = @"24";
+//        _PenguinWendulb.text = @"24";
         _PenguinWendulb.textAlignment = NSTextAlignmentRight;
 //        _PenguinWendulb.backgroundColor = LGDMianColor;
+        _PenguinWendulb.format=@"%d";
+        [_PenguinWendulb countFromCurrentValueTo:24];
     }
     return _PenguinWendulb;
 }
@@ -110,7 +113,7 @@
         _PenguinRililb = [UILabel new];
         _PenguinRililb.textColor = [UIColor whiteColor];
         _PenguinRililb.font = [UIFont systemFontOfSize:14];
-        _PenguinRililb.text = @"11/20 ℃ 晴天";
+        _PenguinRililb.text = @"11/24 ℃ 晴天";
         _PenguinRililb.textAlignment = NSTextAlignmentRight;
     }
     return _PenguinRililb;

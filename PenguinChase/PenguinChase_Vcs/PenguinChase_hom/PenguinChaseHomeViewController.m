@@ -22,10 +22,17 @@
 @interface PenguinChaseHomeViewController ()<PenguinChaseHomHeaderViewDelegate,PYSearchViewControllerDelegate>
 @property(nonatomic,strong) PenguinChaseHomHeaderView  * PenguinChaseHeader;
 @property(nonatomic,strong) PenguinChaseHomeFooterView * PenguinChaseFooter;
+@property(nonatomic,strong) NSMutableArray * PenguinDataArr;
 @end
 
 @implementation PenguinChaseHomeViewController
 
+- (NSMutableArray *)PenguinDataArr{
+    if (!_PenguinDataArr) {
+        _PenguinDataArr = [NSMutableArray array];
+    }
+    return _PenguinDataArr;
+}
 - (void)viewDidLoad {
     [super viewDidLoad];
     self.gk_navLineHidden = YES;
@@ -65,13 +72,27 @@
     PenguinLeftLb.text = @"企鹅追剧";
     [PenguinLeftLogoView addSubview:PenguinLeftLb];
     self.gk_navLeftBarButtonItem = [[UIBarButtonItem alloc]initWithCustomView:PenguinLeftLogoView];
+    
+    [LCProgressHUD showLoading:@""];
+    NSArray * dataArr = [WHC_ModelSqlite query:[PenguinChaseVideoModel class]];
+    dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(0.6 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+        [LCProgressHUD hide];
+        if (dataArr.count > 0) {
+            self.PenguinDataArr = [dataArr subarrayWithRange:NSMakeRange(3, 4)].mutableCopy;
+            [self.PenguinChaseTableView reloadData];
+            [self.PenguinChaseTableView.mj_header endRefreshing];
+        }
+        
+    
+    });
 }
 -(UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     PenguinChaseHomeTableViewCell * penguinHomeCell = [PenguinChaseHomeTableViewCell PenguinChasecreateCellWithTheTableView:tableView AndTheIndexPath:indexPath];
+    penguinHomeCell.penguinModel = self.PenguinDataArr[indexPath.row];
     return penguinHomeCell;
 }
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section{
-    return 3;
+    return self.PenguinDataArr.count;
 }
 -(CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath{
     return RealWidth(120);

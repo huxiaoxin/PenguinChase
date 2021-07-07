@@ -27,6 +27,7 @@ ${BUILT_PRODUCTS_DIR}/SJUIKit/SJUIKit.framework
 ${BUILT_PRODUCTS_DIR}/SJVideoPlayer/SJVideoPlayer.framework
 ${BUILT_PRODUCTS_DIR}/SPPageMenu/SPPageMenu.framework
 ${BUILT_PRODUCTS_DIR}/SVProgressHUD/SVProgressHUD.framework
+${BUILT_PRODUCTS_DIR}/UICountingLabel/UICountingLabel.framework
 ${BUILT_PRODUCTS_DIR}/UIImage+ImageWithColor/UIImageWithColor.framework
 ${BUILT_PRODUCTS_DIR}/UriParser-cpp/UriParser.framework
 ${BUILT_PRODUCTS_DIR}/VTMagic/VTMagic.framework

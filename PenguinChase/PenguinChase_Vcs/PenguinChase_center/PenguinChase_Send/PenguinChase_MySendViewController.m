@@ -6,7 +6,8 @@
 //
 
 #import "PenguinChase_MySendViewController.h"
-
+#import <LYEmptyView-umbrella.h>
+#import "PenguinChaseFabuViewController.h"
 @interface PenguinChase_MySendViewController ()
 
 @end
@@ -15,9 +16,30 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    self.gk_navTitle = @"我的发布";
+    self.PenguinChaseTableView.mj_header = [MJRefreshNormalHeader headerWithRefreshingTarget:self refreshingAction:@selector(PenguinChase_MySendViewHeaderClicks)];
+    [self.PenguinChaseTableView.mj_header beginRefreshing];
     // Do any additional setup after loading the view.
 }
-
+-(void)PenguinChase_MySendViewHeaderClicks{
+    MJWeakSelf;
+    dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(0.7 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+        [LCProgressHUD showInfoMsg:@"暂无数据"];
+        LYEmptyView * emtyView = [LYEmptyView emptyActionViewWithImageStr:@"tubiaozanwushuju" titleStr:@"暂无动态～" detailStr:@"" btnTitleStr:@"去发布" target:self action:@selector(PenguinChase_sendDongtai)];
+        emtyView.actionBtnTitleColor = [UIColor whiteColor];
+        emtyView.actionBtnBackGroundColor = LGDMianColor;
+        emtyView.actionBtnCornerRadius = RealWidth(5);
+        weakSelf.PenguinChaseTableView.ly_emptyView = emtyView;
+        [weakSelf.PenguinChaseTableView.mj_header endRefreshing];
+    });
+}
+-(void)PenguinChase_sendDongtai{
+    PenguinChaseFabuViewController  * carpVc = [[PenguinChaseFabuViewController alloc]init];
+    
+    UINavigationController * nav = [UINavigationController rootVC:carpVc translationScale:YES];
+    
+    [self presentViewController:nav animated:YES completion:nil];
+}
 /*
 #pragma mark - Navigation
 

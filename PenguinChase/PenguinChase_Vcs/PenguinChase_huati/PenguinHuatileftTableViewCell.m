@@ -39,6 +39,12 @@
     }
     return _Penguinlb;
 }
+- (void)setPengModel:(PenguinHuatiLeftMoel *)pengModel{
+    _pengModel = pengModel;
+    _Penguinlb.text = pengModel.title;
+    _Penguinlb.textColor = pengModel.isSeltecd ? LGDBLackColor : LGDLightBLackColor;
+    _PenguinIndictorView.hidden = !pengModel.isSeltecd;
+}
 - (void)awakeFromNib {
     [super awakeFromNib];
     // Initialization code

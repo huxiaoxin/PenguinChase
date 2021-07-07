@@ -12,6 +12,8 @@
 #import "PenguinChaseZanComentViewController.h"
 #import "PenguinChaseKefuViewController.h"
 #import "PenguinChaseNotificationViewController.h"
+#import "PenguinChatMessageListModel.h"
+#import "carpVideoMessageDetailViewController.h"
 @interface PenguinChaseMessageViewController ()
 @property(nonatomic,strong) NSMutableArray * PenguinChasesysMessageDataArr;
 @property(nonatomic,strong) NSMutableArray * PenguinChaseDataArr;
@@ -61,12 +63,20 @@
     self.gk_navTitle = @"消息中心";
     self.PenguinChaseTableView.frame = CGRectMake(0, GK_STATUSBAR_NAVBAR_HEIGHT, GK_SCREEN_WIDTH, GK_SCREEN_HEIGHT-GK_TABBAR_HEIGHT-GK_STATUSBAR_NAVBAR_HEIGHT);
     // Do any additional setup after loading the view.
+    
+    
+    NSArray * dataArr = [WHC_ModelSqlite query:[PenguinChatMessageListModel class]];
+    if (self.PenguinChaseDataArr.count> 0) {
+        [self.PenguinChaseDataArr removeAllObjects];
+    }
+    self.PenguinChaseDataArr = dataArr.mutableCopy;
+    [self.PenguinChaseTableView reloadData];
 }
 -(NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section{
     if (section == 0) {
         return self.PenguinChasesysMessageDataArr.count;
     }else{
-        return 0;
+        return self.PenguinChaseDataArr.count;
     }
 }
 -(NSInteger)numberOfSectionsInTableView:(UITableView *)tableView{
@@ -79,6 +89,7 @@
         return penguinCell;
     }else{
         PenguinChaseMessageTableViewCell * penguinCell = [PenguinChaseMessageTableViewCell PenguinChasecreateCellWithTheTableView:tableView AndTheIndexPath:indexPath];
+        penguinCell.penglistModel = self.PenguinChaseDataArr[indexPath.row];
         return penguinCell;
     }
 }
@@ -105,7 +116,16 @@
             [self.navigationController pushViewController:penguinkefuVc animated:YES];
         }
     }else{
-        
+        PenguinChatMessageListModel * listMoel = self.PenguinChaseDataArr[indexPath.row];
+        if (listMoel.userID == 0) {
+            [WHC_ModelSqlite update:[PenguinChatMessageListModel class] value:[NSString stringWithFormat:@"msgNum ='%d'",0] where:[NSString stringWithFormat:@"userID ='%ld'",listMoel.userID]];
+            [self.PenguinChaseTableView.mj_header beginRefreshing];
+            [self.PenguinChaseTableView reloadData];
+        }
+        carpVideoMessageDetailViewController * penguinDetailVc = [[carpVideoMessageDetailViewController alloc]init];
+        penguinDetailVc.hidesBottomBarWhenPushed = YES;
+        penguinDetailVc.carpessModel = self.PenguinChaseDataArr[indexPath.row];
+        [self.navigationController pushViewController:penguinDetailVc animated:YES];
     }
 }
 -(CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath{

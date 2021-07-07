@@ -1,7 +1,7 @@
 
 #import "PenguinChaseKefuViewController.h"
-#import "CarpVideoKefuTableViewCell.h"
-#import "CarpVideoKefuModel.h"
+#import "PenguinChaseKefuTableViewCell.h"
+#import "PenguinChaseKefuModel.h"
 #import <XHInputView-umbrella.h>
 @interface PenguinChaseKefuViewController ()<UITableViewDelegate,UITableViewDataSource>
 @property(nonatomic,strong) UITableView    * CarpVideoKefuTableView;
@@ -15,7 +15,7 @@
 - (NSMutableArray *)PenguinChasekefuDataArr{
     if (!_PenguinChasekefuDataArr) {
     _PenguinChasekefuDataArr = [NSMutableArray array];
-        CarpVideoKefuModel * PenguinChaseitem =  [[CarpVideoKefuModel alloc]init];
+        PenguinChaseKefuModel * PenguinChaseitem =  [[PenguinChaseKefuModel alloc]init];
         PenguinChaseitem.msgname = @"您好～我是今天值班的客服，小周，请问有什么可以帮您？";
         PenguinChaseitem.userID = 9999;
         PenguinChaseitem.imgUrl = @"";
@@ -68,7 +68,7 @@
     MJWeakSelf;
                 dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(.5 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
                     [LCProgressHUD hide];
-                    CarpVideoKefuModel  * models = [[CarpVideoKefuModel alloc]init];
+                    PenguinChaseKefuModel  * models = [[PenguinChaseKefuModel alloc]init];
                     models.msgname = text;
                     models.userID = 9999;
                     models.msgisMe = YES;
@@ -77,7 +77,7 @@
                     [weakSelf.PenguinChasekefuDataArr addObject:models];
                     [weakSelf.CarpVideoKefuTableView reloadData];
                     dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(1 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
-                        CarpVideoKefuModel  * models = [[CarpVideoKefuModel alloc]init];
+                        PenguinChaseKefuModel  * models = [[PenguinChaseKefuModel alloc]init];
                         models.msgname = self.PenguinChasekefuSendStatus == NO ? @"抱歉，小周无法理解你说的问题哦～，你可以说今天是周几😄" : @"很抱歉，无法理解你说的问题，如果有疑问，可以拨打我们的人工客服电话400-600-5872";
                         models.userID = 9999;
                         models.msgisMe = NO;
@@ -90,14 +90,14 @@
                 });
 
 }
-//- (FilmChatZoneChatDetailToolsView *)carpVideoToolView{
+//- (PenguinChaseChatDetailToolsView *)carpVideoToolView{
 //    if (!_carpVideoToolView) {
 //        MJWeakSelf;
-//        _carpVideoToolView = [[FilmChatZoneChatDetailToolsView alloc]initWithFrame:CGRectMake(0, GK_SCREEN_HEIGHT-RealWidth(65)-GK_STATUSBAR_NAVBAR_HEIGHT, GK_SCREEN_WIDTH, RealWidth(60)) witheTextViewBlokc:^(UITextView * _Nonnull textView) {
+//        _carpVideoToolView = [[PenguinChaseChatDetailToolsView alloc]initWithFrame:CGRectMake(0, GK_SCREEN_HEIGHT-RealWidth(65)-GK_STATUSBAR_NAVBAR_HEIGHT, GK_SCREEN_WIDTH, RealWidth(60)) witheTextViewBlokc:^(UITextView * _Nonnull textView) {
 //            [LCProgressHUD showLoading:@""];
 //            dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(.5 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
 //                [LCProgressHUD hide];
-//                CarpVideoKefuModel  * models = [[CarpVideoKefuModel alloc]init];
+//                PenguinChaseKefuModel  * models = [[PenguinChaseKefuModel alloc]init];
 //                models.msgname = textView.text;
 //                models.userID = 9999;
 //                models.msgisMe = YES;
@@ -107,7 +107,7 @@
 //                textView.text = nil;
 //                [weakSelf.CarpVideoKefuTableView reloadData];
 //                dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(1 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
-//                    CarpVideoKefuModel  * models = [[CarpVideoKefuModel alloc]init];
+//                    PenguinChaseKefuModel  * models = [[PenguinChaseKefuModel alloc]init];
 //                    models.msgname = self.PenguinChasekefuSendStatus == NO ? @"抱歉，小周无法理解你说的问题哦～，你可以说今天是周几😄" : @"很抱歉，无法理解你说的问题，如果有疑问，可以拨打我们的人工客服电话400-600-5872";
 //                    models.userID = 9999;
 //                    models.msgisMe = NO;
@@ -138,16 +138,16 @@
     return self.PenguinChaseiskefu ? self.PenguinChasekefuDataArr.count : 0;
 }
 -(UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
-    static NSString * pandaIdentifer = @"CarpVideoKefuTableViewCell";
-    CarpVideoKefuTableViewCell * carpVideoCell = [tableView dequeueReusableCellWithIdentifier:pandaIdentifer];
+    static NSString * pandaIdentifer = @"PenguinChaseKefuTableViewCell";
+    PenguinChaseKefuTableViewCell * carpVideoCell = [tableView dequeueReusableCellWithIdentifier:pandaIdentifer];
     if (carpVideoCell == nil) {
-        carpVideoCell = [[CarpVideoKefuTableViewCell alloc]initWithStyle:UITableViewCellStyleDefault reuseIdentifier:pandaIdentifer];
+        carpVideoCell = [[PenguinChaseKefuTableViewCell alloc]initWithStyle:UITableViewCellStyleDefault reuseIdentifier:pandaIdentifer];
     }
-    carpVideoCell.carpVideoModel  = self.PenguinChasekefuDataArr[indexPath.row];
+    carpVideoCell.penguinModel  = self.PenguinChasekefuDataArr[indexPath.row];
     return carpVideoCell;
 }
 -(CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath{
-    CarpVideoKefuModel * PenguinChaseitem = self.PenguinChasekefuDataArr[indexPath.row];
+    PenguinChaseKefuModel * PenguinChaseitem = self.PenguinChasekefuDataArr[indexPath.row];
     return PenguinChaseitem.CellHeight;
 }
 /*
