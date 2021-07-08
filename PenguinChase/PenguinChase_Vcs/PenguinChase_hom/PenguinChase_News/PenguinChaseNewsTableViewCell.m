@@ -66,7 +66,6 @@
         _penguinThubImgView.contentMode = UIViewContentModeScaleAspectFill;
         _penguinThubImgView.layer.masksToBounds = YES;
         _penguinThubImgView.layer.cornerRadius =RealWidth(5);
-        _penguinThubImgView.backgroundColor  = LGDMianColor;
     }
     return _penguinThubImgView;
 }
@@ -77,15 +76,27 @@
         _penguinMessagelb.font = [UIFont boldSystemFontOfSize:12];
 //        _penguinMessagelb.text = @"三流的父母给还在买房子，二流的父母把钱存到银行";
         
-        NSString  * penguinFirstText = @"701阅读 104分享  ";
-        NSString  * penguinSecondText = @"#理念";
-        NSMutableAttributedString * muatbute = [[NSMutableAttributedString alloc]initWithString:[NSString stringWithFormat:@"%@%@",penguinFirstText,penguinSecondText]];
-        [muatbute addAttribute:NSForegroundColorAttributeName value:LGDLightBLackColor range:NSMakeRange(0, penguinFirstText.length)];
-        [muatbute addAttribute:NSForegroundColorAttributeName value:LGDMianColor range:NSMakeRange(penguinFirstText.length, penguinSecondText.length)];
-
-        _penguinMessagelb.attributedText = muatbute;
+//        NSString  * penguinFirstText = @"701阅读 104分享  ";
+//        NSString  * penguinSecondText = @"#理念";
+//        NSMutableAttributedString * muatbute = [[NSMutableAttributedString alloc]initWithString:[NSString stringWithFormat:@"%@%@",penguinFirstText,penguinSecondText]];
+//        [muatbute addAttribute:NSForegroundColorAttributeName value:LGDLightBLackColor range:NSMakeRange(0, penguinFirstText.length)];
+//        [muatbute addAttribute:NSForegroundColorAttributeName value:LGDMianColor range:NSMakeRange(penguinFirstText.length, penguinSecondText.length)];
+//
+//        _penguinMessagelb.attributedText = muatbute;
     }
     return _penguinMessagelb;
+}
+- (void)setPengModel:(PenguinChaseNewsModel *)pengModel{
+    _pengModel = pengModel;
+    _PenguinTitle.text = pengModel.title;
+    NSString  * penguinFirstText = [NSString stringWithFormat:@"%@ ",pengModel.time];
+    NSString  * penguinSecondText = [NSString stringWithFormat:@"#%@",pengModel.src];
+    NSMutableAttributedString * muatbute = [[NSMutableAttributedString alloc]initWithString:[NSString stringWithFormat:@"%@%@",penguinFirstText,penguinSecondText]];
+    [muatbute addAttribute:NSForegroundColorAttributeName value:LGDLightBLackColor range:NSMakeRange(0, penguinFirstText.length)];
+    [muatbute addAttribute:NSForegroundColorAttributeName value:LGDMianColor range:NSMakeRange(penguinFirstText.length, penguinSecondText.length)];
+    _penguinMessagelb.attributedText = muatbute;
+    [_penguinThubImgView sd_setImageWithURL:[NSURL URLWithString:pengModel.imgUrl] placeholderImage:[UIImage imageNamed:@"zhanweitu"]];
+
 }
 - (void)awakeFromNib {
     [super awakeFromNib];

@@ -15,6 +15,7 @@
 #import "PenguinChase_MySendViewController.h"
 #import "PenginChaseMyColltecdViewController.h"
 #import "PenguinChase_MyInfoViewController.h"
+#import "PenguinChaseDongtaiModel.h"
 @interface PenguinChaseCenterViewController ()<PenguinCenterHeaderViewDelegate>
 @property(nonatomic,strong) NSMutableArray * penguinDataArr;
 @property(nonatomic,strong) PenguinCenterHeaderView * penguinHeader;
@@ -107,6 +108,10 @@
     }
 }
 -(void)PenguinCenterHeaderViewWithBtnClickIndex:(NSInteger)btnIndex{
+    if (![PenguinChaseLoginTool PenguinChaseLoginToolCheckuserIslgoin]) {
+        [self PenguinChase_showLoginVc];
+        return;
+    }
     if (btnIndex == 0) {
         PenguinChaseMyFallowViewController * penguinFalllowVc = [[PenguinChaseMyFallowViewController alloc]init];
         penguinFalllowVc.hidesBottomBarWhenPushed = YES;
@@ -127,9 +132,35 @@
     }
 }
 -(void)PenguinCenterHeaderViewWithInfoAcion{
+    if (![PenguinChaseLoginTool PenguinChaseLoginToolCheckuserIslgoin]) {
+        [self PenguinChase_showLoginVc];
+        return;
+    }
     PenguinChase_MyInfoViewController * penguinInfiVc = [[PenguinChase_MyInfoViewController alloc]init];
     penguinInfiVc.hidesBottomBarWhenPushed = YES;
     [self.navigationController pushViewController:penguinInfiVc animated:YES];
+}
+-(void)viewWillAppear:(BOOL)animated{
+    [super viewWillAppear:animated];
+    
+    NSArray * dataArr_Views = [WHC_ModelSqlite query:[PenguinChaseVideoModel class] where:[NSString stringWithFormat:@"isViews = '%@'",@(YES)]];
+    NSArray * dataArr_Colltecd = [WHC_ModelSqlite query:[PenguinChaseVideoModel class] where:[NSString stringWithFormat:@"penguinChase_isColltecd = '%@'",@(YES)]];
+    NSArray * dataArr_Coemnt = [WHC_ModelSqlite query:[PenguinChaseDongtaiModel class] where:[NSString stringWithFormat:@"isLike = '%@'",@(YES)]];
+    if ([PenguinChaseLoginTool PenguinChaseLoginToolCheckuserIslgoin]) {
+        [self.penguinHeader.PenguinuserimgView sd_setImageWithURL:[NSURL URLWithString:@"https://img0.baidu.com/it/u=2592042537,1864064944&fm=26&fmt=auto&gp=0.jpg"] placeholderImage:[UIImage imageNamed:@"whitelogo"]];
+        self.penguinHeader.PenguinNamelb.text = [PenguinChaseLoginTool PenguinChasegetName];
+        self.penguinHeader.MyFolwwbtn.PenguinToplb.text =  [NSString stringWithFormat:@"%ld",dataArr_Coemnt.count];
+        self.penguinHeader.MyWatchBtn.PenguinToplb.text = [NSString stringWithFormat:@"%ld",dataArr_Views.count];
+        self.penguinHeader.MySendbtn.PenguinToplb.text = @"0";
+        self.penguinHeader.MyColltecdbtn.PenguinToplb.text = [NSString stringWithFormat:@"%ld",dataArr_Colltecd.count];
+    }else{
+        self.penguinHeader.PenguinuserimgView.image = [UIImage imageNamed:@"whitelogo"];
+        self.penguinHeader.PenguinNamelb.text = @"未登录";
+        self.penguinHeader.MyFolwwbtn.PenguinToplb.text =  @"-.-";
+        self.penguinHeader.MyWatchBtn.PenguinToplb.text = @"-.-";
+        self.penguinHeader.MySendbtn.PenguinToplb.text = @"-.-";
+        self.penguinHeader.MyColltecdbtn.PenguinToplb.text = @"-.-";
+    }
 }
 /*
 #pragma mark - Navigation

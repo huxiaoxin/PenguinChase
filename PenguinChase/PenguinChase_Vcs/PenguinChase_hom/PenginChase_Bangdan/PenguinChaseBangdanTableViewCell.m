@@ -9,7 +9,7 @@
 #import <SDCycleScrollView.h>
 #import "WWStarView.h"
 #import "PenguinChaseWantBtn.h"
-@interface PenguinChaseBangdanTableViewCell ()
+@interface PenguinChaseBangdanTableViewCell ()<SDCycleScrollViewDelegate>
 @property(nonatomic,strong) UIImageView * PenguinThubImgView;
 @property(nonatomic,strong) SDCycleScrollView * PengunSDC;
 @property(nonatomic,strong) UILabel * PenguinTitle;
@@ -92,6 +92,7 @@
 - (SDCycleScrollView *)PengunSDC{
     if (!_PengunSDC) {
         _PengunSDC = [SDCycleScrollView new];
+        _PengunSDC.delegate =self;
         _PengunSDC.autoScroll = NO;
         _PengunSDC.imageURLStringsGroup = @[@"https://img1.doubanio.com/view/photo/l/public/p2236554239.jpg",@"https://img2.doubanio.com/view/photo/l/public/p2236548371.jpg",@"https://img2.doubanio.com/view/photo/l/public/p2236548362.jpg"];
         _PengunSDC.layer.cornerRadius = RealWidth(5);
@@ -166,8 +167,8 @@
 - (PenguinChaseWantBtn *)wantBtn{
     if (!_wantBtn) {
         _wantBtn = [PenguinChaseWantBtn new];
-        [_wantBtn addTarget:self action:@selector(PenguinChaseWantBtnClick) forControlEvents:UIControlEventTouchUpInside];
         _wantBtn.penguinTopimgView.image = [UIImage imageNamed:@"yishoucang"];
+        [_wantBtn addTarget:self action:@selector(PenguinChaseWantBtnClick) forControlEvents:UIControlEventTouchUpInside];
         //yishoucang
         //xiangkan
     }
@@ -179,7 +180,6 @@
         _PenguinContentlb.textColor = LGDLightBLackColor;
         _PenguinContentlb.font = [UIFont systemFontOfSize:12];
         _PenguinContentlb.numberOfLines = 3;
-        [_PenguinContentlb setText:@"在一次原始森林的看守任务中，一位女看林人遇见了两位过着“后启示录”式蛮荒生活的生存者，一对父子。这对父子的信仰似乎自成一派，与自然的关系也微妙诡秘。看林人对这对父子的身世充满怀疑，但当他们的林中小屋在夜里被一种神秘生物袭击，她恍然发觉，在这片肆意生长的荒野，孕育着更加可怕的凶险……" lineSpacing:3];
     }
     return _PenguinContentlb;
 }
@@ -190,8 +190,31 @@
     }
     return _PenguinBtomline;
 }
--(void)PenguinChaseWantBtnClick{
+- (void)setPenguinModel:(PenguinChaseVideoModel *)penguinModel{
+    _penguinModel = penguinModel;
+    [_PenguinThubImgView sd_setImageWithURL:[NSURL URLWithString:penguinModel.penguinChase_MoviewIocnurl] placeholderImage:[UIImage imageNamed:@"zhanweitu"]];
+    _PengunSDC.imageURLStringsGroup = penguinModel.penguinChase_MoviewImgArr;
+    _PenguinTitle.text = penguinModel.penguinChase_MoviewName;
+    _starView.currentStar = penguinModel.PenguinChase_starNum;
+    _penuinSourcelb.text = [NSString stringWithFormat:@"%.2ld",(long)penguinModel.penguinChase_DBSourecd];
+    _PenuinRatelb.text =  [NSString stringWithFormat:@"%ld%@好评",penguinModel.penguinChase_RateSourecd,@"%"];
+    _PenuinInfolb.text = [NSString stringWithFormat:@"%@ | %@",penguinModel.penguinChase_MoviewTime,penguinModel.penguinChase_MoviewType];
+    [_PenguinContentlb setText:penguinModel.penguinChase_MoviewDesc lineSpacing:3];
     
+    if ([PenguinChaseLoginTool PenguinChaseLoginToolCheckuserIslgoin]) {
+        _wantBtn.penguinTopimgView.image = [UIImage imageNamed:penguinModel.penguinChase_isColltecd ? @"yishoucang" : @"xiangkan"];
+
+    }else{
+        _wantBtn.penguinTopimgView.image = [UIImage imageNamed:@"xiangkan"];
+
+    }
+
+}
+- (void)cycleScrollView:(SDCycleScrollView *)cycleScrollView didSelectItemAtIndex:(NSInteger)index{
+    [self.delegate PenguinChaseBangdanTableViewCellWithBannerIndex:index CellIndx:self.tag];
+}
+-(void)PenguinChaseWantBtnClick{
+    [self.delegate PenguinChaseBangdanTableViewCellWithWantchWithIndex:self.tag];
 }
 - (void)awakeFromNib {
     [super awakeFromNib];

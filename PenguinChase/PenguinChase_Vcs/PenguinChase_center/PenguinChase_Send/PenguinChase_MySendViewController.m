@@ -34,9 +34,9 @@
     });
 }
 -(void)PenguinChase_sendDongtai{
-    PenguinChaseFabuViewController  * carpVc = [[PenguinChaseFabuViewController alloc]init];
+    PenguinChaseFabuViewController  * PenguinVCs = [[PenguinChaseFabuViewController alloc]init];
     
-    UINavigationController * nav = [UINavigationController rootVC:carpVc translationScale:YES];
+    UINavigationController * nav = [UINavigationController rootVC:PenguinVCs translationScale:YES];
     
     [self presentViewController:nav animated:YES completion:nil];
 }

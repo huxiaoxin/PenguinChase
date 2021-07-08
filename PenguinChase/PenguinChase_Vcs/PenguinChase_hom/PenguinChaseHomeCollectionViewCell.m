@@ -76,4 +76,12 @@
     }
     return _PenguinThubImgView;
 }
+
+- (void)setPenguinModel:(PenguinChaseVideoModel *)penguinModel{
+    _penguinModel  = penguinModel;
+    [_PenguinThubImgView sd_setImageWithURL:[NSURL URLWithString:penguinModel.penguinChase_MoviewIocnurl] placeholderImage:[UIImage imageNamed:@"zhanweitu"]];
+    _PenguinToplb.text =  penguinModel.penguinChase_MoviewName;
+    _PenguinzBtomlb.text =  penguinModel.penguinChase_MoviewTitle;
+}
+
 @end

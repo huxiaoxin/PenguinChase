@@ -10,7 +10,7 @@
 NS_ASSUME_NONNULL_BEGIN
 
 @interface PenguinChaseVideodetailCollectionViewCell : UICollectionViewCell
-
+@property(nonatomic,copy) NSDictionary * penuinDic;
 @end
 
 NS_ASSUME_NONNULL_END

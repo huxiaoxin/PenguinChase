@@ -16,7 +16,7 @@
     [LCProgressHUD showLoading:@""];
     MJWeakSelf;
     dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(1 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
-        [[NSUserDefaults standardUserDefaults] setObject:self->_PenguinInfoTextField.text forKey:@"CarpvideoName"];
+        [[NSUserDefaults standardUserDefaults] setObject:self->_PenguinInfoTextField.text forKey:@"penguinName"];
         [[NSUserDefaults standardUserDefaults] synchronize];
         [LCProgressHUD showSuccess:@"修改成功"];
         if (weakSelf.seltecdInfoBlock) {

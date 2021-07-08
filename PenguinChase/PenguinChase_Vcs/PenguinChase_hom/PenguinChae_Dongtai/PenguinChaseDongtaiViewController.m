@@ -11,7 +11,7 @@
 #import "PenguinChaseComentListViewController.h"
 #import "PenguinChaseJubaoLitsViewController.h"
 #import "PenguinChaseDongtaiModel.h"
-#import "carpVideoMessageDetailViewController.h"
+#import "PenguinChaseMessageDetailViewController.h"
 @interface PenguinChaseDongtaiViewController ()<PenguinChaseDongtaiTableViewCellDelegate>
 @property(nonatomic,strong) PenguinCase_GoodVideoHeaderView * PenguinHeader;
 @property(nonatomic,strong) NSMutableArray * PenguinDongtaiDataArr;
@@ -25,9 +25,14 @@
     }
     return _PenguinDongtaiDataArr;
 }
+-(void)PenguinLoginSuccedNotiFication{
+    [self PenguinChaseTableViewHeaderClicks];
+}
 - (void)viewDidLoad {
     [super viewDidLoad];
     self.gk_navBarAlpha = 0;
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(PenguinLoginSuccedNotiFication) name:@"PenguinLoginSuccedNotiFication" object:nil];
+
     self.PenguinChaseTableView.frame = CGRectMake(0, GK_IS_iPhoneX ? GK_STATUSBAR_HEIGHT : 0, GK_SCREEN_WIDTH, GK_SCREEN_HEIGHT-GK_SAFEAREA_BTM- (GK_IS_iPhoneX ? GK_STATUSBAR_HEIGHT: 0));
     self.PenguinChaseTableView.mj_header =[MJRefreshNormalHeader headerWithRefreshingTarget:self refreshingAction:@selector(PenguinChaseTableViewHeaderClicks)];
     [self.PenguinChaseTableView.mj_header beginRefreshing];
@@ -120,7 +125,17 @@
         PenguinListVc.hidesBottomBarWhenPushed = YES;
         [self.navigationController pushViewController:PenguinListVc animated:YES];
     }else{
-        
+        if (![PenguinChaseLoginTool PenguinChaseLoginToolCheckuserIslgoin]) {
+            [self PenguinChase_showLoginVc];
+            return;
+        }
+        pengModel.isLike  = !pengModel.isLike;
+        [LCProgressHUD showLoading:@""];
+        dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(0.5 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+            [LCProgressHUD hide];
+            [self.PenguinChaseTableView reloadData];
+            [WHC_ModelSqlite update:[PenguinChaseDongtaiModel class] value:[NSString stringWithFormat:@"isLike = '%@'",@(pengModel.isLike)] where:[NSString stringWithFormat:@"userID = '%ld'",pengModel.userID]];
+        });
     }
 }
 -(void)PenguinChaseDongtaiTableViewCellWithChatCellIndex:(NSInteger)CellIndex{
@@ -133,8 +148,8 @@
     listModle.userID = dongtModel.userID;
     listModle.headerimgurl = dongtModel.headerImgurl;
     listModle.username = dongtModel.userName;
-    carpVideoMessageDetailViewController * penguinChatVc = [[carpVideoMessageDetailViewController alloc]init];
-    penguinChatVc.carpessModel = listModle;
+    PenguinChaseMessageDetailViewController * penguinChatVc = [[PenguinChaseMessageDetailViewController alloc]init];
+    penguinChatVc.penguinChaseModel = listModle;
     [self.navigationController pushViewController:penguinChatVc animated:YES];
     
 }

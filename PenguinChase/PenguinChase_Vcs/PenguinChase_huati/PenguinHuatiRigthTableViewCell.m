@@ -60,7 +60,7 @@
         _PenguinChaseThubImg = [UIImageView new];
         _PenguinChaseThubImg.layer.cornerRadius = RealWidth(5);
         _PenguinChaseThubImg.layer.masksToBounds = YES;
-        _PenguinChaseThubImg.backgroundColor = LGDMianColor;
+//        _PenguinChaseThubImg.backgroundColor = LGDMianColor;
         _PenguinChaseThubImg.contentMode = UIViewContentModeScaleAspectFill;
     }
     return _PenguinChaseThubImg;
@@ -83,6 +83,12 @@
         _PenguinContentlb.numberOfLines = 3;
     }
     return _PenguinContentlb;
+}
+- (void)setPengModel:(PenguinChaseVideoModel *)pengModel{
+    _pengModel = pengModel;
+    _PenguinTitle.text = pengModel.penguinChase_MoviewName;
+    _PenguinContentlb.text = pengModel.penguinChase_MoviewDesc;
+    [_PenguinChaseThubImg sd_setImageWithURL:[NSURL URLWithString:pengModel.penguinChase_MoviewIocnurl] placeholderImage:[UIImage imageNamed:@"zhanweitu"]];
 }
 - (void)awakeFromNib {
     [super awakeFromNib];

@@ -4,7 +4,7 @@
 #import "PenguinChaseKefuModel.h"
 #import <XHInputView-umbrella.h>
 @interface PenguinChaseKefuViewController ()<UITableViewDelegate,UITableViewDataSource>
-@property(nonatomic,strong) UITableView    * CarpVideoKefuTableView;
+@property(nonatomic,strong) UITableView    * PenguinChaseKeufTableView;
 @property(nonatomic,strong) NSMutableArray * PenguinChasekefuDataArr;
 @property(nonatomic,assign) BOOL PenguinChasekefuSendStatus;
 @property(nonatomic,assign) BOOL PenguinChaseiskefu;
@@ -31,13 +31,13 @@
     self.PenguinChasekefuSendStatus = NO;
     self.PenguinChaseiskefu = NO;
     
-    [self.view addSubview:self.CarpVideoKefuTableView];
+    [self.view addSubview:self.PenguinChaseKeufTableView];
     [self.view addSubview:self.PenguinSednBtn];
     [LCProgressHUD showLoading:@""];
     dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(0.34 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
         [LCProgressHUD hide];
         self.PenguinChaseiskefu = YES;
-        [self.CarpVideoKefuTableView reloadData];
+        [self.PenguinChaseKeufTableView reloadData];
     });
 }
 -(void)PenguinSednBtnClick{
@@ -75,7 +75,7 @@
                     models.imgUrl = @"https://gimg2.baidu.com/image_search/src=http%3A%2F%2Fimg3.duitang.com%2Fuploads%2Fitem%2F201505%2F17%2F20150517101126_SFy2U.jpeg&refer=http%3A%2F%2Fimg3.duitang.com&app=2002&size=f9999,10000&q=a80&n=0&g=0n&fmt=jpeg?sec=1619531738&t=5a22670d588cfd9b0d5f6719b04e22bf";
                     models.CellHeight = 0 ;
                     [weakSelf.PenguinChasekefuDataArr addObject:models];
-                    [weakSelf.CarpVideoKefuTableView reloadData];
+                    [weakSelf.PenguinChaseKeufTableView reloadData];
                     dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(1 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
                         PenguinChaseKefuModel  * models = [[PenguinChaseKefuModel alloc]init];
                         models.msgname = self.PenguinChasekefuSendStatus == NO ? @"抱歉，小周无法理解你说的问题哦～，你可以说今天是周几😄" : @"很抱歉，无法理解你说的问题，如果有疑问，可以拨打我们的人工客服电话400-600-5872";
@@ -84,67 +84,36 @@
                         models.imgUrl = @"https://gimg2.baidu.com/image_search/src=http%3A%2F%2Fimg3.duitang.com%2Fuploads%2Fitem%2F201505%2F17%2F20150517101126_SFy2U.jpeg&refer=http%3A%2F%2Fimg3.duitang.com&app=2002&size=f9999,10000&q=a80&n=0&g=0n&fmt=jpeg?sec=1619531738&t=5a22670d588cfd9b0d5f6719b04e22bf";
                         models.CellHeight = 0 ;
                         [weakSelf.PenguinChasekefuDataArr addObject:models];
-                        [weakSelf.CarpVideoKefuTableView reloadData];
+                        [weakSelf.PenguinChaseKeufTableView reloadData];
                         self.PenguinChasekefuSendStatus = YES;
                     });
                 });
 
 }
-//- (PenguinChaseChatDetailToolsView *)carpVideoToolView{
-//    if (!_carpVideoToolView) {
-//        MJWeakSelf;
-//        _carpVideoToolView = [[PenguinChaseChatDetailToolsView alloc]initWithFrame:CGRectMake(0, GK_SCREEN_HEIGHT-RealWidth(65)-GK_STATUSBAR_NAVBAR_HEIGHT, GK_SCREEN_WIDTH, RealWidth(60)) witheTextViewBlokc:^(UITextView * _Nonnull textView) {
-//            [LCProgressHUD showLoading:@""];
-//            dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(.5 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
-//                [LCProgressHUD hide];
-//                PenguinChaseKefuModel  * models = [[PenguinChaseKefuModel alloc]init];
-//                models.msgname = textView.text;
-//                models.userID = 9999;
-//                models.msgisMe = YES;
-//                models.imgUrl = @"https://gimg2.baidu.com/image_search/src=http%3A%2F%2Fimg3.duitang.com%2Fuploads%2Fitem%2F201505%2F17%2F20150517101126_SFy2U.jpeg&refer=http%3A%2F%2Fimg3.duitang.com&app=2002&size=f9999,10000&q=a80&n=0&g=0n&fmt=jpeg?sec=1619531738&t=5a22670d588cfd9b0d5f6719b04e22bf";
-//                models.CellHeight = 0 ;
-//                [weakSelf.PenguinChasekefuDataArr addObject:models];
-//                textView.text = nil;
-//                [weakSelf.CarpVideoKefuTableView reloadData];
-//                dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(1 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
-//                    PenguinChaseKefuModel  * models = [[PenguinChaseKefuModel alloc]init];
-//                    models.msgname = self.PenguinChasekefuSendStatus == NO ? @"抱歉，小周无法理解你说的问题哦～，你可以说今天是周几😄" : @"很抱歉，无法理解你说的问题，如果有疑问，可以拨打我们的人工客服电话400-600-5872";
-//                    models.userID = 9999;
-//                    models.msgisMe = NO;
-//                    models.imgUrl = @"https://gimg2.baidu.com/image_search/src=http%3A%2F%2Fimg3.duitang.com%2Fuploads%2Fitem%2F201505%2F17%2F20150517101126_SFy2U.jpeg&refer=http%3A%2F%2Fimg3.duitang.com&app=2002&size=f9999,10000&q=a80&n=0&g=0n&fmt=jpeg?sec=1619531738&t=5a22670d588cfd9b0d5f6719b04e22bf";
-//                    models.CellHeight = 0 ;
-//                    [weakSelf.PenguinChasekefuDataArr addObject:models];
-//                    [weakSelf.CarpVideoKefuTableView reloadData];
-//                    self.PenguinChasekefuSendStatus = YES;
-//                });
-//            });
-//        }];
-//    }
-//    return _carpVideoToolView;
-//}
-- (UITableView *)CarpVideoKefuTableView{
-    if (!_CarpVideoKefuTableView) {
-        _CarpVideoKefuTableView = [[UITableView alloc]initWithFrame:CGRectMake(0, GK_STATUSBAR_NAVBAR_HEIGHT, GK_SCREEN_WIDTH, GK_SCREEN_HEIGHT-RealWidth(0)-GK_STATUSBAR_NAVBAR_HEIGHT) style:UITableViewStylePlain];
-        _CarpVideoKefuTableView.delegate = self;
-        _CarpVideoKefuTableView.dataSource = self;
-        _CarpVideoKefuTableView.showsVerticalScrollIndicator = NO;
-        _CarpVideoKefuTableView.showsHorizontalScrollIndicator = NO;
-        _CarpVideoKefuTableView.separatorStyle = UITableViewCellSelectionStyleNone;
-        _CarpVideoKefuTableView.backgroundColor = [UIColor clearColor];
+
+- (UITableView *)PenguinChaseKeufTableView{
+    if (!_PenguinChaseKeufTableView) {
+        _PenguinChaseKeufTableView = [[UITableView alloc]initWithFrame:CGRectMake(0, GK_STATUSBAR_NAVBAR_HEIGHT, GK_SCREEN_WIDTH, GK_SCREEN_HEIGHT-RealWidth(0)-GK_STATUSBAR_NAVBAR_HEIGHT) style:UITableViewStylePlain];
+        _PenguinChaseKeufTableView.delegate = self;
+        _PenguinChaseKeufTableView.dataSource = self;
+        _PenguinChaseKeufTableView.showsVerticalScrollIndicator = NO;
+        _PenguinChaseKeufTableView.showsHorizontalScrollIndicator = NO;
+        _PenguinChaseKeufTableView.separatorStyle = UITableViewCellSelectionStyleNone;
+        _PenguinChaseKeufTableView.backgroundColor = [UIColor clearColor];
     }
-    return _CarpVideoKefuTableView;
+    return _PenguinChaseKeufTableView;
 }
 -(NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section{
     return self.PenguinChaseiskefu ? self.PenguinChasekefuDataArr.count : 0;
 }
 -(UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
-    static NSString * pandaIdentifer = @"PenguinChaseKefuTableViewCell";
-    PenguinChaseKefuTableViewCell * carpVideoCell = [tableView dequeueReusableCellWithIdentifier:pandaIdentifer];
-    if (carpVideoCell == nil) {
-        carpVideoCell = [[PenguinChaseKefuTableViewCell alloc]initWithStyle:UITableViewCellStyleDefault reuseIdentifier:pandaIdentifer];
+    static NSString * PenguinChaseIdentifer = @"PenguinChaseKefuTableViewCell";
+    PenguinChaseKefuTableViewCell * PenguinCell = [tableView dequeueReusableCellWithIdentifier:PenguinChaseIdentifer];
+    if (PenguinCell == nil) {
+        PenguinCell = [[PenguinChaseKefuTableViewCell alloc]initWithStyle:UITableViewCellStyleDefault reuseIdentifier:PenguinChaseIdentifer];
     }
-    carpVideoCell.penguinModel  = self.PenguinChasekefuDataArr[indexPath.row];
-    return carpVideoCell;
+    PenguinCell.penguinModel  = self.PenguinChasekefuDataArr[indexPath.row];
+    return PenguinCell;
 }
 -(CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath{
     PenguinChaseKefuModel * PenguinChaseitem = self.PenguinChasekefuDataArr[indexPath.row];

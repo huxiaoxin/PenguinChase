@@ -49,7 +49,7 @@
     [_PenguinChaseWantNumlb mas_makeConstraints:^(MASConstraintMaker *make) {
         make.left.mas_equalTo(_PenguinThubImgView.mas_right).offset(RealWidth(10));
         make.top.mas_equalTo(_PenguinChaseMainArtistlb.mas_bottom).offset(RealWidth(5));
-        make.right.mas_equalTo(_PenguinChase_contentView.mas_right).offset(-RealWidth(5));
+        make.right.mas_equalTo(_watchBtn.mas_left).offset(-RealWidth(10));
     }];
     
     [_PenguinTimelb mas_makeConstraints:^(MASConstraintMaker *make) {
@@ -121,16 +121,7 @@
         _PenguinChaseWantNumlb = [UILabel new];
         _PenguinChaseWantNumlb.textColor = LGDLightBLackColor;
         _PenguinChaseWantNumlb.font = [UIFont systemFontOfSize:12];
-        NSString * peopleNums = @"1231";
-        NSString * peopleWatch =  @"人想看";
-        NSMutableAttributedString * mutableAttbute = [[NSMutableAttributedString alloc]initWithString:[NSString stringWithFormat:@"%@%@",peopleNums,peopleWatch]];
-        [mutableAttbute addAttribute:NSForegroundColorAttributeName value:LGDRedColor range:NSMakeRange(0, peopleNums.length)];
-        [mutableAttbute addAttribute:NSFontAttributeName value:[UIFont boldSystemFontOfSize:12] range:NSMakeRange(0, peopleNums.length)];
-
-        [mutableAttbute addAttribute:NSForegroundColorAttributeName value:LGDLightBLackColor range:NSMakeRange(peopleNums.length, peopleWatch.length)];
-        [mutableAttbute addAttribute:NSFontAttributeName value:[UIFont systemFontOfSize:12] range:NSMakeRange(peopleNums.length, peopleWatch.length)];
-
-        _PenguinChaseWantNumlb.attributedText = mutableAttbute;
+       
     }
     return _PenguinChaseWantNumlb;
 }
@@ -149,7 +140,7 @@
     return _watchBtn;
 }
 -(void)watchBtnClick{
-    
+    [self.delegate PenguinChaseHomeTableViewCellWithWantbtnAction:self.tag];
 }
 - (void)setPenguinModel:(PenguinChaseVideoModel *)penguinModel{
     _penguinModel = penguinModel;
@@ -162,7 +153,24 @@
     }
     _PenguinChaseMainArtistlb.text =  [tempArr componentsJoinedByString:@"|"];
     _PenguinTimelb.text = penguinModel.penguinChase_MoviewTime;
+    NSString * peopleNums = [NSString stringWithFormat:@"%ld",(long)penguinModel.WantNums];
+    NSString * peopleWatch =  @"人想看";
+    NSMutableAttributedString * mutableAttbute = [[NSMutableAttributedString alloc]initWithString:[NSString stringWithFormat:@"%@%@",peopleNums,peopleWatch]];
+    [mutableAttbute addAttribute:NSForegroundColorAttributeName value:LGDRedColor range:NSMakeRange(0, peopleNums.length)];
+    [mutableAttbute addAttribute:NSFontAttributeName value:[UIFont boldSystemFontOfSize:12] range:NSMakeRange(0, peopleNums.length)];
+
+    [mutableAttbute addAttribute:NSForegroundColorAttributeName value:LGDLightBLackColor range:NSMakeRange(peopleNums.length, peopleWatch.length)];
+    [mutableAttbute addAttribute:NSFontAttributeName value:[UIFont systemFontOfSize:12] range:NSMakeRange(peopleNums.length, peopleWatch.length)];
+
+    _PenguinChaseWantNumlb.attributedText = mutableAttbute;
     
+    if ([PenguinChaseLoginTool PenguinChaseLoginToolCheckuserIslgoin]) {
+        [_watchBtn setBackgroundColor:penguinModel.penguinChase_isColltecd ? LGDGaryColor : LGDMianColor ];
+        [_watchBtn setTitle:penguinModel.penguinChase_isColltecd ? @"已看" :@"想看" forState:UIControlStateNormal];
+    }else{
+        [_watchBtn setTitle:@"想看" forState:UIControlStateNormal];
+        [_watchBtn setBackgroundColor:LGDMianColor];
+    }
     
 }
 - (void)awakeFromNib {

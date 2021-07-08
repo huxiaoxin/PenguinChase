@@ -28,23 +28,28 @@
             make.left.right.mas_equalTo(self);
             make.height.mas_equalTo(RealWidth(10));
         }];
-        MJWeakSelf;
-        dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(0.01 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
-            [weakSelf.PenguinCollectionView reloadData];
-            [self setNeedsLayout];
-            [self layoutIfNeeded];
-            [weakSelf.PenguinCollectionView mas_updateConstraints:^(MASConstraintMaker *make) {
-                make.height.mas_equalTo(self->_penguinLayout.collectionViewContentSize.height);
-            }];
-
-            if (weakSelf.FooterBlock) {
-                weakSelf.FooterBlock(weakSelf.penguinLayout.collectionViewContentSize.height+RealWidth(35));
-            }
-        });
+ 
         
         
     }
     return self;
+}
+- (void)setPenguinFooterDataArr:(NSArray *)PenguinFooterDataArr{
+    _PenguinFooterDataArr = PenguinFooterDataArr;
+    [_PenguinCollectionView reloadData];
+    MJWeakSelf;
+    dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(0.01 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+        [weakSelf.PenguinCollectionView reloadData];
+        [self setNeedsLayout];
+        [self layoutIfNeeded];
+        [weakSelf.PenguinCollectionView mas_updateConstraints:^(MASConstraintMaker *make) {
+            make.height.mas_equalTo(self->_penguinLayout.collectionViewContentSize.height);
+        }];
+
+        if (weakSelf.FooterBlock) {
+            weakSelf.FooterBlock(weakSelf.penguinLayout.collectionViewContentSize.height+RealWidth(35));
+        }
+    });
 }
 - (UICollectionView *)PenguinCollectionView{
     if (!_PenguinCollectionView) {
@@ -63,16 +68,16 @@
 }
 // The cell that is returned must be retrieved from a call to -dequeueReusableCellWithReuseIdentifier:forIndexPath:
 - (__kindof UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath{
-    PenguinChaseHomeCollectionViewCell * pandaCell = [PenguinChaseHomeCollectionViewCell PenguinChasecreatTheCollectView:collectionView AndTheIndexPath:indexPath];
-    return pandaCell;
+    PenguinChaseHomeCollectionViewCell * PenginCHsaesaCell = [PenguinChaseHomeCollectionViewCell PenguinChasecreatTheCollectView:collectionView AndTheIndexPath:indexPath];
+    PenginCHsaesaCell.penguinModel = self.PenguinFooterDataArr[indexPath.row];
+    return PenginCHsaesaCell;
 }
 -(NSInteger)collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section{
-    return 4;
+    return _PenguinFooterDataArr.count;
 }
 -(void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath{
-  
+    [self.delegate PenguinChaseHomeFooterViewWithColltecDidSeltecd:_PenguinFooterDataArr[indexPath.row]];
 }
-
 #pragma mark--JRWaterFallLayoutDelegate
 - (CGFloat)waterFallLayout:(JRWaterFallLayout *)waterFallLayout heightForItemAtIndex:(NSUInteger)index width:(CGFloat)width
 {

@@ -234,6 +234,14 @@
     _PenguinChaseNamelb.text = pengModel.userName;
     _PenguinTimelb.text =  pengModel.time;
     
+    if ([PenguinChaseLoginTool PenguinChaseLoginToolCheckuserIslgoin]) {
+        _PenguinZanBtn.penguinLeftImgView.image = [UIImage imageNamed:pengModel.isLike ? @"dianzan-sel" : @"dianzan"];
+
+    }else{
+        _PenguinZanBtn.penguinLeftImgView.image = [UIImage imageNamed:@"dianzan"];
+
+    }
+    
     if (pengModel.userLevel == 0) {
         _PenguinChaseTaglb.hidden = YES;
     }else if (pengModel.userLevel == 1){

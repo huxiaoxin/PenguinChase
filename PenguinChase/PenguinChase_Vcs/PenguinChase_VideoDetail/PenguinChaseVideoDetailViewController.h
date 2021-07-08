@@ -10,7 +10,7 @@
 NS_ASSUME_NONNULL_BEGIN
 
 @interface PenguinChaseVideoDetailViewController : PenguinChaseListViewController
-
+@property(nonatomic,strong) PenguinChaseVideoModel * pengModel;
 @end
 
 NS_ASSUME_NONNULL_END

@@ -41,6 +41,14 @@
 		8A515550268C5427001F5D52 /* PenguinChaseHomeNewsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8A51554F268C5427001F5D52 /* PenguinChaseHomeNewsViewController.m */; };
 		8A515559268C5642001F5D52 /* PenguinChaseNewsTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 8A515558268C5642001F5D52 /* PenguinChaseNewsTableViewCell.m */; };
 		8A515560268C6EB5001F5D52 /* PenguinChaseDongtaiViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8A51555F268C6EB5001F5D52 /* PenguinChaseDongtaiViewController.m */; };
+		8A551B8E2696BBFB003B218B /* PenguinChaseNewsModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 8A551B8D2696BBFB003B218B /* PenguinChaseNewsModel.m */; };
+		8A551B942696BC21003B218B /* PenguinChaseBaseModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 8A551B932696BC21003B218B /* PenguinChaseBaseModel.m */; };
+		8A551B9A2696BC5A003B218B /* PenguinChasenewsSizeTool.m in Sources */ = {isa = PBXBuildFile; fileRef = 8A551B982696BC5A003B218B /* PenguinChasenewsSizeTool.m */; };
+		8A551BA02696BDAE003B218B /* PenguinChaseNewsDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8A551B9F2696BDAE003B218B /* PenguinChaseNewsDetailViewController.m */; };
+		8A551BB62696C016003B218B /* penguinChaseNews_0.json in Resources */ = {isa = PBXBuildFile; fileRef = 8A551BB52696C016003B218B /* penguinChaseNews_0.json */; };
+		8A551BBB2696C06D003B218B /* penguinChaseNews_1.json in Resources */ = {isa = PBXBuildFile; fileRef = 8A551BBA2696C06D003B218B /* penguinChaseNews_1.json */; };
+		8A551BC02696C073003B218B /* penguinChaseNews_2.json in Resources */ = {isa = PBXBuildFile; fileRef = 8A551BBF2696C073003B218B /* penguinChaseNews_2.json */; };
+		8A551BC52696C07A003B218B /* penguinChaseNews_3.json in Resources */ = {isa = PBXBuildFile; fileRef = 8A551BC42696C07A003B218B /* penguinChaseNews_3.json */; };
 		8A59703126942E43006D3675 /* PenguinChaseSearchingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8A59703026942E43006D3675 /* PenguinChaseSearchingViewController.m */; };
 		8A5970FD26943E95006D3675 /* PenguinCenterBtn.m in Sources */ = {isa = PBXBuildFile; fileRef = 8A5970FC26943E95006D3675 /* PenguinCenterBtn.m */; };
 		8A59714326944F63006D3675 /* PenguinChaseSugestionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8A59714226944F63006D3675 /* PenguinChaseSugestionViewController.m */; };
@@ -100,7 +108,7 @@
 		8AF8485326956C2F0025CDE3 /* PenguinChatMessageListModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 8AF8485226956C2F0025CDE3 /* PenguinChatMessageListModel.m */; };
 		8AF8485A2695705D0025CDE3 /* PenguinChaseChatDetailToolsView.m in Sources */ = {isa = PBXBuildFile; fileRef = 8AF848592695705D0025CDE3 /* PenguinChaseChatDetailToolsView.m */; };
 		8AF848622695706F0025CDE3 /* PenguinChaseMessageDetailModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 8AF848602695706F0025CDE3 /* PenguinChaseMessageDetailModel.m */; };
-		8AF848632695706F0025CDE3 /* carpVideoMessageDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8AF848612695706F0025CDE3 /* carpVideoMessageDetailViewController.m */; };
+		8AF848632695706F0025CDE3 /* PenguinChaseMessageDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8AF848612695706F0025CDE3 /* PenguinChaseMessageDetailViewController.m */; };
 		8AF848AA269580E20025CDE3 /* PenguinChaseVideoModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 8AF848A9269580E20025CDE3 /* PenguinChaseVideoModel.m */; };
 		8AF848B0269584610025CDE3 /* PenguinHuatiLeftMoel.m in Sources */ = {isa = PBXBuildFile; fileRef = 8AF848AF269584610025CDE3 /* PenguinHuatiLeftMoel.m */; };
 		8AF848B626958A180025CDE3 /* PenguinChaseVideoComentModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 8AF848B526958A180025CDE3 /* PenguinChaseVideoComentModel.m */; };
@@ -195,6 +203,18 @@
 		8A515558268C5642001F5D52 /* PenguinChaseNewsTableViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PenguinChaseNewsTableViewCell.m; sourceTree = "<group>"; };
 		8A51555E268C6EB5001F5D52 /* PenguinChaseDongtaiViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PenguinChaseDongtaiViewController.h; sourceTree = "<group>"; };
 		8A51555F268C6EB5001F5D52 /* PenguinChaseDongtaiViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PenguinChaseDongtaiViewController.m; sourceTree = "<group>"; };
+		8A551B8C2696BBFB003B218B /* PenguinChaseNewsModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PenguinChaseNewsModel.h; sourceTree = "<group>"; };
+		8A551B8D2696BBFB003B218B /* PenguinChaseNewsModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PenguinChaseNewsModel.m; sourceTree = "<group>"; };
+		8A551B922696BC21003B218B /* PenguinChaseBaseModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PenguinChaseBaseModel.h; sourceTree = "<group>"; };
+		8A551B932696BC21003B218B /* PenguinChaseBaseModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PenguinChaseBaseModel.m; sourceTree = "<group>"; };
+		8A551B982696BC5A003B218B /* PenguinChasenewsSizeTool.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PenguinChasenewsSizeTool.m; sourceTree = "<group>"; };
+		8A551B992696BC5A003B218B /* PenguinChasenewsSizeTool.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PenguinChasenewsSizeTool.h; sourceTree = "<group>"; };
+		8A551B9E2696BDAE003B218B /* PenguinChaseNewsDetailViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PenguinChaseNewsDetailViewController.h; sourceTree = "<group>"; };
+		8A551B9F2696BDAE003B218B /* PenguinChaseNewsDetailViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PenguinChaseNewsDetailViewController.m; sourceTree = "<group>"; };
+		8A551BB52696C016003B218B /* penguinChaseNews_0.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = penguinChaseNews_0.json; sourceTree = "<group>"; };
+		8A551BBA2696C06D003B218B /* penguinChaseNews_1.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = penguinChaseNews_1.json; sourceTree = "<group>"; };
+		8A551BBF2696C073003B218B /* penguinChaseNews_2.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = penguinChaseNews_2.json; sourceTree = "<group>"; };
+		8A551BC42696C07A003B218B /* penguinChaseNews_3.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = penguinChaseNews_3.json; sourceTree = "<group>"; };
 		8A59702F26942E43006D3675 /* PenguinChaseSearchingViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PenguinChaseSearchingViewController.h; sourceTree = "<group>"; };
 		8A59703026942E43006D3675 /* PenguinChaseSearchingViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PenguinChaseSearchingViewController.m; sourceTree = "<group>"; };
 		8A5970FB26943E95006D3675 /* PenguinCenterBtn.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PenguinCenterBtn.h; sourceTree = "<group>"; };
@@ -313,9 +333,9 @@
 		8AF848582695705D0025CDE3 /* PenguinChaseChatDetailToolsView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PenguinChaseChatDetailToolsView.h; sourceTree = "<group>"; };
 		8AF848592695705D0025CDE3 /* PenguinChaseChatDetailToolsView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PenguinChaseChatDetailToolsView.m; sourceTree = "<group>"; };
 		8AF8485E2695706E0025CDE3 /* PenguinChaseMessageDetailModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PenguinChaseMessageDetailModel.h; sourceTree = "<group>"; };
-		8AF8485F2695706F0025CDE3 /* carpVideoMessageDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = carpVideoMessageDetailViewController.h; sourceTree = "<group>"; };
+		8AF8485F2695706F0025CDE3 /* PenguinChaseMessageDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PenguinChaseMessageDetailViewController.h; sourceTree = "<group>"; };
 		8AF848602695706F0025CDE3 /* PenguinChaseMessageDetailModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PenguinChaseMessageDetailModel.m; sourceTree = "<group>"; };
-		8AF848612695706F0025CDE3 /* carpVideoMessageDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = carpVideoMessageDetailViewController.m; sourceTree = "<group>"; };
+		8AF848612695706F0025CDE3 /* PenguinChaseMessageDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PenguinChaseMessageDetailViewController.m; sourceTree = "<group>"; };
 		8AF848A8269580E20025CDE3 /* PenguinChaseVideoModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PenguinChaseVideoModel.h; sourceTree = "<group>"; };
 		8AF848A9269580E20025CDE3 /* PenguinChaseVideoModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PenguinChaseVideoModel.m; sourceTree = "<group>"; };
 		8AF848AE269584610025CDE3 /* PenguinHuatiLeftMoel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PenguinHuatiLeftMoel.h; sourceTree = "<group>"; };
@@ -478,10 +498,16 @@
 		8A51554D268C53CA001F5D52 /* PenguinChase_News */ = {
 			isa = PBXGroup;
 			children = (
+				8A551B992696BC5A003B218B /* PenguinChasenewsSizeTool.h */,
+				8A551B982696BC5A003B218B /* PenguinChasenewsSizeTool.m */,
 				8A51554E268C5427001F5D52 /* PenguinChaseHomeNewsViewController.h */,
 				8A51554F268C5427001F5D52 /* PenguinChaseHomeNewsViewController.m */,
 				8A515557268C5642001F5D52 /* PenguinChaseNewsTableViewCell.h */,
 				8A515558268C5642001F5D52 /* PenguinChaseNewsTableViewCell.m */,
+				8A551B8C2696BBFB003B218B /* PenguinChaseNewsModel.h */,
+				8A551B8D2696BBFB003B218B /* PenguinChaseNewsModel.m */,
+				8A551B9E2696BDAE003B218B /* PenguinChaseNewsDetailViewController.h */,
+				8A551B9F2696BDAE003B218B /* PenguinChaseNewsDetailViewController.m */,
 			);
 			path = PenguinChase_News;
 			sourceTree = "<group>";
@@ -513,6 +539,10 @@
 			children = (
 				8A59702F26942E43006D3675 /* PenguinChaseSearchingViewController.h */,
 				8A59703026942E43006D3675 /* PenguinChaseSearchingViewController.m */,
+				8A551BB52696C016003B218B /* penguinChaseNews_0.json */,
+				8A551BBA2696C06D003B218B /* penguinChaseNews_1.json */,
+				8A551BBF2696C073003B218B /* penguinChaseNews_2.json */,
+				8A551BC42696C07A003B218B /* penguinChaseNews_3.json */,
 			);
 			path = PenguinChase_search;
 			sourceTree = "<group>";
@@ -743,6 +773,8 @@
 				8A5ABC1E2689CEE100DF1108 /* PenguinChaseBaseTableViewCell.m */,
 				8A5ABC232689CF3B00DF1108 /* PenguinChaseBaseCollectionViewCell.h */,
 				8A5ABC242689CF3B00DF1108 /* PenguinChaseBaseCollectionViewCell.m */,
+				8A551B922696BC21003B218B /* PenguinChaseBaseModel.h */,
+				8A551B932696BC21003B218B /* PenguinChaseBaseModel.m */,
 			);
 			path = PenguunChase_Base;
 			sourceTree = "<group>";
@@ -820,8 +852,8 @@
 				8AF848592695705D0025CDE3 /* PenguinChaseChatDetailToolsView.m */,
 				8AF8485E2695706E0025CDE3 /* PenguinChaseMessageDetailModel.h */,
 				8AF848602695706F0025CDE3 /* PenguinChaseMessageDetailModel.m */,
-				8AF8485F2695706F0025CDE3 /* carpVideoMessageDetailViewController.h */,
-				8AF848612695706F0025CDE3 /* carpVideoMessageDetailViewController.m */,
+				8AF8485F2695706F0025CDE3 /* PenguinChaseMessageDetailViewController.h */,
+				8AF848612695706F0025CDE3 /* PenguinChaseMessageDetailViewController.m */,
 			);
 			path = PenguinChase_ChatDetail;
 			sourceTree = "<group>";
@@ -940,9 +972,13 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8A551BC52696C07A003B218B /* penguinChaseNews_3.json in Resources */,
 				8A32A67926845F4A0089F8BC /* LaunchScreen.storyboard in Resources */,
 				8A32A67626845F4A0089F8BC /* Assets.xcassets in Resources */,
 				8A59715B2694574F006D3675 /* PenguinAbout.html in Resources */,
+				8A551BC02696C073003B218B /* penguinChaseNews_2.json in Resources */,
+				8A551BB62696C016003B218B /* penguinChaseNews_0.json in Resources */,
+				8A551BBB2696C06D003B218B /* penguinChaseNews_1.json in Resources */,
 				8A32A67426845F480089F8BC /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -1049,12 +1085,13 @@
 				8A7190AE2692AFAF004F4953 /* PenguinChaseDongtaiTableViewCell.m in Sources */,
 				4A25563C26900B0200033DFD /* PenginChaseVideoDetailTableViewCell.m in Sources */,
 				8A7190BA2692DCBD004F4953 /* PenguinChaseDongtaiBtn.m in Sources */,
-				8AF848632695706F0025CDE3 /* carpVideoMessageDetailViewController.m in Sources */,
+				8AF848632695706F0025CDE3 /* PenguinChaseMessageDetailViewController.m in Sources */,
 				8A7190A526929539004F4953 /* PenguinCase_GoodVideoHeaderView.m in Sources */,
 				8A59716F26945B39006D3675 /* PengUinChaseWatchedViewController.m in Sources */,
 				8A719145269306A7004F4953 /* PenguinCenterHeaderView.m in Sources */,
 				8A7190D62692F98D004F4953 /* PenguinChaseJubaoLitsViewController.m in Sources */,
 				8A5ABC312689D13A00DF1108 /* CoreAnimationEffect.m in Sources */,
+				8A551B942696BC21003B218B /* PenguinChaseBaseModel.m in Sources */,
 				8AF848622695706F0025CDE3 /* PenguinChaseMessageDetailModel.m in Sources */,
 				8AF8483226953AE80025CDE3 /* PenguinChaseMyinfoTableViewCell.m in Sources */,
 				8A32A66B26845F480089F8BC /* AppDelegate.m in Sources */,
@@ -1078,6 +1115,7 @@
 				8A59719626945CB1006D3675 /* PenguinhaseSendZoneCollectionCell.m in Sources */,
 				8A49613F268AC9F100CB02DD /* PenguinChaseHomeTableViewCell.m in Sources */,
 				8A5ABC522689D22000DF1108 /* PenguinChaseFabuViewController.m in Sources */,
+				8A551B9A2696BC5A003B218B /* PenguinChasenewsSizeTool.m in Sources */,
 				8A5ABBF42689CCF400DF1108 /* UIView+ACSLayer.m in Sources */,
 				8A5ABBF52689CCF400DF1108 /* LMJHorizontalScrollText.m in Sources */,
 				8A5ABC192689CEC300DF1108 /* PenguinChaseListViewController.m in Sources */,
@@ -1093,6 +1131,7 @@
 				8A59716526945A64006D3675 /* PenguinChaseMyFallowViewController.m in Sources */,
 				4A25564E2690233700033DFD /* PenguinChaseBangdanTableViewCell.m in Sources */,
 				8A496163268B22D600CB02DD /* PenguinHuatiRigthTableViewCell.m in Sources */,
+				8A551B8E2696BBFB003B218B /* PenguinChaseNewsModel.m in Sources */,
 				8AF84844269541110025CDE3 /* PenguinChaseDongtaiModel.m in Sources */,
 				8A5ABC0A2689CE6900DF1108 /* PenguinChase_BaseTabbarViewController.m in Sources */,
 				4A2556512690460A00033DFD /* PenguinChaseWantBtn.m in Sources */,
@@ -1116,6 +1155,7 @@
 				8A5ABBF62689CCF400DF1108 /* UILabel+CDGPSpaceLb.m in Sources */,
 				8A496136268ABBA600CB02DD /* PenguinChaseVideoMessageBtn.m in Sources */,
 				8A49614B268B006A00CB02DD /* PenguinChaseHomeCollectionViewCell.m in Sources */,
+				8A551BA02696BDAE003B218B /* PenguinChaseNewsDetailViewController.m in Sources */,
 				8A49615D268B1DE500CB02DD /* PenguinHuatileftTableViewCell.m in Sources */,
 				8A5ABC132689CEA300DF1108 /* PenguinChase_BaseViewController.m in Sources */,
 			);

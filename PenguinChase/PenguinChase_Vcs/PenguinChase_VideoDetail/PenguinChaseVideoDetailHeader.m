@@ -7,8 +7,11 @@
 
 #import "PenguinChaseVideoDetailHeader.h"
 #import "PenguinChaseVideodetailCollectionViewCell.h"
-@interface PenguinChaseVideoDetailHeader ()<UICollectionViewDataSource,UICollectionViewDelegate>
-@property(nonatomic,strong) UIImageView * penguinThubImgView;
+#import <SDCycleScrollView-umbrella.h>
+#import "PenguinChaseWantBtn.h"
+#import <GKPhotoBrowser-umbrella.h>
+@interface PenguinChaseVideoDetailHeader ()<UICollectionViewDataSource,UICollectionViewDelegate,SDCycleScrollViewDelegate>
+@property(nonatomic,strong) SDCycleScrollView * penguinThubImgView;
 @property(nonatomic,strong) UIImageView * penguinThubIconImgView;
 @property(nonatomic,strong) UILabel     * PenguinNamelb;
 @property(nonatomic,strong) UILabel     * PenguinEnglishlb;
@@ -20,11 +23,22 @@
 @property(nonatomic,strong) UIView      * PenguinTopline;
 @property(nonatomic,strong) UICollectionView * PenguinCollectionView;
 @property(nonatomic,strong) UIView      * PenguinBtomline;
-@property(nonatomic,strong) UIButton    * PenguinColltecdBtn;
+@property(nonatomic,strong) PenguinChaseWantBtn    * PenguinColltecdBtn;
 @property(nonatomic,strong) UIView      * PenguinGaryView;
 @property(nonatomic,strong) UILabel     * PenguinHotlb;
 @end
 @implementation PenguinChaseVideoDetailHeader
+- (void)cycleScrollView:(SDCycleScrollView *)cycleScrollView didSelectItemAtIndex:(NSInteger)index{
+    NSMutableArray *photos = [NSMutableArray new];
+    [_pengModel.penguinChase_MoviewImgArr enumerateObjectsUsingBlock:^(id  _Nonnull obj, NSUInteger idx, BOOL * _Nonnull stop) {
+        GKPhoto *photo = [GKPhoto new];
+        photo.url = [NSURL URLWithString:obj];
+        [photos addObject:photo];
+    }];
+    GKPhotoBrowser *browser = [GKPhotoBrowser photoBrowserWithPhotos:photos currentIndex:index];
+    browser.showStyle = GKPhotoBrowserShowStyleNone;
+    [browser showFromVC:[AppDelegate shareDelegate].window.rootViewController.gk_visibleViewControllerIfExist];
+}
 -(instancetype)initWithFrame:(CGRect)frame{
     if (self = [super initWithFrame:frame]) {
         [self addSubview:self.penguinThubImgView];
@@ -43,10 +57,14 @@
         [self addSubview:self.PenguinCollectionView];
         [self addSubview:self.PenguinGaryView];
         [self addSubview:self.PenguinHotlb];
-        [_penguinThubImgView sd_setImageWithURL:[NSURL URLWithString:@"https://img1.doubanio.com/view/photo/l/public/p2236554239.jpg"] placeholderImage:[UIImage imageNamed:@""]];
+        
+
+//
+        
+//        [_penguinThubImgView sd_setImageWithURL:[NSURL URLWithString:@"https://img1.doubanio.com/view/photo/l/public/p2236554239.jpg"] placeholderImage:[UIImage imageNamed:@""]];
         
         
-        [_penguinThubIconImgView sd_setImageWithURL:[NSURL URLWithString:@"https://img1.doubanio.com/view/photo/s_ratio_poster/public/p2233706697.jpg"] placeholderImage:nil];
+//        [_penguinThubIconImgView sd_setImageWithURL:[NSURL URLWithString:@"https://img1.doubanio.com/view/photo/s_ratio_poster/public/p2233706697.jpg"] placeholderImage:nil];
         [_penguinThubImgView mas_makeConstraints:^(MASConstraintMaker *make) {
             make.left.right.top.mas_equalTo(self);
             make.height.mas_equalTo(RealWidth(220));
@@ -125,11 +143,32 @@
     }
     return self;
 }
-- (UIImageView *)penguinThubImgView{
+- (void)setPengModel:(PenguinChaseVideoModel *)pengModel{
+    _pengModel = pengModel;
+    [_penguinThubIconImgView sd_setImageWithURL:[NSURL URLWithString:pengModel.penguinChase_MoviewIocnurl] placeholderImage:[UIImage imageNamed:@"zhanweitu"]];
+    _penguinThubImgView.imageURLStringsGroup = pengModel.penguinChase_MoviewImgArr;
+    _PenguinNamelb.text = pengModel.penguinChase_MoviewName;
+    _PenguinEnglishlb.text = pengModel.penguinChase_EngilshMoviewName;
+    _PenguinTimelb.text = pengModel.penguinChase_MoviewTime;
+    _PenguinTypelb.text = pengModel.penguinChase_MoviewType;
+    _PenguinMoveTimelb.text = [NSString stringWithFormat:@"%ld%@好评",pengModel.penguinChase_RateSourecd,@"%"];
+    _PenguinTopTitle.text =  pengModel.penguinChase_MoviewTitle;
+    [_PenguinDesclb setText:pengModel.penguinChase_MoviewDesc lineSpacing:3];
+    [_PenguinCollectionView reloadData];
+    
+    if ([PenguinChaseLoginTool PenguinChaseLoginToolCheckuserIslgoin]) {
+        _PenguinColltecdBtn.penguinTopimgView.image = [UIImage imageNamed:pengModel.penguinChase_isColltecd ? @"yishoucang" : @"xiangkan"];
+    }else{
+        _PenguinColltecdBtn.penguinTopimgView.image = [UIImage imageNamed:@"xiangkan"];
+
+    }
+}
+- (SDCycleScrollView *)penguinThubImgView{
     if (!_penguinThubImgView) {
-        _penguinThubImgView = [UIImageView new];
+        _penguinThubImgView = [SDCycleScrollView new];
         _penguinThubImgView.contentMode = UIViewContentModeScaleToFill;
         _penguinThubImgView.layer.masksToBounds = YES;
+        _penguinThubImgView.delegate =self;
     }
     return _penguinThubImgView;
 }
@@ -218,11 +257,11 @@
     }
     return _PenguinTopline;
 }
-- (UIButton *)PenguinColltecdBtn{
+- (PenguinChaseWantBtn *)PenguinColltecdBtn{
     if (!_PenguinColltecdBtn) {
-        _PenguinColltecdBtn = [UIButton buttonWithType:UIButtonTypeCustom];
-        [_PenguinColltecdBtn setBackgroundColor:LGDMianColor];
-        [_PenguinColltecdBtn setImage:[UIImage imageNamed:@""] forState:UIControlStateNormal];
+        _PenguinColltecdBtn = [PenguinChaseWantBtn buttonWithType:UIButtonTypeCustom];
+//        [_PenguinColltecdBtn setBackgroundColor:LGDMianColor];
+//        [_PenguinColltecdBtn setImage:[UIImage imageNamed:@""] forState:UIControlStateNormal];
         [_PenguinColltecdBtn addTarget:self action:@selector(PenguinColltecdBtnClick) forControlEvents:UIControlEventTouchUpInside];
     }
     return _PenguinColltecdBtn;
@@ -245,7 +284,18 @@
 }
 #pragma mar--收藏
 -(void)PenguinColltecdBtnClick{
-    
+    if ([PenguinChaseLoginTool PenguinChaseLoginToolCheckuserIslgoin]) {
+        
+        [LCProgressHUD showLoading:@""];
+        dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(1 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+            [LCProgressHUD hide];
+            self.pengModel.penguinChase_isColltecd  = !self.pengModel.penguinChase_isColltecd;
+            _PenguinColltecdBtn.penguinTopimgView.image = [UIImage imageNamed:self.pengModel.penguinChase_isColltecd ? @"yishoucang" : @"xiangkan"];
+
+        });
+    }else{
+        [self.delegate PenguinChaseVideoDetailHeaderWithWantAction:self.pengModel];
+    }
 }
 - (UICollectionView *)PenguinCollectionView{
     if (!_PenguinCollectionView) {
@@ -263,12 +313,13 @@
     return _PenguinCollectionView;
 }
 - (NSInteger)collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section{
-    return 10;
+    return _pengModel.penguinChase_MoviewArtistArr.count;
 }
 
 // The cell that is returned must be retrieved from a call to -dequeueReusableCellWithReuseIdentifier:forIndexPath:
 - (__kindof UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath{
     PenguinChaseVideodetailCollectionViewCell * penguinCell = [collectionView dequeueReusableCellWithReuseIdentifier:@"PenguinChaseVideodetailCollectionViewCell" forIndexPath:indexPath];
+    penguinCell.penuinDic = _pengModel.penguinChase_MoviewArtistArr[indexPath.row];
     return penguinCell;
 }
 

@@ -13,6 +13,7 @@ NS_ASSUME_NONNULL_BEGIN
 @property(nonatomic,copy) NSString * userName;
 @property(nonatomic,copy) NSString * userHeadeurl;
 @property(nonatomic,assign) NSInteger starNum;
+@property(nonatomic,assign) NSInteger soureNum;
 @property(nonatomic,copy) NSString * content;
 @property(nonatomic,assign) NSInteger MoviewID;
 @property(nonatomic,assign) NSInteger ComentID;

@@ -97,7 +97,7 @@
 }
 -(void)setPenguinModel:(PenguinChaseKefuModel *)penguinModel{
     _penguinModel =  penguinModel;
-    [_PenguinChaseChatSEND_userImgView sd_setImageWithURL:[NSURL URLWithString:@"https://img2.woyaogexing.com/2021/06/19/4e16cecbec4145c4b10e52bb0b50fd17!400x400.jpeg"]];
+    [_PenguinChaseChatSEND_userImgView sd_setImageWithURL:[NSURL URLWithString:@"https://img0.baidu.com/it/u=2592042537,1864064944&fm=26&fmt=auto&gp=0.jpg"]];
     _PenguinChaseChatReVICE_userImgView.image = [UIImage imageNamed:@"kefu_onine"];
     if (penguinModel.msgisMe) {
         _PenguinChaseChatReVICE_paopaoIMgView.hidden = YES;
@@ -140,7 +140,7 @@
 }
 - (void)setPenguinDetailModel:(PenguinChaseMessageDetailModel *)penguinDetailModel{
     _penguinDetailModel = penguinDetailModel;
-    [_PenguinChaseChatSEND_userImgView sd_setImageWithURL:[NSURL URLWithString:@"https://img2.woyaogexing.com/2021/06/19/4e16cecbec4145c4b10e52bb0b50fd17!400x400.jpeg"]];
+    [_PenguinChaseChatSEND_userImgView sd_setImageWithURL:[NSURL URLWithString:@"https://img0.baidu.com/it/u=2592042537,1864064944&fm=26&fmt=auto&gp=0.jpg"]];
     [_PenguinChaseChatReVICE_userImgView sd_setImageWithURL:[NSURL URLWithString:penguinDetailModel.imgUrl]];
     if (penguinDetailModel.msgisMe) {
         _PenguinChaseChatReVICE_paopaoIMgView.hidden = YES;

@@ -6,16 +6,11 @@
 //
 
 #import "PenguinCenterHeaderView.h"
-#import "PenguinCenterBtn.h"
 @interface PenguinCenterHeaderView ()
 @property(nonatomic,strong) UIImageView * penguinBackImgView;
-@property(nonatomic,strong) UIImageView * PenguinuserimgView;
-@property(nonatomic,strong) UILabel     * PenguinNamelb;
+
 @property(nonatomic,strong) UIView      * PenguinContentView;
-@property(nonatomic,strong)PenguinCenterBtn  * MyFolwwbtn;
-@property(nonatomic,strong)PenguinCenterBtn  * MyWatchBtn;
-@property(nonatomic,strong)PenguinCenterBtn  * MySendbtn;
-@property(nonatomic,strong)PenguinCenterBtn  * MyColltecdbtn;
+
 
 @end
 @implementation PenguinCenterHeaderView
@@ -101,7 +96,7 @@
     if (!_MyFolwwbtn) {
         _MyFolwwbtn = [PenguinCenterBtn new];
         _MyFolwwbtn.PenguinToplb.text = @"12";
-        _MyFolwwbtn.PenguinBtomlb.text  =@"我的关注";
+        _MyFolwwbtn.PenguinBtomlb.text  =@"我的点赞";
         _MyFolwwbtn.tag = 0;
         [_MyFolwwbtn addTarget:self action:@selector(PenguinCenterBtnClick:) forControlEvents:UIControlEventTouchUpInside];
     }

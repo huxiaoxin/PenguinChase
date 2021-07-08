@@ -34,7 +34,7 @@
     penguinModel.content = @"电影角度来说很差，流水账一般的叙事，有点名气的演员有好几十个，其中至少20个角色只是露脸对剧情没有推动作用，每个人露脸2分钟，就是40分钟！";
     penguinModel.imgArr = @[@"https://img2.doubanio.com/view/photo/l/public/p2663174502.jpg",@"https://img9.doubanio.com/view/photo/l/public/p2663174504.jpg"];
     penguinModel.userID = 0;
-    penguinModel.isLike = NO;
+    penguinModel.isLike = YES;
     penguinModel.CellHeight = 0;
     [tempArr addObject:penguinModel];
     
@@ -62,7 +62,7 @@
     penguinModel2.content = @"3.5星，算是近期质量比较高的科幻电影，合格的爆米花，依旧是看特效，许多大场面还算是可以，找到了难得的快感，最后BOSS战也不错（真的，让我想到玩《生化危机8》刀通的时候）。不要在乎那些剧情，漏洞有些多，看个过瘾就OK咯～～～";
     penguinModel2.imgArr = @[@"https://img1.doubanio.com/view/photo/l/public/p2573878649.jpg",@"https://img1.doubanio.com/view/photo/l/public/p2658059718.jpg",@"https://img2.doubanio.com/view/photo/l/public/p2644391913.jpg",@"https://img2.doubanio.com/view/photo/l/public/p2642946101.jpg"];
     penguinModel2.userID = 2;
-    penguinModel2.isLike = NO;
+    penguinModel2.isLike = YES;
     penguinModel2.CellHeight = 0;
     [tempArr addObject:penguinModel2];
     
@@ -102,7 +102,7 @@
     penguinModel5.content = @"观感太割裂了，一边频频被视觉设计上的创意惊艳到，一边又不知道导演在吃力地表达什么，库伊拉这个本来能有深度挖掘空间的主角最终沦为了一种纯猎奇式的空壳人物，视觉残影散去以后，我还是没有懂她为何会逐渐演化成后传中的极端恶人。但终归两位艾玛对戏实在太精彩，戏剧张力拉满。影片虽然整体不完美，但是足够被牢记。";
     penguinModel5.imgArr = @[@"https://img2.doubanio.com/view/photo/l/public/p2635972581.jpg",@"https://img9.doubanio.com/view/photo/l/public/p2633681644.jpg"];
     penguinModel5.userID = 5;
-    penguinModel5.isLike = NO;
+    penguinModel5.isLike = YES;
     penguinModel5.CellHeight = 0;
     [tempArr addObject:penguinModel5];
     
@@ -499,7 +499,9 @@
 +(void)PenguinChaseVideoModelConfigers{
     NSMutableArray * tempArr = [NSMutableArray array];
     PenguinChaseVideoModel * penguinModle = [[PenguinChaseVideoModel alloc]init];
+    penguinModle.isViews =  NO;
     penguinModle.WantNums = 123;
+    penguinModle.PenguinChase_starNum = 5;
     penguinModle.penguinChase_MoviewName = @"明日之战";
     penguinModle.penguinChase_EngilshMoviewName = @"The Tomorrow War";
     penguinModle.penguinChase_MoviewIocnurl = @"https://img9.doubanio.com/view/photo/s_ratio_poster/public/p2666541015.jpg";
@@ -520,7 +522,9 @@
     
     
     PenguinChaseVideoModel * penguinModle1 = [[PenguinChaseVideoModel alloc]init];
+    penguinModle1.isViews =  NO;
     penguinModle1.WantNums = 451;
+    penguinModle1.PenguinChase_starNum = 5;
     penguinModle1.penguinChase_MoviewName = @"狼行者";
     penguinModle1.penguinChase_EngilshMoviewName = @"Wolfwalkers";
     penguinModle1.penguinChase_MoviewIocnurl = @"https://img1.doubanio.com/view/photo/s_ratio_poster/public/p2654733189.jpg";
@@ -539,7 +543,9 @@
     
     
     PenguinChaseVideoModel * penguinModle2= [[PenguinChaseVideoModel alloc]init];
+    penguinModle2.isViews =  NO;
     penguinModle2.WantNums = 456;
+    penguinModle2.PenguinChase_starNum = 4;
     penguinModle2.penguinChase_MoviewName = @"午夜天鹅 ";
     penguinModle2.penguinChase_EngilshMoviewName = @"ミッドナイトスワン";
     penguinModle2.penguinChase_MoviewIocnurl = @"https://img9.doubanio.com/view/photo/s_ratio_poster/public/p2614297584.jpg";
@@ -559,7 +565,9 @@
     
     
     PenguinChaseVideoModel * penguinModle3 = [[PenguinChaseVideoModel alloc]init];
+    penguinModle3.isViews =  NO;
     penguinModle3.WantNums = 135;
+    penguinModle3.PenguinChase_starNum = 4;
     penguinModle3.penguinChase_MoviewName = @"浴火鸟 ";
     penguinModle3.penguinChase_EngilshMoviewName = @"Firebird";
     penguinModle3.penguinChase_MoviewIocnurl = @"https://img9.doubanio.com/view/photo/s_ratio_poster/public/p2633279574.jpg";
@@ -579,7 +587,9 @@
     
     
     PenguinChaseVideoModel * penguinModle4 = [[PenguinChaseVideoModel alloc]init];
+    penguinModle4.isViews =  NO;
     penguinModle4.WantNums = 521;
+    penguinModle4.PenguinChase_starNum = 4;
     penguinModle4.penguinChase_MoviewName = @"爱在疯人院";
     penguinModle4.penguinChase_EngilshMoviewName = @"Loco Por Ella";
     penguinModle4.penguinChase_MoviewIocnurl = @"https://img3.doubanio.com/view/photo/s_ratio_poster/public/p2630022800.jpg";
@@ -598,7 +608,9 @@
     
     
     PenguinChaseVideoModel * penguinModle5 = [[PenguinChaseVideoModel alloc]init];
+    penguinModle5.isViews =  NO;
     penguinModle5.WantNums = 563;
+    penguinModle5.PenguinChase_starNum = 4;
     penguinModle5.penguinChase_MoviewName = @"夏日友晴天 ";
     penguinModle5.penguinChase_EngilshMoviewName = @"Luca";
     penguinModle5.penguinChase_MoviewIocnurl = @"https://img1.doubanio.com/view/photo/s_ratio_poster/public/p2633883449.jpg";
@@ -617,7 +629,9 @@
     
     
     PenguinChaseVideoModel * penguinModle6 = [[PenguinChaseVideoModel alloc]init];
+    penguinModle6.isViews =  NO;
     penguinModle6.WantNums = 312;
+    penguinModle6.PenguinChase_starNum = 4;
     penguinModle6.penguinChase_MoviewName = @"我要我们在一起 ";
     penguinModle6.penguinChase_EngilshMoviewName = @"Love Will Tear Us Apart";
     penguinModle6.penguinChase_MoviewIocnurl = @"https://img2.doubanio.com/view/photo/s_ratio_poster/public/p2641399262.jpg";
@@ -636,7 +650,9 @@
     
     
     PenguinChaseVideoModel * penguinModle7 = [[PenguinChaseVideoModel alloc]init];
+    penguinModle7.isViews =  NO;
     penguinModle7.WantNums = 235;
+    penguinModle7.PenguinChase_starNum = 4;
     penguinModle7.penguinChase_MoviewName = @"黑白魔女库伊拉";
     penguinModle7.penguinChase_EngilshMoviewName = @"Cruella";
     penguinModle7.penguinChase_MoviewIocnurl = @"https://img9.doubanio.com/view/photo/s_ratio_poster/public/p2653946775.jpg";
@@ -656,7 +672,9 @@
     
     
     PenguinChaseVideoModel * penguinModle8 = [[PenguinChaseVideoModel alloc]init];
-    penguinModle7.WantNums = 126;
+    penguinModle8.isViews =  NO;
+    penguinModle8.WantNums = 126;
+    penguinModle8.PenguinChase_starNum = 3;
     penguinModle8.penguinChase_MoviewName = @"寂静之地2";
     penguinModle8.penguinChase_EngilshMoviewName = @"A Quiet Place: Part II";
     penguinModle8.penguinChase_MoviewIocnurl = @"https://img1.doubanio.com/view/photo/s_ratio_poster/public/p2651298629.jpg";
@@ -666,7 +684,7 @@
     penguinModle8.penguinChase_MoviewArtistArr =@[@{@"img":@"https://img2.doubanio.com/view/celebrity/raw/public/p1352.jpg",@"title":@"约翰·卡拉辛斯基 "},@{@"img":@"https://img1.doubanio.com/view/celebrity/raw/public/p32548.jpg",@"title":@"艾米莉·布朗特"},@{@"img":@"https://img3.doubanio.com/view/celebrity/raw/public/p1440.jpg",@"title":@"基里安·墨菲"},@{@"img":@"https://img1.doubanio.com/view/celebrity/raw/public/p1622427478.79.jpg",@"title":@"米利森特·西蒙兹"},@{@"img":@"https://img2.doubanio.com/view/celebrity/raw/public/p1516598354.03.jpg",@"title":@"诺亚·尤佩"}];
     penguinModle8.penguinChase_MoviewTime =@"2021-05-28(中国大陆/美国)";
     penguinModle8.penguinChase_MoviewType = @"科幻 / 惊悚 / 恐怖";
-    penguinModle8.penguinChase_isColltecd = NO;
+    penguinModle8.penguinChase_isColltecd = YES;
     penguinModle8.penguinChase_DBSourecd  =6.6;
     penguinModle8.penguinChase_RateSourecd = 72;
     penguinModle8.penguinChase_MoviewID = 8;
@@ -676,7 +694,9 @@
     
     
     PenguinChaseVideoModel * penguinModle9= [[PenguinChaseVideoModel alloc]init];
+    penguinModle9.isViews =  NO;
     penguinModle9.WantNums = 452;
+    penguinModle9.PenguinChase_starNum = 3;
     penguinModle9.penguinChase_MoviewName = @"悬崖之上 ";
     penguinModle9.penguinChase_EngilshMoviewName = @"Impasse / Cliff Walkers";
     penguinModle9.penguinChase_MoviewIocnurl = @"https://img2.doubanio.com/view/photo/s_ratio_poster/public/p2641614433.jpg";
@@ -686,7 +706,7 @@
     penguinModle9.penguinChase_MoviewArtistArr =@[@{@"img":@"https://img1.doubanio.com/view/celebrity/raw/public/p568.jpg",@"title":@"张艺谋 "},@{@"img":@"https://img1.doubanio.com/view/celebrity/raw/public/p1608309015.99.jpg",@"title":@"张译"},@{@"img":@"https://img2.doubanio.com/view/celebrity/raw/public/p1365451897.03.jpg",@"title":@"于和伟"},@{@"img":@"https://img2.doubanio.com/view/celebrity/raw/public/p1559632146.61.jpg",@"title":@"秦海璐"}];
     penguinModle9.penguinChase_MoviewTime =@"2021-04-30(中国大陆)";
     penguinModle9.penguinChase_MoviewType = @"剧情 / 动作 / 悬疑";
-    penguinModle9.penguinChase_isColltecd = NO;
+    penguinModle9.penguinChase_isColltecd = YES;
     penguinModle9.penguinChase_DBSourecd  =7.6;
     penguinModle9.penguinChase_RateSourecd = 79;
     penguinModle9.penguinChase_MoviewID = 9;
@@ -697,7 +717,9 @@
     
     
     PenguinChaseVideoModel * penguinModle10 = [[PenguinChaseVideoModel alloc]init];
+    penguinModle10.isViews =  YES;
     penguinModle10.WantNums = 123;
+    penguinModle10.PenguinChase_starNum = 4;
     penguinModle10.penguinChase_MoviewName = @"比得兔2：逃跑计划";
     penguinModle10.penguinChase_EngilshMoviewName = @"Peter Rabbit 2: The Runaway";
     penguinModle10.penguinChase_MoviewIocnurl = @"https://img3.doubanio.com/view/photo/s_ratio_poster/public/p2656009080.jpg";
@@ -717,6 +739,9 @@
     
     
     PenguinChaseVideoModel * penguinModle11 = [[PenguinChaseVideoModel alloc]init];
+    penguinModle11.isViews =  NO;
+    penguinModle11.WantNums = 313;
+    penguinModle11.PenguinChase_starNum = 4;
     penguinModle11.penguinChase_MoviewName = @"恐惧街";
     penguinModle11.penguinChase_EngilshMoviewName = @"Fear Street";
     penguinModle11.penguinChase_MoviewIocnurl = @"https://img1.doubanio.com/view/photo/s_ratio_poster/public/p2665617507.jpg";
@@ -736,6 +761,9 @@
     
     
     PenguinChaseVideoModel * penguinModle12 = [[PenguinChaseVideoModel alloc]init];
+    penguinModle12.isViews =  NO;
+    penguinModle12.WantNums = 313;
+    penguinModle12.PenguinChase_starNum = 4;
     penguinModle12.penguinChase_MoviewName = @"鬼灭之刃 剧场版";
     penguinModle12.penguinChase_EngilshMoviewName = @"劇場版 鬼滅の刃";
     penguinModle12.penguinChase_MoviewIocnurl = @"https://img9.doubanio.com/view/photo/s_ratio_poster/public/p2623798236.jpg";
@@ -754,6 +782,9 @@
     
     
     PenguinChaseVideoModel * penguinModle13 = [[PenguinChaseVideoModel alloc]init];
+    penguinModle13.isViews =  NO;
+    penguinModle13.WantNums = 315;
+    penguinModle13.PenguinChase_starNum = 3;
     penguinModle13.penguinChase_MoviewName = @"机动战士高达";
     penguinModle13.penguinChase_EngilshMoviewName = @"機動戦士ガンダム 閃光のハサウェイ";
     penguinModle13.penguinChase_MoviewIocnurl = @"https://img2.doubanio.com/view/photo/s_ratio_poster/public/p2591960411.jpg";
@@ -772,6 +803,8 @@
     
     
     PenguinChaseVideoModel * penguinModle14 = [[PenguinChaseVideoModel alloc]init];
+    penguinModle14.isViews =  NO;
+    penguinModle14.PenguinChase_starNum = 4;
     penguinModle14.penguinChase_MoviewName = @"普吉岛的最后黄昏";
     penguinModle14.penguinChase_EngilshMoviewName = @"แปลรักฉันด้วยใจเธอ Side Story";
     penguinModle14.penguinChase_MoviewIocnurl = @"https://img9.doubanio.com/view/photo/s_ratio_poster/public/p2652268085.jpg";
@@ -791,6 +824,10 @@
     
     
     PenguinChaseVideoModel * penguinModle15 = [[PenguinChaseVideoModel alloc]init];
+    penguinModle15.isViews =  NO;
+    penguinModle15.WantNums = 215;
+    penguinModle15.PenguinChase_starNum = 4;
+
     penguinModle15.penguinChase_MoviewName = @"酒精计划";
     penguinModle15.penguinChase_EngilshMoviewName = @"Druk";
     penguinModle15.penguinChase_MoviewIocnurl = @"https://img9.doubanio.com/view/photo/s_ratio_poster/public/p2628440526.jpg";
@@ -809,6 +846,9 @@
     
     
     PenguinChaseVideoModel * penguinModle16 = [[PenguinChaseVideoModel alloc]init];
+    penguinModle16.isViews =  NO;
+    penguinModle16.WantNums = 431;
+    penguinModle16.PenguinChase_starNum = 4;
     penguinModle16.penguinChase_MoviewName = @"酒精计划";
     penguinModle16.penguinChase_EngilshMoviewName = @"Druk";
     penguinModle16.penguinChase_MoviewIocnurl = @"https://img9.doubanio.com/view/photo/s_ratio_poster/public/p2628440526.jpg";
@@ -827,6 +867,9 @@
     
     
     PenguinChaseVideoModel * penguinModle17 = [[PenguinChaseVideoModel alloc]init];
+    penguinModle17.isViews =  NO;
+    penguinModle17.WantNums = 245;
+    penguinModle17.PenguinChase_starNum = 4;
     penguinModle17.penguinChase_MoviewName = @"黑道与家族 ";
     penguinModle17.penguinChase_EngilshMoviewName = @"ヤクザと家族";
     penguinModle17.penguinChase_MoviewIocnurl = @"https://img1.doubanio.com/view/photo/s_ratio_poster/public/p2625912897.jpg";
@@ -845,6 +888,9 @@
     
     
     PenguinChaseVideoModel * penguinModle18 = [[PenguinChaseVideoModel alloc]init];
+    penguinModle18.isViews =  NO;
+    penguinModle18.WantNums = 561;
+    penguinModle18.PenguinChase_starNum = 5;
     penguinModle18.penguinChase_MoviewName = @"黑道与家族 ";
     penguinModle18.penguinChase_EngilshMoviewName = @"ヤクザと家族";
     penguinModle18.penguinChase_MoviewIocnurl = @"https://img1.doubanio.com/view/photo/s_ratio_poster/public/p2625912897.jpg";
@@ -863,6 +909,9 @@
     
     
     PenguinChaseVideoModel * penguinModle19 = [[PenguinChaseVideoModel alloc]init];
+    penguinModle19.isViews =  NO;
+    penguinModle19.WantNums = 356;
+    penguinModle19.PenguinChase_starNum = 4;
     penguinModle19.penguinChase_MoviewName = @"扎克·施奈德版正义联盟";
     penguinModle19.penguinChase_EngilshMoviewName = @" Zack Snyder's Justice League ";
     penguinModle19.penguinChase_MoviewIocnurl = @"https://img9.doubanio.com/view/photo/s_ratio_poster/public/p2634360594.jpg";
@@ -882,6 +931,9 @@
     
     
     PenguinChaseVideoModel * penguinModle20 = [[PenguinChaseVideoModel alloc]init];
+    penguinModle20.isViews =  NO;
+    penguinModle20.WantNums = 256;
+    penguinModle20.PenguinChase_starNum = 5;
     penguinModle20.penguinChase_MoviewName = @"切尔诺贝利";
     penguinModle20.penguinChase_EngilshMoviewName = @"Чернобыль";
     penguinModle20.penguinChase_MoviewIocnurl = @"https://img9.doubanio.com/view/photo/s_ratio_poster/public/p2640665946.jpg";
@@ -917,6 +969,7 @@
     penguinModel.MoviewID = 0;
     penguinModel.ComentID = 0;
     penguinModel.CellHeight = 0;
+    penguinModel.soureNum = 6.8;
     [tempArr addObject:penguinModel];
     
     PenguinChaseVideoComentModel * penguinModel1 = [[PenguinChaseVideoComentModel alloc]init];
@@ -927,6 +980,7 @@
     penguinModel1.MoviewID = 0;
     penguinModel1.ComentID = 1;
     penguinModel1.CellHeight = 0;
+    penguinModel1.soureNum = 7.4;
     [tempArr addObject:penguinModel1];
     
     
@@ -938,6 +992,7 @@
     penguinModel2.MoviewID = 1;
     penguinModel2.ComentID = 2;
     penguinModel2.CellHeight = 0;
+    penguinModel2.soureNum = 4.5;
     [tempArr addObject:penguinModel2];
     
     
@@ -949,6 +1004,7 @@
     penguinModel3.MoviewID = 1;
     penguinModel3.ComentID = 3;
     penguinModel3.CellHeight = 0;
+    penguinModel3.soureNum = 6.3;
     [tempArr addObject:penguinModel3];
     
     PenguinChaseVideoComentModel * penguinModel4 = [[PenguinChaseVideoComentModel alloc]init];
@@ -959,6 +1015,7 @@
     penguinModel4.MoviewID = 1;
     penguinModel4.ComentID = 4;
     penguinModel4.CellHeight = 0;
+    penguinModel4.soureNum = 6.8;
     [tempArr addObject:penguinModel4];
     
     
@@ -970,6 +1027,7 @@
     penguinModel5.MoviewID = 2;
     penguinModel5.ComentID = 5;
     penguinModel5.CellHeight = 0;
+    penguinModel5.soureNum = 8.2;
     [tempArr addObject:penguinModel5];
     
     
@@ -981,6 +1039,7 @@
     penguinModel6.MoviewID = 2;
     penguinModel6.ComentID = 6;
     penguinModel6.CellHeight = 0;
+    penguinModel6.soureNum = 5.3;
     [tempArr addObject:penguinModel6];
     
     
@@ -992,6 +1051,7 @@
     penguinModel7.MoviewID = 3;
     penguinModel7.ComentID = 7;
     penguinModel7.CellHeight = 0;
+    penguinModel7.soureNum = 8.3;
     [tempArr addObject:penguinModel7];
     
     
@@ -1003,6 +1063,7 @@
     penguinModel8.MoviewID = 3;
     penguinModel8.ComentID = 8;
     penguinModel8.CellHeight = 0;
+    penguinModel8.soureNum = 6.3;
     [tempArr addObject:penguinModel8];
     
     
@@ -1014,6 +1075,7 @@
     penguinModel9.MoviewID = 4;
     penguinModel9.ComentID = 9;
     penguinModel9.CellHeight = 0;
+    penguinModel9.soureNum = 8.3;
     [tempArr addObject:penguinModel9];
     
     
@@ -1025,6 +1087,7 @@
     penguinModel10.MoviewID = 4;
     penguinModel10.ComentID = 10;
     penguinModel10.CellHeight = 0;
+    penguinModel10.soureNum = 5.4;
     [tempArr addObject:penguinModel10];
     
     
@@ -1037,6 +1100,7 @@
     penguinModel11.MoviewID = 5;
     penguinModel11.ComentID = 11;
     penguinModel11.CellHeight = 0;
+    penguinModel11.soureNum = 7.3;
     [tempArr addObject:penguinModel11];
     
     PenguinChaseVideoComentModel * penguinModel12 = [[PenguinChaseVideoComentModel alloc]init];
@@ -1047,6 +1111,7 @@
     penguinModel12.MoviewID = 5;
     penguinModel12.ComentID = 12;
     penguinModel12.CellHeight = 0;
+    penguinModel12.soureNum = 4.5;
     [tempArr addObject:penguinModel12];
     
     
@@ -1058,6 +1123,7 @@
     penguinModel13.MoviewID = 6;
     penguinModel13.ComentID = 13;
     penguinModel13.CellHeight = 0;
+    penguinModel13.soureNum = 4.6;
     [tempArr addObject:penguinModel13];
     
     
@@ -1069,6 +1135,7 @@
     penguinModel14.MoviewID = 6;
     penguinModel14.ComentID = 14;
     penguinModel14.CellHeight = 0;
+    penguinModel14.soureNum = 6.5;
     [tempArr addObject:penguinModel14];
     
     PenguinChaseVideoComentModel * penguinModel15 = [[PenguinChaseVideoComentModel alloc]init];
@@ -1079,6 +1146,7 @@
     penguinModel15.MoviewID = 7;
     penguinModel15.ComentID = 15;
     penguinModel15.CellHeight = 0;
+    penguinModel15.soureNum = 7.3;
     [tempArr addObject:penguinModel15];
     
     
@@ -1090,6 +1158,7 @@
     penguinModel16.MoviewID = 7;
     penguinModel16.ComentID = 16;
     penguinModel16.CellHeight = 0;
+    penguinModel16.soureNum = 6.3;
     [tempArr addObject:penguinModel16];
     
     
@@ -1102,6 +1171,7 @@
     penguinModel17.MoviewID = 8;
     penguinModel17.ComentID = 17;
     penguinModel17.CellHeight = 0;
+    penguinModel17.soureNum = 5.3;
     [tempArr addObject:penguinModel17];
     
     PenguinChaseVideoComentModel * penguinModel18 = [[PenguinChaseVideoComentModel alloc]init];
@@ -1112,6 +1182,7 @@
     penguinModel18.MoviewID = 8;
     penguinModel18.ComentID = 18;
     penguinModel18.CellHeight = 0;
+    penguinModel18.soureNum = 7.3;
     [tempArr addObject:penguinModel18];
     
     PenguinChaseVideoComentModel * penguinModel19 = [[PenguinChaseVideoComentModel alloc]init];
@@ -1122,6 +1193,7 @@
     penguinModel19.MoviewID = 9;
     penguinModel19.ComentID = 19;
     penguinModel19.CellHeight = 0;
+    penguinModel19.soureNum = 6.3;
     [tempArr addObject:penguinModel19];
     
     
@@ -1133,6 +1205,7 @@
     penguinModel20.MoviewID = 9;
     penguinModel20.ComentID = 20;
     penguinModel20.CellHeight = 0;
+    penguinModel20.soureNum = 7.4;
     [tempArr addObject:penguinModel20];
     
     PenguinChaseVideoComentModel * penguinModel21 = [[PenguinChaseVideoComentModel alloc]init];
@@ -1143,6 +1216,7 @@
     penguinModel21.MoviewID = 10;
     penguinModel21.ComentID = 21;
     penguinModel21.CellHeight = 0;
+    penguinModel21.soureNum = 8.3;
     [tempArr addObject:penguinModel21];
     
     PenguinChaseVideoComentModel * penguinModel22 = [[PenguinChaseVideoComentModel alloc]init];
@@ -1153,6 +1227,7 @@
     penguinModel22.MoviewID = 10;
     penguinModel22.ComentID = 22;
     penguinModel22.CellHeight = 0;
+    penguinModel22.soureNum = 5.4;
     [tempArr addObject:penguinModel22];
     
     
@@ -1164,6 +1239,7 @@
     penguinModel23.MoviewID = 11;
     penguinModel23.ComentID = 23;
     penguinModel23.CellHeight = 0;
+    penguinModel23.soureNum = 6.8;
     [tempArr addObject:penguinModel23];
     
     PenguinChaseVideoComentModel * penguinModel24 = [[PenguinChaseVideoComentModel alloc]init];
@@ -1174,6 +1250,7 @@
     penguinModel24.MoviewID = 12;
     penguinModel24.ComentID = 24;
     penguinModel24.CellHeight = 0;
+    penguinModel24.soureNum = 4.3;
     [tempArr addObject:penguinModel24];
     
     PenguinChaseVideoComentModel * penguinModel25 = [[PenguinChaseVideoComentModel alloc]init];
@@ -1184,6 +1261,7 @@
     penguinModel25.MoviewID = 12;
     penguinModel25.ComentID = 25;
     penguinModel25.CellHeight = 0;
+    penguinModel25.soureNum = 6.8;
     [tempArr addObject:penguinModel25];
     
     PenguinChaseVideoComentModel * penguinModel26 = [[PenguinChaseVideoComentModel alloc]init];
@@ -1194,6 +1272,7 @@
     penguinModel26.MoviewID = 13;
     penguinModel26.ComentID = 26;
     penguinModel26.CellHeight = 0;
+    penguinModel26.soureNum = 4.3;
     [tempArr addObject:penguinModel26];
     
     

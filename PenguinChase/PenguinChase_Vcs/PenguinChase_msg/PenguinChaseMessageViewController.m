@@ -13,7 +13,7 @@
 #import "PenguinChaseKefuViewController.h"
 #import "PenguinChaseNotificationViewController.h"
 #import "PenguinChatMessageListModel.h"
-#import "carpVideoMessageDetailViewController.h"
+#import "PenguinChaseMessageDetailViewController.h"
 @interface PenguinChaseMessageViewController ()
 @property(nonatomic,strong) NSMutableArray * PenguinChasesysMessageDataArr;
 @property(nonatomic,strong) NSMutableArray * PenguinChaseDataArr;
@@ -32,7 +32,7 @@
         PenguinsystemMessageModel * messageModel = [[PenguinsystemMessageModel alloc]init];
         messageModel.img = @"zan_hong";
         messageModel.Name = @"赞";
-        messageModel.messageNums = @"11";
+        messageModel.messageNums = @"0";
         [_PenguinChasesysMessageDataArr addObject:messageModel];
         
         
@@ -58,12 +58,21 @@
     }
     return _PenguinChasesysMessageDataArr;
 }
+-(void)PenguinLoginSuccedNotiFication{
+    NSArray * dataArr = [WHC_ModelSqlite query:[PenguinChatMessageListModel class]];
+    if (self.PenguinChaseDataArr.count> 0) {
+        [self.PenguinChaseDataArr removeAllObjects];
+    }
+    self.PenguinChaseDataArr = dataArr.mutableCopy;
+    [self.PenguinChaseTableView reloadData];
+}
 - (void)viewDidLoad {
     [super viewDidLoad];
     self.gk_navTitle = @"消息中心";
     self.PenguinChaseTableView.frame = CGRectMake(0, GK_STATUSBAR_NAVBAR_HEIGHT, GK_SCREEN_WIDTH, GK_SCREEN_HEIGHT-GK_TABBAR_HEIGHT-GK_STATUSBAR_NAVBAR_HEIGHT);
     // Do any additional setup after loading the view.
-    
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(PenguinLoginSuccedNotiFication) name:@"PenguinLoginSuccedNotiFication" object:nil];
+
     
     NSArray * dataArr = [WHC_ModelSqlite query:[PenguinChatMessageListModel class]];
     if (self.PenguinChaseDataArr.count> 0) {
@@ -95,7 +104,12 @@
 }
 -(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
     if (indexPath.section == 0) {
+        if (![PenguinChaseLoginTool PenguinChaseLoginToolCheckuserIslgoin]) {
+            [self PenguinChase_showLoginVc];
+            return;;
+        }
         if (indexPath.row == 0) {
+          
             PenguinChaseZanComentViewController * pengZanvc = [[PenguinChaseZanComentViewController alloc]init];
             pengZanvc.index = 0;
             pengZanvc.hidesBottomBarWhenPushed = YES;
@@ -116,15 +130,19 @@
             [self.navigationController pushViewController:penguinkefuVc animated:YES];
         }
     }else{
+        if (![PenguinChaseLoginTool PenguinChaseLoginToolCheckuserIslgoin]) {
+            [self PenguinChase_showLoginVc];
+            return;;
+        }
         PenguinChatMessageListModel * listMoel = self.PenguinChaseDataArr[indexPath.row];
         if (listMoel.userID == 0) {
             [WHC_ModelSqlite update:[PenguinChatMessageListModel class] value:[NSString stringWithFormat:@"msgNum ='%d'",0] where:[NSString stringWithFormat:@"userID ='%ld'",listMoel.userID]];
             [self.PenguinChaseTableView.mj_header beginRefreshing];
             [self.PenguinChaseTableView reloadData];
         }
-        carpVideoMessageDetailViewController * penguinDetailVc = [[carpVideoMessageDetailViewController alloc]init];
+        PenguinChaseMessageDetailViewController * penguinDetailVc = [[PenguinChaseMessageDetailViewController alloc]init];
         penguinDetailVc.hidesBottomBarWhenPushed = YES;
-        penguinDetailVc.carpessModel = self.PenguinChaseDataArr[indexPath.row];
+        penguinDetailVc.penguinChaseModel = self.PenguinChaseDataArr[indexPath.row];
         [self.navigationController pushViewController:penguinDetailVc animated:YES];
     }
 }

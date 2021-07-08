@@ -9,7 +9,16 @@
 
 @implementation PenguinChaseLoginTool
 +(BOOL)PenguinChaseLoginToolCheckuserIslgoin{
-    
-    return YES;
+    BOOL isLogin = [[NSUserDefaults standardUserDefaults] boolForKey:@"PenguinLoginStatus"];
+    return isLogin;
+}
++(NSString *)PenguinChasegetName{
+    NSString * penguinText = [[NSUserDefaults standardUserDefaults] objectForKey:@"penguinName"];
+    if (penguinText.length == 0) {
+        return @"阿三的小蝴蝶";
+    }else{
+        return penguinText;
+    }
+
 }
 @end

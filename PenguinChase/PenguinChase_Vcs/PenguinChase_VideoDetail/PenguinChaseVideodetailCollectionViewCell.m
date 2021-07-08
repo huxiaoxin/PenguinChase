@@ -30,7 +30,6 @@
 - (UIImageView *)PenguinThubImgView{
     if (!_PenguinThubImgView) {
         _PenguinThubImgView = [UIImageView new];
-        _PenguinThubImgView.backgroundColor = LGDMianColor;
     }
     return _PenguinThubImgView;
 }
@@ -43,5 +42,12 @@
         _PenguinBtomlb.text  =@"范迪塞尔";
     }
     return _PenguinBtomlb;
+}
+- (void)setPenuinDic:(NSDictionary *)penuinDic{
+    _penuinDic = penuinDic;
+    NSString * imgurk = [penuinDic objectForKey:@"img"];
+    NSString * title = [penuinDic objectForKey:@"title"];
+    [_PenguinThubImgView sd_setImageWithURL:[NSURL URLWithString:imgurk] placeholderImage:[UIImage imageNamed:@"zhanweitu"]];
+    _PenguinBtomlb.text = title;
 }
 @end

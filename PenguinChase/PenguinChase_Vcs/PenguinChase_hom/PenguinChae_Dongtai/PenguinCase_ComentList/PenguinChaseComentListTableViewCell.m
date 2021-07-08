@@ -145,7 +145,7 @@
     if (penguinModel.CellHeight == 0) {
      
     }
-
+    _PenguinTimelb.text = penguinModel.time;
         [self.contentView setNeedsLayout];
         [self.contentView layoutIfNeeded];
         penguinModel.CellHeight = CGRectGetMaxY(self->_penguinBtomline.frame)-RealWidth(0);

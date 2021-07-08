@@ -42,7 +42,7 @@
     }];
     
     UIImageView *PenguinChaseHeaderImgView = [UIImageView new];
-    [PenguinChaseHeaderImgView sd_setImageWithURL:[NSURL URLWithString:@"https://img2.woyaogexing.com/2021/06/19/4e16cecbec4145c4b10e52bb0b50fd17!400x400.jpeg"] placeholderImage:[UIImage imageNamed:@"whiteLogo"]];
+    [PenguinChaseHeaderImgView sd_setImageWithURL:[NSURL URLWithString:@"https://img0.baidu.com/it/u=2592042537,1864064944&fm=26&fmt=auto&gp=0.jpg"] placeholderImage:[UIImage imageNamed:@"whiteLogo"]];
     PenguinChaseHeaderImgView.layer.cornerRadius = RealWidth(15);
     PenguinChaseHeaderImgView.layer.masksToBounds = YES;
     [self.contentView addSubview:PenguinChaseHeaderImgView];

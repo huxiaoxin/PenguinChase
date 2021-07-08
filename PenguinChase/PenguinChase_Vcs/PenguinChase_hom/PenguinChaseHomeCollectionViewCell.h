@@ -6,11 +6,11 @@
 //
 
 #import "PenguinChaseBaseCollectionViewCell.h"
-
+#import "PenguinChaseVideoModel.h"
 NS_ASSUME_NONNULL_BEGIN
 
 @interface PenguinChaseHomeCollectionViewCell : PenguinChaseBaseCollectionViewCell
-
+@property(nonatomic,strong) PenguinChaseVideoModel * penguinModel;
 @end
 
 NS_ASSUME_NONNULL_END

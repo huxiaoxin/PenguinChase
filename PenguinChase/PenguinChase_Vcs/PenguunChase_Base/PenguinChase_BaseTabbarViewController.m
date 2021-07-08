@@ -47,9 +47,9 @@
     if ([NSStringFromClass(baseNav.topViewController.class) isEqualToString:@"PenguinChaseFabuViewController"]) {
         if (![PenguinChaseLoginTool PenguinChaseLoginToolCheckuserIslgoin]) {
             dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(0.001 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
-                PenguinChaseLoginViewController  * carpVc = [[PenguinChaseLoginViewController alloc]init];
+                PenguinChaseLoginViewController  * PenguinChasVc = [[PenguinChaseLoginViewController alloc]init];
                 
-                UINavigationController * nav = [UINavigationController rootVC:carpVc translationScale:YES];
+                UINavigationController * nav = [UINavigationController rootVC:PenguinChasVc translationScale:YES];
                 
                 [self presentViewController:nav animated:YES completion:nil];
             });
@@ -57,9 +57,9 @@
             return NO;
         }else{
             dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(0.001 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
-                PenguinChaseFabuViewController  * carpVc = [[PenguinChaseFabuViewController alloc]init];
+                PenguinChaseFabuViewController  * PenguinChasVc = [[PenguinChaseFabuViewController alloc]init];
                 
-                UINavigationController * nav = [UINavigationController rootVC:carpVc translationScale:YES];
+                UINavigationController * nav = [UINavigationController rootVC:PenguinChasVc translationScale:YES];
                 
                 [self presentViewController:nav animated:YES completion:nil];
             });
@@ -67,7 +67,23 @@
             return NO;
         }
         
-    }else{
+    }else if ([NSStringFromClass(baseNav.topViewController.class) isEqualToString:@"PenguinChaseMessageViewController"])
+    {
+        if (![PenguinChaseLoginTool PenguinChaseLoginToolCheckuserIslgoin]) {
+            dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(0.001 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+                PenguinChaseLoginViewController  * PenguinChasVc = [[PenguinChaseLoginViewController alloc]init];
+                
+                UINavigationController * nav = [UINavigationController rootVC:PenguinChasVc translationScale:YES];
+                
+                [self presentViewController:nav animated:YES completion:nil];
+            });
+            
+            return NO;
+        }else{
+            return YES;
+        }
+    }
+    else{
         
         return YES;
     }

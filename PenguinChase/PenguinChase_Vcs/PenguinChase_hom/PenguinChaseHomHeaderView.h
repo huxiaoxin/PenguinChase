@@ -21,10 +21,12 @@ typedef void(^PenguinChaseHomHeaderHeightBlock)(CGFloat headerHeight);
 -(void)PenguinChaseHomHeaderViewBtnsAction:(NSInteger)btnInex;
 -(void)PenguinChaseHomHeaderViewWithClanderActions;
 -(void)PenguinChaseHomHeaderViewSearchAction;
+-(void)PenguinChaseHomHeaderViewWithSDCBannerIndex:(PenguinChaseVideoModel *)viewModel;
 @end
 @interface PenguinChaseHomHeaderView : UIView
 @property(nonatomic,weak) id <PenguinChaseHomHeaderViewDelegate>delegate;
 @property(nonatomic,copy) PenguinChaseHomHeaderHeightBlock headerBlock;
+@property(nonatomic,copy) NSArray * BannerImgArr;
 @end
 
 NS_ASSUME_NONNULL_END

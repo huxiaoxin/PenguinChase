@@ -113,7 +113,7 @@
         _PenguinRililb = [UILabel new];
         _PenguinRililb.textColor = [UIColor whiteColor];
         _PenguinRililb.font = [UIFont systemFontOfSize:14];
-        _PenguinRililb.text = @"11/24 ℃ 晴天";
+        _PenguinRililb.text = @"07/24 ℃ 晴天";
         _PenguinRililb.textAlignment = NSTextAlignmentRight;
     }
     return _PenguinRililb;

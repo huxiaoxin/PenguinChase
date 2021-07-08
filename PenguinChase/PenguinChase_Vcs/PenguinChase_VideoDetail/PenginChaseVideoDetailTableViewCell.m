@@ -11,7 +11,7 @@
 @property(nonatomic,strong) UIButton   * PenguinChaseJBBtn;
 @end
 @implementation PenginChaseVideoDetailTableViewCell
--(void)setContentUI{
+-(void)PenguinChaseAddSubViews{
     self.backgroundColor = [UIColor whiteColor];
     [self.contentView addSubview:self.PenguinChaseThubImgView];
     [self.contentView addSubview:self.PenguinChaseNamelb];
@@ -63,12 +63,11 @@
         _PenguiChaseLHBtn = [UIButton buttonWithType:UIButtonTypeCustom];
         CGSize LHBtnSize = [@"拉黑" cxl_sizeWithString:KBlFont(14)];
         [_PenguiChaseLHBtn setFrame:CGRectMake(CGRectGetMinX(_PenguinChaseJBBtn.frame)-LHBtnSize.width-RealWidth(10), CGRectGetMidY(_PenguinChaseThubImgView.frame)-RealWidth(7.5), LHBtnSize.width+RealWidth(10), RealWidth(15))];
-        
+        _PenguiChaseLHBtn.tag = 0;
         [_PenguiChaseLHBtn setTitle:@"拉黑" forState:UIControlStateNormal];
         [_PenguiChaseLHBtn setTitleColor:LGDMianColor forState:UIControlStateNormal];
         _PenguiChaseLHBtn.titleLabel.font = KBlFont(14);
         [_PenguiChaseLHBtn addTarget:self action:@selector(PenguiChaseLHBtnClick) forControlEvents:UIControlEventTouchUpInside];
-        _PenguiChaseLHBtn.tag = 1;
     }
     return _PenguiChaseLHBtn;
 }
@@ -77,7 +76,7 @@
         _PenguinChaseJBBtn = [UIButton buttonWithType:UIButtonTypeCustom];
         CGSize JBBtnSize = [@"举报" cxl_sizeWithString:KBlFont(14)];
         [_PenguinChaseJBBtn setFrame:CGRectMake(GK_SCREEN_WIDTH-RealWidth(15)-JBBtnSize.width, CGRectGetMidY(_PenguinChaseThubImgView.frame)-RealWidth(7.5), JBBtnSize.width+RealWidth(10), RealWidth(15))];
-        _PenguinChaseJBBtn.tag = 0;
+        _PenguinChaseJBBtn.tag = 1;
         [_PenguinChaseJBBtn setTitle:@"举报" forState:UIControlStateNormal];
         [_PenguinChaseJBBtn setTitleColor:LGDMianColor forState:UIControlStateNormal];
         [_PenguinChaseJBBtn addTarget:self action:@selector(PenguinChaseJBBtnClick) forControlEvents:UIControlEventTouchUpInside];
@@ -99,31 +98,34 @@
         _PenguinChaseContentlb = [[UILabel alloc]initWithFrame:CGRectMake(CGRectGetMaxX(_PenguinChaseThubImgView.frame)+RealWidth(5), CGRectGetMaxY(_PenguinChaseThubImgView.frame)+RealWidth(10), GK_SCREEN_WIDTH-CGRectGetMaxX(_PenguinChaseThubImgView.frame)-RealWidth(10), RealWidth(40))];
         _PenguinChaseContentlb.numberOfLines =  0;
         _PenguinChaseContentlb.font = [UIFont systemFontOfSize:RealWidth(14)];
-        //        _PenguinChaseContentlb.text = @"2134287648792547623514678321546728315478621547862154872154214762174287145827145217421342876487925476235146783215467283154786215478621548721542147621742871458271452174";
     }
     return _PenguinChaseContentlb;
 }
-//- (void)setCarHotModel:(carpVideoRemneAdviceModel *)carHotModel{
-//    _carHotModel = carHotModel;
-//    [_PenguinChaseThubImgView sd_setImageWithURL:[NSURL URLWithString:carHotModel.imgurl] placeholderImage:[UIImage imageNamed:@"zhanweitu"]];
-//    _PenguinChaseNamelb.text =  carHotModel.name;
-//    [_PenguinChaseStarView setCurrentStar:carHotModel.StarNum];
-//    _PenguinChaseNumlb.text = [NSString stringWithFormat:@"%ld星",carHotModel.StarNum];
-//    [_PenguinChaseContentlb setText:carHotModel.content lineSpacing:RealWidth(3)];
-//    CGSize contenSize  = [_PenguinChaseContentlb getSpaceLabelSize:carHotModel.content withFont:[UIFont systemFontOfSize:RealWidth(14)] withWidth:GK_SCREEN_WIDTH-CGRectGetMaxX(_PenguinChaseThubImgView.frame)-RealWidth(10) lineSpacing:RealWidth(3)];
-//    _PenguinChaseContentlb.size = contenSize;
-//
-//    _PenguinChaseLine.y = CGRectGetMaxY(_PenguinChaseContentlb.frame)+RealWidth(10);
-//
-//    carHotModel.CellHeight = CGRectGetMaxY(_PenguinChaseLine.frame);
-//
-//}
+- (void)setPengModel:(PenguinChaseVideoComentModel *)pengModel{
+    _pengModel = pengModel;
+    [_PenguinChaseThubImgView sd_setImageWithURL:[NSURL URLWithString:pengModel.userHeadeurl] placeholderImage:[UIImage imageNamed:@"zhanweitu"]];
+    _PenguinChaseStarView.currentStar = pengModel.starNum;
+    _PenguinChaseNamelb.text = pengModel.userName;
+    [_PenguinChaseContentlb setText:pengModel.content lineSpacing:3];
+   CGSize penguinContentSize  = [_PenguinChaseContentlb getSpaceLabelSize:pengModel.content withFont:[UIFont systemFontOfSize:RealWidth(14)] withWidth:GK_SCREEN_WIDTH -CGRectGetMaxX(_PenguinChaseThubImgView.frame)-RealWidth(10) lineSpacing:3];
+    _PenguinChaseNumlb.text = [NSString stringWithFormat:@"%.2ld",(long)pengModel.soureNum];
+    _PenguinChaseContentlb.frame = CGRectMake(CGRectGetMaxX(_PenguinChaseThubImgView.frame)+RealWidth(5), CGRectGetMaxY(_PenguinChaseThubImgView.frame)+RealWidth(10), penguinContentSize.width, penguinContentSize.height);
+    _PenguinChaseLine.y = CGRectGetMaxY(_PenguinChaseContentlb.frame)+RealWidth(5);
+    [self setNeedsLayout];
+    [self  layoutIfNeeded];
+    
+    pengModel.CellHeight = CGRectGetMaxY(_PenguinChaseLine.frame);
+    
+    
+    
+}
 -(void)PenguiChaseLHBtnClick{
-    //    [self.delegate CarpVideoDetailTableViewCellDidSeltecdWithBtnIndex:1 cellIndex:self.tag];
+    [self.delegate PenginChaseVideoDetailTableViewCellPenguinWithBtnAction:0 cellIndex:self.tag];
     
 }
 -(void)PenguinChaseJBBtnClick{
-    //    [self.delegate CarpVideoDetailTableViewCellDidSeltecdWithBtnIndex:0 cellIndex:self.tag];
+    [self.delegate PenginChaseVideoDetailTableViewCellPenguinWithBtnAction:1 cellIndex:self.tag];
+
 }
 - (void)awakeFromNib {
     [super awakeFromNib];

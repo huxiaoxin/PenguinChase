@@ -10,6 +10,7 @@
 #import "PenguinChaseComentListTableViewCell.h"
 #import <LYEmptyView-umbrella.h>
 #import "PenguinChaseJubaoLitsViewController.h"
+#import <XHInputView-umbrella.h>
 @interface PenguinChaseComentListViewController ()<PenguinChaseComentListTableViewCellDelegate>
 @property(nonatomic,strong) UIButton  * PenguinSednBtn;
 @property(nonatomic,strong) NSMutableArray * penguinDataArr;
@@ -27,9 +28,49 @@
 }
 -(void)PenguinSednBtnClick{
     
+    if (![PenguinChaseLoginTool PenguinChaseLoginToolCheckuserIslgoin]) {
+        [self PenguinChase_showLoginVc];
+        return;
+    }
     
+    dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(0.0 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+        
+        MJWeakSelf;
+        [XHInputView showWithStyle:InputViewStyleLarge configurationBlock:^(XHInputView *inputView) {
+            inputView.sendButtonBackgroundColor = LGDMianColor;
+            inputView.sendButtonCornerRadius = RealWidth(5);
+        } sendBlock:^BOOL(NSString *text) {
+            if (text.length > 0) {
+                [weakSelf PenguinChaseSendComentWithtext:text];
+                return YES;
+            }else{
+                return NO;
+            }
+        }];
+        
+
+    });
     
 }
+-(void)PenguinChaseSendComentWithtext:(NSString *)text{
+    [LCProgressHUD showLoading:@""];
+    dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(0.5 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+        [LCProgressHUD hide];
+        PenguinChaseComentModel * pengMoel = [[PenguinChaseComentModel alloc]init];
+        pengMoel.headerImgurl = @"https://img0.baidu.com/it/u=2592042537,1864064944&fm=26&fmt=auto&gp=0.jpg";
+        pengMoel.userName  =[PenguinChaseLoginTool PenguinChasegetName];
+        pengMoel.time = @"刚刚";
+        pengMoel.content = @"";
+        pengMoel.zoneID = self.pengModel.userID;
+        pengMoel.comentID = 5554;
+        pengMoel.CellHeight =0;
+        pengMoel.StarNum =4;
+        [self.penguinDataArr addObject:pengMoel];
+        [WHC_ModelSqlite insert:pengMoel];
+    });
+
+}
+
 -(void)PenguinHeaderClicks{
     NSArray * dataArr = [WHC_ModelSqlite query:[PenguinChaseComentModel class] where:[NSString stringWithFormat:@"zoneID = '%ld'",self.pengModel.userID]];
     dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(0.5 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{

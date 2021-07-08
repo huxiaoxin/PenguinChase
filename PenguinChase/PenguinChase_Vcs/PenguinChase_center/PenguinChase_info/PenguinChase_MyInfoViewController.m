@@ -31,9 +31,10 @@
     
     [LCProgressHUD showLoading:@""];
     dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(1 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
-        [[NSNotificationCenter defaultCenter] postNotificationName:@"CarpVideoLoginOutActon" object:nil];
+        [[NSNotificationCenter defaultCenter] postNotificationName:@"PenguinChaseLoginoutNotiFication" object:nil];
         [LCProgressHUD hide];
-        //        [CarpVideoLoginVideModelTool CarpVideoLoginViewModel_loginOut];
+        [[NSUserDefaults standardUserDefaults] setBool:NO forKey:@"PenguinLoginStatus"];
+        [[NSUserDefaults standardUserDefaults] synchronize];
         [self.navigationController popViewControllerAnimated:YES];
     });
     
@@ -44,7 +45,7 @@
 -(UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
     PenguinChaseMyinfoTableViewCell * PenguinCell = [PenguinChaseMyinfoTableViewCell PenguinChasecreateCellWithTheTableView:tableView AndTheIndexPath:indexPath];
     [PenguinCell PenguinChaseMyinfoTableViewCellConfiguarWithIndexPath:indexPath];
-    PenguinCell.penguinChaseuserNamelb.text = @"1231231";
+    PenguinCell.penguinChaseuserNamelb.text = [PenguinChaseLoginTool PenguinChasegetName];
     return PenguinCell;
 }
 -(CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath{
@@ -54,13 +55,13 @@
     if (indexPath.row == 0) {
         [LCProgressHUD showInfoMsg:@"暂不支持修改头像！"];
     }else{
-        PenguinChaseMyInfoEditViewController * CarpInfoVc  = [[PenguinChaseMyInfoEditViewController alloc]init];
+        PenguinChaseMyInfoEditViewController * PenguinVCs  = [[PenguinChaseMyInfoEditViewController alloc]init];
         MJWeakSelf;
-        CarpInfoVc.seltecdInfoBlock = ^{
+        PenguinVCs.seltecdInfoBlock = ^{
             [weakSelf.PenguinChaseTableView reloadData];
         };
-        CarpInfoVc.hidesBottomBarWhenPushed = YES;
-        [self.navigationController pushViewController:CarpInfoVc animated:YES];
+        PenguinVCs.hidesBottomBarWhenPushed = YES;
+        [self.navigationController pushViewController:PenguinVCs animated:YES];
     }
     
 }

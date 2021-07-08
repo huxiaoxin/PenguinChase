@@ -12,12 +12,16 @@
 #import "PenguinChaseSearchingViewController.h"
 #import <PYSearch-umbrella.h>
 #import "PenguinHuatiLeftMoel.h"
+#import <LYEmptyView-umbrella.h>
+#import "PenguinChaseVideoDetailViewController.h"
 @interface PenguinChaseHuatiViewController ()<UITableViewDelegate,UITableViewDataSource,PYSearchViewControllerDelegate>
 @property(nonatomic,strong) PenguinChaseHuatiSearchView * PenguinChase_SearchView;
 @property(nonatomic,strong) UITableView * PenguinSearchLeftTableView;
 @property(nonatomic,strong) UITableView * PenguinSearchRightTableiew;
 @property(nonatomic,strong) UIView      * PenguinVerticline;
 @property(nonatomic,strong) NSMutableArray * PenguinLeftDataArr;
+@property(nonatomic,strong) NSMutableArray * PenguinRightDataArr;
+
 @end
 
 @implementation PenguinChaseHuatiViewController
@@ -26,6 +30,12 @@
         _PenguinLeftDataArr = [NSMutableArray array];
     }
     return _PenguinLeftDataArr;
+}
+- (NSMutableArray *)PenguinRightDataArr{
+    if (!_PenguinRightDataArr) {
+        _PenguinRightDataArr =[NSMutableArray array];
+    }
+    return _PenguinRightDataArr;
 }
 - (void)viewDidLoad {
     [super viewDidLoad];
@@ -46,6 +56,9 @@
         }
         self.PenguinLeftDataArr = leftDataArr.mutableCopy;
         [self.PenguinSearchLeftTableView reloadData];
+        NSArray * dataArr = [WHC_ModelSqlite query:[PenguinChaseVideoModel class]];
+        self.PenguinRightDataArr = [dataArr subarrayWithRange:NSMakeRange(5, 10)].mutableCopy;
+        [self.PenguinSearchRightTableiew reloadData];
     });
     
     // Do any additional setup after loading the view.
@@ -101,7 +114,7 @@
         MJWeakSelf;
         _PenguinChase_SearchView = [[PenguinChaseHuatiSearchView alloc]initWithFrame:CGRectMake(RealWidth(15), GK_STATUSBAR_NAVBAR_HEIGHT, GK_SCREEN_WIDTH-RealWidth(30), RealWidth(30)) SearchTapAction:^{
             
-            PYSearchViewController * pysearchVc = [PYSearchViewController searchViewControllerWithHotSearches:@[@"312312",@"3123",@"3123",@"1321"] searchBarPlaceholder:@"搜你所搜，看你搜看"];
+            PYSearchViewController * pysearchVc = [PYSearchViewController searchViewControllerWithHotSearches:@[@"明日之战",@"鬼灭之刃",@"机动战士高达",@"普吉岛的最后黄昏"] searchBarPlaceholder:@"搜你所搜，看你搜看"];
             pysearchVc.hotSearchStyle =PYHotSearchStyleColorfulTag;
             pysearchVc.delegate = self;
             UITableView * baseSearchTableView  = [pysearchVc valueForKey:@"baseSearchTableView"];
@@ -120,32 +133,34 @@
                   searchText:(NSString *)searchText{
     
     NSInteger searchID;
-    if ([searchText isEqualToString:@"速度与激情9"]) {
+    if ([searchText isEqualToString:@"明日之战"]) {
         searchID  = 0;
-    }else if ([searchText isEqualToString:@"人之怒"]){
-        searchID  = 17;
-    }else if ([searchText isEqualToString:@"007:无暇赴死"]){
-        searchID  = 22;
-    }else if ([searchText isEqualToString:@"黑寡妇"]){
-        searchID  = 20;
+    }else if ([searchText isEqualToString:@"鬼灭之刃"]){
+        searchID  = 12;
+    }else if ([searchText isEqualToString:@"机动战士高达"]){
+        searchID  = 13;
+    }else if ([searchText isEqualToString:@"普吉岛的最后黄昏"]){
+        searchID  = 14;
     }else {
         searchID  = 21;
     }
     MJWeakSelf;
     [searchViewController dismissViewControllerAnimated:NO completion:^{
-        PenguinChaseSearchingViewController * pandaSearchVc = [[PenguinChaseSearchingViewController alloc]init];
-        pandaSearchVc.searchContent = searchText;
-        pandaSearchVc.searchID = searchID;
-        pandaSearchVc.hidesBottomBarWhenPushed = YES;
-        [weakSelf.navigationController pushViewController:pandaSearchVc animated:YES];
+        PenguinChaseSearchingViewController * PenguinSeachVc = [[PenguinChaseSearchingViewController alloc]init];
+        PenguinSeachVc.searchContent = searchText;
+        PenguinSeachVc.searchID = searchID;
+        PenguinSeachVc.hidesBottomBarWhenPushed = YES;
+        [weakSelf.navigationController pushViewController:PenguinSeachVc animated:YES];
     }];
     
 }
 -(NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section{
     if (tableView == self.PenguinSearchLeftTableView) {
         return self.PenguinLeftDataArr.count;
+    }else{
+        return self.PenguinRightDataArr.count;
     }
-    return 8;
+    return 0;
 }
 -(UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
     if (tableView == self.PenguinSearchLeftTableView) {
@@ -154,6 +169,7 @@
         return penguinSearchCell;
     }else{
         PenguinHuatiRigthTableViewCell * penguinRightCell = [PenguinHuatiRigthTableViewCell PenguinChasecreateCellWithTheTableView:tableView AndTheIndexPath:indexPath];
+        penguinRightCell.pengModel = self.PenguinRightDataArr[indexPath.row];
         return penguinRightCell;
     }
 
@@ -166,6 +182,65 @@
         PenguinHuatiLeftMoel * pengModel = self.PenguinLeftDataArr[indexPath.row];
         pengModel.isSeltecd = YES;
         [self.PenguinSearchLeftTableView reloadData];
+        
+        
+        [LCProgressHUD showLoading:@""];
+        dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(0.6 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+            
+            [LCProgressHUD hide];
+            NSArray * dataArr = [WHC_ModelSqlite query:[PenguinChaseVideoModel class]];
+            if (self.PenguinRightDataArr.count > 0) {
+                [self.PenguinRightDataArr removeAllObjects];
+            }
+            if (pengModel.typeID == 0) {
+                NSMutableArray * tempArr =[NSMutableArray array];
+                for (PenguinChaseVideoModel  * model in dataArr) {
+                    if (model.penguinChase_isColltecd) {
+                        [tempArr addObject:model];
+                    }
+                }
+                if ([PenguinChaseLoginTool PenguinChaseLoginToolCheckuserIslgoin]) {
+                    
+                    self.PenguinRightDataArr = tempArr.mutableCopy;
+
+                    if (tempArr.count == 0) {
+                        LYEmptyView * emtView = [LYEmptyView emptyViewWithImage:nil titleStr:@"暂无数据!" detailStr:nil];
+                        self.PenguinSearchRightTableiew.ly_emptyView = emtView;
+                    }
+                    
+                }else{
+                    LYEmptyView * emtyView = [LYEmptyView emptyViewWithImage:nil titleStr:@"未登录" detailStr:nil];
+                    self.PenguinSearchRightTableiew.ly_emptyView = emtyView;
+                }
+            }else if (pengModel.typeID == 1){
+                self.PenguinRightDataArr = [dataArr subarrayWithRange:NSMakeRange(5, 10)].mutableCopy;
+            }else if (pengModel.typeID == 2){
+                self.PenguinRightDataArr = [dataArr subarrayWithRange:NSMakeRange(10, 10)].mutableCopy;
+            }else if (pengModel.typeID == 3){
+                self.PenguinRightDataArr = [dataArr subarrayWithRange:NSMakeRange(5, 4)].mutableCopy;
+
+            }else if (pengModel.typeID == 4){
+                self.PenguinRightDataArr = [dataArr subarrayWithRange:NSMakeRange(6, 8)].mutableCopy;
+
+            }else if (pengModel.typeID == 5){
+                self.PenguinRightDataArr = [dataArr subarrayWithRange:NSMakeRange(5, 6)].mutableCopy;
+
+            }else if (pengModel.typeID == 6){
+                self.PenguinRightDataArr = [dataArr subarrayWithRange:NSMakeRange(3, 7)].mutableCopy;
+
+            }else if (pengModel.typeID == 7){
+                self.PenguinRightDataArr = [dataArr subarrayWithRange:NSMakeRange(4, 9)].mutableCopy;
+
+            }
+            [self.PenguinSearchRightTableiew scrollRectToVisible:CGRectMake(0, 0, 1, 1) animated:YES];
+            [self.PenguinSearchRightTableiew reloadData];
+        });
+
+    }else{
+        PenguinChaseVideoDetailViewController *  penguinDetailVc = [[PenguinChaseVideoDetailViewController alloc]init];
+        penguinDetailVc.pengModel = self.PenguinRightDataArr[indexPath.row];
+        penguinDetailVc.hidesBottomBarWhenPushed = YES;
+        [self.navigationController pushViewController:penguinDetailVc animated:YES];
     }
 }
 -(CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath{

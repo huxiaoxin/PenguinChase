@@ -103,9 +103,8 @@
         [LCProgressHUD showInfoMsg:@"请输入个人建议"];
         return;
     }
-    NSString * ISLogin = [[NSUserDefaults standardUserDefaults] objectForKey:@"ISLogin"];
-    if (![ISLogin isEqualToString:@"1"]) {
-        //           [self SanXiaBaseShowLoginController];
+    if (![PenguinChaseLoginTool PenguinChaseLoginToolCheckuserIslgoin]) {
+        [self PenguinChase_showLoginVc];
         return;
     }
     

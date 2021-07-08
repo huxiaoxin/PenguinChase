@@ -17,6 +17,7 @@ NS_ASSUME_NONNULL_BEGIN
 @property(nonatomic,assign) NSInteger zoneID;
 @property(nonatomic,assign) NSInteger comentID;
 @property(nonatomic,assign) CGFloat CellHeight;
+@property(nonatomic,assign) NSInteger StarNum;
 @end
 
 NS_ASSUME_NONNULL_END

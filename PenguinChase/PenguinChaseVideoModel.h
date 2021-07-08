@@ -25,6 +25,8 @@ NS_ASSUME_NONNULL_BEGIN
 @property(nonatomic,assign) NSInteger  penguinChase_MoviewID;
 @property(nonatomic,copy)   NSString *    TopType;
 @property(nonatomic,assign) NSInteger  WantNums;
+@property(nonatomic,assign) NSInteger   PenguinChase_starNum;
+@property(nonatomic,assign) BOOL  isViews;
 @end
 
 NS_ASSUME_NONNULL_END

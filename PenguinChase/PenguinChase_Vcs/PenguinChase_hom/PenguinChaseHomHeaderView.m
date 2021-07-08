@@ -8,7 +8,7 @@
 #import "PenguinChaseHomHeaderView.h"
 #import <SDCycleScrollView.h>
 #import "PenguinChaseVideoMessageBtn.h"
-@interface PenguinChaseHomHeaderView ()
+@interface PenguinChaseHomHeaderView ()<SDCycleScrollViewDelegate>
 @property(nonatomic,strong) PenguinClanderView * pengClandeView;
 @property(nonatomic,strong) UIView             * PenguinSearchingView;
 @property(nonatomic,strong) UIImageView        * PenguinSeachiIocnImgView;
@@ -77,7 +77,20 @@
         _PenguinBtomlb = [UILabel new];
         _PenguinBtomlb.font = [UIFont boldSystemFontOfSize:40];
         _PenguinBtomlb.textColor = [UIColor whiteColor];
-        _PenguinBtomlb.text = @"25";
+        NSDate *date = [NSDate date];
+        NSCalendar *calendar = [[NSCalendar alloc] initWithCalendarIdentifier:NSGregorianCalendar];
+           NSDateComponents *comps = [[NSDateComponents alloc] init];
+           NSInteger unitFlags = NSYearCalendarUnit |NSMonthCalendarUnit |NSDayCalendarUnit |NSWeekdayCalendarUnit |NSHourCalendarUnit |NSMinuteCalendarUnit |NSSecondCalendarUnit;
+           comps = [calendar components:unitFlags fromDate:date];
+           //星期 注意星期是从周日开始计算
+           int week = [comps weekday];
+           //年
+           int year=[comps year];
+           //月
+           int month = [comps month];
+           //日
+           int day = [comps day];
+        _PenguinBtomlb.text = [NSString stringWithFormat:@"%d",day];
         _PenguinBtomlb.textAlignment = NSTextAlignmentCenter;
     }
     return _PenguinBtomlb;
@@ -112,7 +125,6 @@
         
         [self setNeedsLayout];
         [self layoutIfNeeded];
-        
         NSArray * PenguinTitleArr = @[@"热门榜单",@"甄选好片",@"影视资讯",@"在线客服"];
         NSArray * PenguinColorArr = @[@"e0620d",@"FCB211",@"FC0E49",@"F8460F"];
         for (int index = 0; index < PenguinTitleArr.count; index++) {
@@ -183,8 +195,7 @@
         _PenguinSDCView.layer.cornerRadius = RealWidth(5);
         _PenguinSDCView.showPageControl = NO;
         _PenguinSDCView.layer.masksToBounds = YES;
-        _PenguinSDCView.imageURLStringsGroup = @[@"https://img2.doubanio.com/view/photo/l/public/p2664120673.jpg",@"https://img2.doubanio.com/view/photo/l/public/p2664120671.jpg"];
-        _PenguinSDCView.titlesGroup = @[@"3123123123",@"312312312312"];
+        _PenguinSDCView.delegate = self;
     }
     return _PenguinSDCView;
 }
@@ -199,6 +210,23 @@
 #pragma mark--日历
 -(void)pengClandeViewClicks{
     [self.delegate PenguinChaseHomHeaderViewWithClanderActions];
+}
+- (void)setBannerImgArr:(NSArray *)BannerImgArr{
+    _BannerImgArr = BannerImgArr;
+    NSMutableArray * tempImgArr = [NSMutableArray array];
+    NSMutableArray * tempTitileArr = [NSMutableArray array];
+    [BannerImgArr enumerateObjectsUsingBlock:^(id  _Nonnull obj, NSUInteger idx, BOOL * _Nonnull stop) {
+        PenguinChaseVideoModel * viewModel = (PenguinChaseVideoModel *)obj;
+        [tempImgArr addObject:viewModel.penguinChase_MoviewImgArr.firstObject];
+        [tempTitileArr addObject:viewModel.penguinChase_MoviewTitle];
+    }];
+    _PenguinSDCView.imageURLStringsGroup =tempImgArr.copy;
+    _PenguinSDCView.titlesGroup = tempTitileArr.copy;
+}
+#pragma marlk--SDCycleScrollViewDelegate
+- (void)cycleScrollView:(SDCycleScrollView *)cycleScrollView didSelectItemAtIndex:(NSInteger)index{
+    PenguinChaseVideoModel * model = _BannerImgArr[index];
+    [self.delegate PenguinChaseHomHeaderViewWithSDCBannerIndex:model];
 }
 /*
 // Only override drawRect: if you perform custom drawing.

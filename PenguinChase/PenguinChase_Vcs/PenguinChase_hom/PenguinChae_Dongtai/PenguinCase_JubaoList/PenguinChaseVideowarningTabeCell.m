@@ -3,7 +3,7 @@
 @interface PenguinChaseVideowarningTabeCell ()
 {
     UILabel * _PenguinChaseContenlb;
-    UIImageView * _carpVideoSecondlb;
+    UIImageView * PengyiiNhaseVideoSecondlb;
 }
 @end
 @implementation PenguinChaseVideowarningTabeCell
@@ -22,9 +22,9 @@
         _PenguinChaseContenlb = PenguinChaseContenlb;
         
         
-        UIImageView * carpVideoSecondlb  = [[UIImageView alloc]initWithFrame:CGRectMake(SCREEN_Width-K(35), K(15), K(20), K(20))];
-        [self.contentView addSubview:carpVideoSecondlb];
-        _carpVideoSecondlb = carpVideoSecondlb;
+        UIImageView * PengyiiNhaseVideoSecondlb  = [[UIImageView alloc]initWithFrame:CGRectMake(SCREEN_Width-K(35), K(15), K(20), K(20))];
+        [self.contentView addSubview:PengyiiNhaseVideoSecondlb];
+        PengyiiNhaseVideoSecondlb = PengyiiNhaseVideoSecondlb;
         
     }
     return self;
@@ -32,7 +32,7 @@
 -(void)setPenguinModel:(PenguinChaseJubaoVideoWarningModel *)penguinModel{
     _penguinModel = penguinModel;
     _PenguinChaseContenlb.text = penguinModel.PenguinChaseVideoText;
-    _carpVideoSecondlb.image = [UIImage imageNamed:penguinModel.PenguinChaseVideoStatus ? @"xuanzhong" : @"weixuanzhong"];
+    PengyiiNhaseVideoSecondlb.image = [UIImage imageNamed:penguinModel.PenguinChaseVideoStatus ? @"xuanzhong" : @"weixuanzhong"];
     
 }
 @end
