@@ -234,7 +234,7 @@
     _PenguinChaseNamelb.text = pengModel.userName;
     _PenguinTimelb.text =  pengModel.time;
     
-    if ([PenguinChaseLoginTool PenguinChaseLoginToolCheckuserIslgoin]) {
+    if ([FilmFactoryAccountComponent checkLogin:NO]) {
         _PenguinZanBtn.penguinLeftImgView.image = [UIImage imageNamed:pengModel.isLike ? @"dianzan-sel" : @"dianzan"];
 
     }else{

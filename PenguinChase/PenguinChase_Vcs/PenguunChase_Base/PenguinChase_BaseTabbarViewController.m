@@ -10,8 +10,9 @@
 #import "PenguinChaseCenterViewController.h"
 #import "PenguinChaseFabuViewController.h"
 #import "PenguinChaseLoginViewController.h"
-
-@interface PenguinChase_BaseTabbarViewController ()<UITabBarControllerDelegate>
+#import "ORHotViewController.h"
+#import "PandaMovieLoginViewController.h"
+@interface PenguinChase_BaseTabbarViewController ()<UITabBarControllerDelegate,UINavigationControllerDelegate>
 @property (nonatomic, strong)UITabBarItem *lastItem; // 标记上一次点击的TabBarItem
 @end
 
@@ -19,6 +20,8 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    [[NSNotificationCenter defaultCenter] mdf_safeAddObserver:self selector:@selector(forceLogin:) name:ORAccountForceToLoginNotification object:nil];
+
     self.view.backgroundColor = [UIColor whiteColor];
     self.delegate = self;
     CHTabBar *tabbar = [[CHTabBar alloc] init];
@@ -31,56 +34,38 @@
     NSMutableArray *imageNormalArr;
     NSMutableArray *imageSelectedArr;
     NSArray *controArray;
-    titleArr = [NSMutableArray arrayWithObjects:@"首页",@"分类", @"",@"消息",@"我的", nil];
-    imageNormalArr = [NSMutableArray arrayWithObjects:@"shouyeHom_nomal",@"fenlei_nomal",@"fabu-",@"xiaoxi_nomal",@"gerenzhongxin_nomal", nil];
-    imageSelectedArr = [NSMutableArray arrayWithObjects:@"shouyeHom_sel",@"fenlei_sel",@"fabu-",@"xiaoxi_sel",@"gerenzhongxin_sel", nil];
-    controArray = @[[PenguinChaseHomeViewController new], [PenguinChaseHuatiViewController new], [PenguinChaseFabuViewController new],[PenguinChaseMessageViewController new], [PenguinChaseCenterViewController new]];
+    titleArr = [NSMutableArray arrayWithObjects:@"首页",@"分类", @"视频",@"消息",@"我的", nil];
+    imageNormalArr = [NSMutableArray arrayWithObjects:@"shouyeHom_nomal",@"fenlei_nomal",@"duanshipin_nomal",@"xiaoxi_nomal",@"gerenzhongxin_nomal", nil];
+    imageSelectedArr = [NSMutableArray arrayWithObjects:@"shouyeHom_sel",@"fenlei_sel",@"duanshipin_sel",@"xiaoxi_sel",@"gerenzhongxin_sel", nil];
+    controArray = @[[PenguinChaseHomeViewController new], [PenguinChaseHuatiViewController new], [ORHotViewController new],[PenguinChaseMessageViewController new], [PenguinChaseCenterViewController new]];
     for (int i = 0; i < titleArr.count; i++) {
         UINavigationController *nav = [UINavigationController rootVC:controArray[i] translationScale:YES];
         [self addChildViewController:nav andTitle:titleArr[i] image:imageNormalArr[i] selectImage:imageSelectedArr[i]];
     }
     self.selectedIndex =  0;
 }
+- (void)forceLogin:(NSNotification *)notification
+{
+    if (![[UIViewController mdf_toppestViewController] isKindOfClass:[PandaMovieLoginViewController class]]) {
+        UIViewController *loginVC = [[PandaMovieLoginViewController alloc] init];
+        UINavigationController *navVC = [UINavigationController rootVC:loginVC translationScale:NO];
+        navVC.delegate = self;
+        navVC.modalPresentationStyle = UIModalPresentationFullScreen;
+        [self presentViewController:navVC animated:YES completion:nil];
+    }
+}
+
 #pragma mark - 控制器跳转拦截
 - (BOOL)tabBarController:(UITabBarController *)tabBarController shouldSelectViewController:(UIViewController *)viewController {
     UINavigationController * baseNav  = (UINavigationController *)viewController;
-    if ([NSStringFromClass(baseNav.topViewController.class) isEqualToString:@"PenguinChaseFabuViewController"]) {
-        if (![PenguinChaseLoginTool PenguinChaseLoginToolCheckuserIslgoin]) {
-            dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(0.001 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
-                PenguinChaseLoginViewController  * PenguinChasVc = [[PenguinChaseLoginViewController alloc]init];
-                
-                UINavigationController * nav = [UINavigationController rootVC:PenguinChasVc translationScale:YES];
-                
-                [self presentViewController:nav animated:YES completion:nil];
-            });
-            
-            return NO;
-        }else{
-            dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(0.001 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
-                PenguinChaseFabuViewController  * PenguinChasVc = [[PenguinChaseFabuViewController alloc]init];
-                
-                UINavigationController * nav = [UINavigationController rootVC:PenguinChasVc translationScale:YES];
-                
-                [self presentViewController:nav animated:YES completion:nil];
-            });
-            
-            return NO;
-        }
-        
-    }else if ([NSStringFromClass(baseNav.topViewController.class) isEqualToString:@"PenguinChaseMessageViewController"])
+        if ([NSStringFromClass(baseNav.topViewController.class) isEqualToString:@"PenguinChaseMessageViewController"])
     {
-        if (![PenguinChaseLoginTool PenguinChaseLoginToolCheckuserIslgoin]) {
-            dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(0.001 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
-                PenguinChaseLoginViewController  * PenguinChasVc = [[PenguinChaseLoginViewController alloc]init];
-                
-                UINavigationController * nav = [UINavigationController rootVC:PenguinChasVc translationScale:YES];
-                
-                [self presentViewController:nav animated:YES completion:nil];
-            });
-            
-            return NO;
-        }else{
+        
+        if ([FilmFactoryAccountComponent checkLogin:YES]) {
+
             return YES;
+        }else{
+            return NO;
         }
     }
     else{
@@ -134,6 +119,25 @@
             [CoreAnimationEffect showCAKeyframeAnimationsForView:imageView keyPath:@"transform.scale" values1:1 values2:1.1 values3:.9 values4:1 duration:.3 repatCount:1];
         }
     }
+}
+- (void)navigationController:(UINavigationController *)navigationController willShowViewController:(UIViewController *)viewController animated:(BOOL)animated
+{
+//
+    BOOL isHiddenNavBar = ([NSStringFromClass(viewController.class) isEqualToString:@"PandaMovieIndexViewController"] ||
+                           [NSStringFromClass(viewController.class) isEqualToString:@"PandaMovieMineViewController"] ||
+                           [NSStringFromClass(viewController.class) isEqualToString:@"PandaMovieLoginViewController"] ||
+                           [NSStringFromClass(viewController.class) isEqualToString:@"ORHotViewController"] ||
+                           [NSStringFromClass(viewController.class) isEqualToString:@"PandaMovieCategoryViewController"] ||
+                           [NSStringFromClass(viewController.class) isEqualToString:@"ORHotDetailViewController"] ||
+                           [NSStringFromClass(viewController.class) isEqualToString:@"FilmFactoryVideoPlayerViewController"]||
+                           [NSStringFromClass(viewController.class) isEqualToString:@"PenguinChaseHomeViewController"] ||
+                           [NSStringFromClass(viewController.class) isEqualToString:@"PandaMovieHotDetailViewController"]||
+                           [NSStringFromClass(viewController.class) isEqualToString:@"PandaMoVieVideoPlayerViewController"]||
+                           [NSStringFromClass(viewController.class) isEqualToString:@"PandaMovieSendingViewController"]||
+                           [NSStringFromClass(viewController.class) isEqualToString:@"SDVideoCropViewController"] ||
+                           [NSStringFromClass(viewController.class) isEqualToString:@"SDVideoAlbumViewController"]||
+                           [NSStringFromClass(viewController.class) isEqualToString:@"SDVideoPreviewViewController"]);
+    [navigationController setNavigationBarHidden:isHiddenNavBar animated:NO];
 }
 /*
  #pragma mark - Navigation

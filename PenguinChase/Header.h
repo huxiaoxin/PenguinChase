@@ -6,6 +6,7 @@
 #define LGDBLackColor         [UIColor blackColor]
 #define LGDLightBLackColor    [UIColor colorWithHexString:@"#444444"]
 #define LGDTabarColor         [UIColor colorWithHexString:@"#804AB7"]
+#define LGDViewBJColor         [UIColor colorWithHexString:@"#ffffff"]
 
 #define LGDRedColor          [UIColor colorWithHexString:@"#F95B6A"]
 #define LGDBlueColor          [UIColor colorWithHexString:@"#25D090"]

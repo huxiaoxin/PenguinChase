@@ -1,31 +1,62 @@
 //
 //  PrefixHeader.pch
-//  PenguinChase
+//  FilmFactory
 //
-//  Created by zjlk03 on 2021/6/28.
+//  Created by codehzx on 2021/5/10.
 //
 
 #ifndef PrefixHeader_pch
 #define PrefixHeader_pch
-#import "Header.h"
+
+#define IOSDevelop
+
+#ifdef __OBJC__
+#import <Foundation/Foundation.h>
 #import <UIKit/UIKit.h>
-#import <objc/runtime.h>
-#import "UIColor+CHRegex.h"
-#import <GKNavigationBarViewController.h>
-#import "PenguinChaseLoginTool.h"
-#import "NSString+CHRegex.h"
-#import <Masonry-umbrella.h>
+#import <MediaPlayer/MediaPlayer.h>
+#import <AudioUnit/AudioUnit.h>
+#import <CoreAudio/CoreAudioTypes.h>
+#import <AudioToolbox/AudioToolbox.h>
+#import <OpenGLES/EAGLDrawable.h>
+#import <OpenGLES/EAGL.h>
+#import <OpenGLES/ES2/gl.h>
+#import <OpenGLES/ES2/glext.h>
+#import <Masonry.h>
+#import "UIView+EnlargeTouchArea.h"
+#import "UIDevice+MDFHardware.h"
+#import <UMCommon/UMCommon.h>
+#import <UMCommon/MobClick.h>
+#import "MDF.h"
+#import "ORKit.h"
+#import <SVProgressHUD.h>
+#import <Masonry.h>
+#import "ORNetworkAddressHeader.h"
 #import <UIImageView+WebCache.h>
-#import <MJRefresh.h>
-#import "UIView+HZXFrame.h"
+#import "ORNotificationHeader.h"
+#import "FilmFactoryUMConfig.h"
+#import "GNHKitNetworkAddressHeader.h"
+#import "ORNetworkingManager.h"
+#import "FilmFactoryPlayerManager.h"
+#import "FilmFactoryMenuChannelManager.h"
+
+#import "Header.h"
 #import "UIView+shadowPath.h"
-#import "UIView+ACSLayer.h"
-#import "UILabel+CDGPSpaceLb.h"
 #import <LCProgressHUD-umbrella.h>
 #import <WHC_ModelSqliteKit-umbrella.h>
-#import "AppDelegate.h"
+#import "NSString+CHRegex.h"
+#import <LYEmptyView-umbrella.h>
+#import <GKNavigationBarViewController-umbrella.h>
+#import "UIColor+CHRegex.h"
+#import "UILabel+CDGPSpaceLb.h"
+#import "UIView+ACSLayer.h"
 #import "PenguinChaseVideoModel.h"
-// Include any system framework and library headers here that should be included in all compilation units.
-// You will also need to set the Prefix Header build setting of one or more of your targets to reference this file.
+#import "PenguinChaseLoginTool.h"
+#import "AppDelegate.h"
+#define WEAK __weak typeof(self) weakSelf = self;
+#endif
+
 
 #endif /* PrefixHeader_pch */
+
+
+

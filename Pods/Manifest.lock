@@ -14,7 +14,6 @@ PODS:
   - AFNetworking/Serialization (4.0.0)
   - AFNetworking/UIKit (4.0.0):
     - AFNetworking/NSURLSession
-  - Bytedance-UnionAD (3.3.6.2)
   - CocoaAsyncSocket (7.6.5)
   - GKNavigationBarViewController (2.7.0)
   - GKPhotoBrowser (2.2.1):
@@ -328,7 +327,6 @@ PODS:
 
 DEPENDENCIES:
   - AFNetworking (= 4.0.0)
-  - Bytedance-UnionAD (~> 3.3.6.2)
   - GKNavigationBarViewController (~> 2.7.0)
   - GKPhotoBrowser (~> 2.2.1)
   - glm (= 0.9.4.6)
@@ -377,7 +375,6 @@ DEPENDENCIES:
 SPEC REPOS:
   trunk:
     - AFNetworking
-    - Bytedance-UnionAD
     - CocoaAsyncSocket
     - GKNavigationBarViewController
     - GKPhotoBrowser
@@ -436,7 +433,6 @@ CHECKOUT OPTIONS:
 
 SPEC CHECKSUMS:
   AFNetworking: d9fdf484a3c723ec3c558a41cc5754c7e845ee77
-  Bytedance-UnionAD: e9f83939e2a5d857e104f6a91035bbf504b603e5
   CocoaAsyncSocket: 065fd1e645c7abab64f7a6a2007a48038fdc6a99
   GKNavigationBarViewController: 72b8d2c6da7d1f02e44d5cf06b149b3616e48d9e
   GKPhotoBrowser: 16a9f50f2a8ff253e576659a74ecf938fb700a39
@@ -485,6 +481,6 @@ SPEC CHECKSUMS:
   ZWLimitCounter: 382d8a4f063980f18022749672b89e0558087007
   ZWPlaceHolder: d55cce10c9930b48c31bf48e7f4748974a31f7e0
 
-PODFILE CHECKSUM: 517de3e1377e9ab66a8a1d847fa15460147377e3
+PODFILE CHECKSUM: 3c2f2eafac920e5850c64673560bfafa5c82157f
 
 COCOAPODS: 1.10.1

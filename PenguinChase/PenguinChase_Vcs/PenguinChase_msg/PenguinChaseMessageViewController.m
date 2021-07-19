@@ -104,10 +104,7 @@
 }
 -(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
     if (indexPath.section == 0) {
-        if (![PenguinChaseLoginTool PenguinChaseLoginToolCheckuserIslgoin]) {
-            [self PenguinChase_showLoginVc];
-            return;;
-        }
+        if ([FilmFactoryAccountComponent checkLogin:YES]) {
         if (indexPath.row == 0) {
           
             PenguinChaseZanComentViewController * pengZanvc = [[PenguinChaseZanComentViewController alloc]init];
@@ -129,11 +126,9 @@
             penguinkefuVc.hidesBottomBarWhenPushed = YES;
             [self.navigationController pushViewController:penguinkefuVc animated:YES];
         }
-    }else{
-        if (![PenguinChaseLoginTool PenguinChaseLoginToolCheckuserIslgoin]) {
-            [self PenguinChase_showLoginVc];
-            return;;
         }
+    }else{
+        if ([FilmFactoryAccountComponent checkLogin:YES]) {
         PenguinChatMessageListModel * listMoel = self.PenguinChaseDataArr[indexPath.row];
         if (listMoel.userID == 0) {
             [WHC_ModelSqlite update:[PenguinChatMessageListModel class] value:[NSString stringWithFormat:@"msgNum ='%d'",0] where:[NSString stringWithFormat:@"userID ='%ld'",listMoel.userID]];
@@ -144,7 +139,7 @@
         penguinDetailVc.hidesBottomBarWhenPushed = YES;
         penguinDetailVc.penguinChaseModel = self.PenguinChaseDataArr[indexPath.row];
         [self.navigationController pushViewController:penguinDetailVc animated:YES];
-    }
+        }}
 }
 -(CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath{
     return RealWidth(60);

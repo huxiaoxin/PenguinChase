@@ -103,16 +103,15 @@
         [LCProgressHUD showInfoMsg:@"请输入个人建议"];
         return;
     }
-    if (![PenguinChaseLoginTool PenguinChaseLoginToolCheckuserIslgoin]) {
-        [self PenguinChase_showLoginVc];
-        return;
-    }
+
+    
+    if ([FilmFactoryAccountComponent checkLogin:YES]) {
     
     [LCProgressHUD showLoading:@""];
     dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(1 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
         [LCProgressHUD showSuccess:@"感谢反馈,结果会24h通知到你的手机号上"];
         [self.navigationController popViewControllerAnimated:YES];
-    });
+    });}
     
 }
 #pragma mark--

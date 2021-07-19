@@ -12,6 +12,7 @@
 #import "PenguinChaseJubaoLitsViewController.h"
 #import "PenguinChaseDongtaiModel.h"
 #import "PenguinChaseMessageDetailViewController.h"
+#import "PenguinChaseFabuViewController.h"
 @interface PenguinChaseDongtaiViewController ()<PenguinChaseDongtaiTableViewCellDelegate>
 @property(nonatomic,strong) PenguinCase_GoodVideoHeaderView * PenguinHeader;
 @property(nonatomic,strong) NSMutableArray * PenguinDongtaiDataArr;
@@ -37,7 +38,22 @@
     self.PenguinChaseTableView.mj_header =[MJRefreshNormalHeader headerWithRefreshingTarget:self refreshingAction:@selector(PenguinChaseTableViewHeaderClicks)];
     [self.PenguinChaseTableView.mj_header beginRefreshing];
     self.PenguinChaseTableView.tableHeaderView = self.PenguinHeader;
+    
+    UIView * rightView = [[UIView alloc]initWithFrame:CGRectMake(GK_SCREEN_WIDTH-40, GK_STATUSBAR_HEIGHT+10, 40, 40)];
+    rightView.userInteractionEnabled  = YES;
+    UIButton * sendrightbtn = [[UIButton alloc]initWithFrame:CGRectMake(0, 10, 20, 20)];
+    [sendrightbtn setImage:[UIImage imageNamed:@"fabu_dongtai"] forState:UIControlStateNormal];
+    [sendrightbtn addTarget:self action:@selector(sendrightbtnClick) forControlEvents:UIControlEventTouchUpInside];
+    [rightView addSubview:sendrightbtn];
+    self.gk_navRightBarButtonItem = [[UIBarButtonItem alloc]initWithCustomView:rightView];
     // Do any additional setup after loading the view.
+}
+-(void)sendrightbtnClick{
+    PenguinChaseFabuViewController  * PenguinVCs = [[PenguinChaseFabuViewController alloc]init];
+    
+    UINavigationController * nav = [UINavigationController rootVC:PenguinVCs translationScale:YES];
+    
+    [self presentViewController:nav animated:YES completion:nil];
 }
 -(void)PenguinChaseTableViewHeaderClicks{
     
@@ -94,10 +110,7 @@
         
         
         UIAlertAction *penguinJubaoAction  = [UIAlertAction actionWithTitle:@"拉黑" style:UIAlertActionStyleDefault handler:^(UIAlertAction * _Nonnull action) {
-            if (![PenguinChaseLoginTool PenguinChaseLoginToolCheckuserIslgoin]) {
-                [self PenguinChase_showLoginVc];
-                return;
-            }
+            if ([FilmFactoryAccountComponent checkLogin:YES]) {
             
             [LCProgressHUD showLoading:@""];
             dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(0.5 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
@@ -106,7 +119,7 @@
                 [self.PenguinDongtaiDataArr removeObject:pengModel];
                 [self.PenguinChaseTableView reloadData];
             });
-            
+            }
         }];
         UIAlertAction *penguinCancleAction  = [UIAlertAction actionWithTitle:@"取消" style:UIAlertActionStyleCancel handler:^(UIAlertAction * _Nonnull action) {
             
@@ -125,24 +138,18 @@
         PenguinListVc.hidesBottomBarWhenPushed = YES;
         [self.navigationController pushViewController:PenguinListVc animated:YES];
     }else{
-        if (![PenguinChaseLoginTool PenguinChaseLoginToolCheckuserIslgoin]) {
-            [self PenguinChase_showLoginVc];
-            return;
-        }
+        if ([FilmFactoryAccountComponent checkLogin:YES]) {
         pengModel.isLike  = !pengModel.isLike;
         [LCProgressHUD showLoading:@""];
         dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(0.5 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
             [LCProgressHUD hide];
             [self.PenguinChaseTableView reloadData];
             [WHC_ModelSqlite update:[PenguinChaseDongtaiModel class] value:[NSString stringWithFormat:@"isLike = '%@'",@(pengModel.isLike)] where:[NSString stringWithFormat:@"userID = '%ld'",pengModel.userID]];
-        });
+        });}
     }
 }
 -(void)PenguinChaseDongtaiTableViewCellWithChatCellIndex:(NSInteger)CellIndex{
-    if (![PenguinChaseLoginTool PenguinChaseLoginToolCheckuserIslgoin]) {
-        [self PenguinChase_showLoginVc];
-        return;
-    }
+    if ([FilmFactoryAccountComponent checkLogin:YES]) {
     PenguinChaseDongtaiModel * dongtModel = self.PenguinDongtaiDataArr[CellIndex];
     PenguinChatMessageListModel *listModle = [[PenguinChatMessageListModel alloc]init];
     listModle.userID = dongtModel.userID;
@@ -150,7 +157,7 @@
     listModle.username = dongtModel.userName;
     PenguinChaseMessageDetailViewController * penguinChatVc = [[PenguinChaseMessageDetailViewController alloc]init];
     penguinChatVc.penguinChaseModel = listModle;
-    [self.navigationController pushViewController:penguinChatVc animated:YES];
+        [self.navigationController pushViewController:penguinChatVc animated:YES];}
     
 }
 /*

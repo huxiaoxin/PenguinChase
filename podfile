@@ -43,7 +43,7 @@ target 'PenguinChase' do
   pod 'LBLelinkKit' #乐播投屏
   
   # 穿山甲SDK
-  pod 'Bytedance-UnionAD', '~> 3.3.6.2'
+#  pod 'Bytedance-UnionAD', '~> 3.3.6.2'
 
   # 播放器
   pod 'SJVideoPlayer'

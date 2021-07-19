@@ -1,0 +1,10 @@
+
+#import "ORSingleton.h"
+
+NS_ASSUME_NONNULL_BEGIN
+
+@interface FilmFacotryLaunchAdvertManager : ORSingleton
+
+@end
+
+NS_ASSUME_NONNULL_END

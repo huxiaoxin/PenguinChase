@@ -60,10 +60,7 @@
 #pragma mark--PenguinChaseBangdanTableViewCellDelegate
 -(void)PenguinChaseBangdanTableViewCellWithWantchWithIndex:(NSInteger)CellIndex{
     PenguinChaseVideoModel * pengModel = self.penguinDataArr[CellIndex];
-    if (![PenguinChaseLoginTool PenguinChaseLoginToolCheckuserIslgoin]) {
-        [self PenguinChase_showLoginVc];
-        return;;
-    }
+    if ([FilmFactoryAccountComponent checkLogin:YES]) {
     
     [LCProgressHUD showLoading:@""];
     dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(0.5 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
@@ -74,6 +71,7 @@
         [WHC_ModelSqlite update:[PenguinChaseVideoModel class] value:[NSString stringWithFormat:@"penguinChase_isColltecd = '%@'",@(pengModel.penguinChase_isColltecd)] where:[NSString stringWithFormat:@"penguinChase_MoviewID = '%ld'",pengModel.penguinChase_MoviewID]];
         
     });
+    }
 }
 -(void)PenguinChaseBangdanTableViewCellWithBannerIndex:(NSInteger)bannerIndex CellIndx:(NSInteger)cellIndex{
     PenguinChaseVideoModel * pengModel = self.penguinDataArr[cellIndex];

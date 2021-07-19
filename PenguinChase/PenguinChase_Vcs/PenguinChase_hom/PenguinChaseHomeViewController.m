@@ -132,13 +132,10 @@
 }
 #pragma mark--消息
 -(void)PenguinMessageBtnClick{
-    if (![PenguinChaseLoginTool PenguinChaseLoginToolCheckuserIslgoin]) {
-        [self PenguinChase_showLoginVc];
-        return;;
-    }
+    if ([FilmFactoryAccountComponent checkLogin:YES]) {
     PenguinChaseNotificationViewController * penguinMsgVc = [[PenguinChaseNotificationViewController alloc]init];
     penguinMsgVc.hidesBottomBarWhenPushed = YES;
-    [self.navigationController pushViewController:penguinMsgVc animated:YES];
+        [self.navigationController pushViewController:penguinMsgVc animated:YES];}
 }
 -(PenguinChaseHomHeaderView *)PenguinChaseHeader{
     if (!_PenguinChaseHeader) {
@@ -172,13 +169,10 @@
         penguinNewsVc.hidesBottomBarWhenPushed = YES;
         [self.navigationController pushViewController:penguinNewsVc animated:YES];
     }else if (btnInex == 3){
-        if (![PenguinChaseLoginTool PenguinChaseLoginToolCheckuserIslgoin]) {
-            [self PenguinChase_showLoginVc];
-            return;;
-        }
+        if ([FilmFactoryAccountComponent checkLogin:YES]) {
         PenguinChaseKefuViewController * penguinKefuVc = [[PenguinChaseKefuViewController alloc]init];
         penguinKefuVc.hidesBottomBarWhenPushed = YES;
-        [self.navigationController pushViewController:penguinKefuVc animated:YES];
+            [self.navigationController pushViewController:penguinKefuVc animated:YES];}
     }
 }
 -(void)PenguinChaseHomHeaderViewWithSDCBannerIndex:(PenguinChaseVideoModel *)viewModel{
@@ -197,11 +191,7 @@
 }
 #pragma mark--PenguinChaseHomeTableViewCellDelegate
 -(void)PenguinChaseHomeTableViewCellWithWantbtnAction:(NSInteger)btnIndex{
-    if (![PenguinChaseLoginTool PenguinChaseLoginToolCheckuserIslgoin]) {
-        [self PenguinChase_showLoginVc];
-        return;
-    }
-    
+    if ([FilmFactoryAccountComponent checkLogin:YES]) {
     PenguinChaseVideoModel * pengModel = self.PenguinDataArr[btnIndex];
     [LCProgressHUD showLoading:@""];
     dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(1 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
@@ -209,7 +199,7 @@
         pengModel.penguinChase_isColltecd  =!pengModel.penguinChase_isColltecd;
         [self.PenguinChaseTableView reloadData];
         [WHC_ModelSqlite update:[PenguinChaseVideoModel class] value:[NSString stringWithFormat:@"penguinChase_isColltecd ='%@'",@(pengModel.penguinChase_isColltecd)] where:[NSString stringWithFormat:@"penguinChase_MoviewID = '%ld'",pengModel.penguinChase_MoviewID]];
-    });
+    });}
 }
 #pragma mark--搜索
 -(void)PenguinChaseHomHeaderViewSearchAction{

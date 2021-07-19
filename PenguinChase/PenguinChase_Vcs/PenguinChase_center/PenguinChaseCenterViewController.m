@@ -60,18 +60,24 @@
     return  RealWidth(50);
 }
 -(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
+    
+    
     if (indexPath.row == 0) {
+        if ([FilmFactoryAccountComponent checkLogin:YES]) {
         PenguinChaseSugestionViewController * penguinChaseVc = [[PenguinChaseSugestionViewController alloc]init];
         penguinChaseVc.hidesBottomBarWhenPushed = YES;
-        [self.navigationController pushViewController:penguinChaseVc animated:YES];
+            [self.navigationController pushViewController:penguinChaseVc animated:YES];}
+        
     }else if (indexPath.row == 1){
+        if ([FilmFactoryAccountComponent checkLogin:YES]) {
         PenguinaboutUsViewController * penguinAboutUsVc = [[PenguinaboutUsViewController alloc]init];
         penguinAboutUsVc.hidesBottomBarWhenPushed = YES;
-        [self.navigationController pushViewController:penguinAboutUsVc animated:YES];
+            [self.navigationController pushViewController:penguinAboutUsVc animated:YES];}
+        
     }else if (indexPath.row == 2){
         [self PenguinChaseClearCenterMemorySizes];
     }else{
-        [self PenguinChase_showLoginVc];
+
     }
         
 }
@@ -108,37 +114,36 @@
     }
 }
 -(void)PenguinCenterHeaderViewWithBtnClickIndex:(NSInteger)btnIndex{
-    if (![PenguinChaseLoginTool PenguinChaseLoginToolCheckuserIslgoin]) {
-        [self PenguinChase_showLoginVc];
-        return;
-    }
+    
     if (btnIndex == 0) {
+        if ([FilmFactoryAccountComponent checkLogin:YES]) {
         PenguinChaseMyFallowViewController * penguinFalllowVc = [[PenguinChaseMyFallowViewController alloc]init];
         penguinFalllowVc.hidesBottomBarWhenPushed = YES;
-        [self.navigationController pushViewController:penguinFalllowVc animated:YES];
+            [self.navigationController pushViewController:penguinFalllowVc animated:YES];}
     }else if (btnIndex == 1){
+        if ([FilmFactoryAccountComponent checkLogin:YES]) {
         PengUinChaseWatchedViewController * penguinwatchVc = [[PengUinChaseWatchedViewController alloc]init];
         penguinwatchVc.hidesBottomBarWhenPushed = YES;
-        [self.navigationController pushViewController:penguinwatchVc animated:YES];
+            [self.navigationController pushViewController:penguinwatchVc animated:YES];}
         
     }else if (btnIndex == 2){
+        if ([FilmFactoryAccountComponent checkLogin:YES]) {
         PenguinChase_MySendViewController * penguinSendVc = [[PenguinChase_MySendViewController alloc]init];
         penguinSendVc.hidesBottomBarWhenPushed = YES;
-        [self.navigationController pushViewController:penguinSendVc animated:YES];
+            [self.navigationController pushViewController:penguinSendVc animated:YES];}
     }else{
+        if ([FilmFactoryAccountComponent checkLogin:YES]) {
         PenginChaseMyColltecdViewController * penguinMyColltecVc = [[PenginChaseMyColltecdViewController alloc]init];
         penguinMyColltecVc.hidesBottomBarWhenPushed = YES;
-        [self.navigationController pushViewController:penguinMyColltecVc animated:YES];
+            [self.navigationController pushViewController:penguinMyColltecVc animated:YES];}
     }
 }
 -(void)PenguinCenterHeaderViewWithInfoAcion{
-    if (![PenguinChaseLoginTool PenguinChaseLoginToolCheckuserIslgoin]) {
-        [self PenguinChase_showLoginVc];
-        return;
-    }
+
+    if ([FilmFactoryAccountComponent checkLogin:YES]) {
     PenguinChase_MyInfoViewController * penguinInfiVc = [[PenguinChase_MyInfoViewController alloc]init];
     penguinInfiVc.hidesBottomBarWhenPushed = YES;
-    [self.navigationController pushViewController:penguinInfiVc animated:YES];
+        [self.navigationController pushViewController:penguinInfiVc animated:YES];}
 }
 -(void)viewWillAppear:(BOOL)animated{
     [super viewWillAppear:animated];
@@ -146,7 +151,9 @@
     NSArray * dataArr_Views = [WHC_ModelSqlite query:[PenguinChaseVideoModel class] where:[NSString stringWithFormat:@"isViews = '%@'",@(YES)]];
     NSArray * dataArr_Colltecd = [WHC_ModelSqlite query:[PenguinChaseVideoModel class] where:[NSString stringWithFormat:@"penguinChase_isColltecd = '%@'",@(YES)]];
     NSArray * dataArr_Coemnt = [WHC_ModelSqlite query:[PenguinChaseDongtaiModel class] where:[NSString stringWithFormat:@"isLike = '%@'",@(YES)]];
-    if ([PenguinChaseLoginTool PenguinChaseLoginToolCheckuserIslgoin]) {
+    
+    
+    if ([FilmFactoryAccountComponent checkLogin:NO]) {
         [self.penguinHeader.PenguinuserimgView sd_setImageWithURL:[NSURL URLWithString:@"https://img0.baidu.com/it/u=2592042537,1864064944&fm=26&fmt=auto&gp=0.jpg"] placeholderImage:[UIImage imageNamed:@"whitelogo"]];
         self.penguinHeader.PenguinNamelb.text = [PenguinChaseLoginTool PenguinChasegetName];
         self.penguinHeader.MyFolwwbtn.PenguinToplb.text =  [NSString stringWithFormat:@"%ld",dataArr_Coemnt.count];

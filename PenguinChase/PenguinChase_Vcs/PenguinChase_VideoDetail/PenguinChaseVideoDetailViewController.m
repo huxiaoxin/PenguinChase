@@ -100,32 +100,31 @@ _penguinChaseHeader.pengModel = self.pengModel;
 }
 #pragma mrk--PenginChaseVideoDetailTableViewCellDelegate
 -(void)PenginChaseVideoDetailTableViewCellPenguinWithBtnAction:(NSInteger)btnIndex cellIndex:(NSInteger)cellIndex{
-    if (![PenguinChaseLoginTool PenguinChaseLoginToolCheckuserIslgoin]) {
-        [self PenguinChase_showLoginVc];
-        return;
-    }
-    PenguinChaseVideoComentModel * pengModel = self.penguinDataArr[cellIndex];
-
-    if (btnIndex == 0) {
-        [LCProgressHUD showLoading:@""];
-        dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(0.5 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
-            [LCProgressHUD showSuccess:@"拉黑成功！"];
-            [WHC_ModelSqlite delete:[PenguinChaseVideoComentModel class] where:[NSString stringWithFormat:@"MoviewID = '%ld'",self.pengModel.penguinChase_MoviewID]];
-            [self.penguinDataArr removeObject:pengModel];
-            [self.PenguinChaseTableView reloadData];
-        });
+    if ([FilmFactoryAccountComponent checkLogin:YES]) {
         
-    }else{
-        PenguinChaseJubaoLitsViewController * penguinVc = [[PenguinChaseJubaoLitsViewController alloc]init];
-        penguinVc.hidesBottomBarWhenPushed = YES;
-        [self.navigationController pushViewController:penguinVc animated:YES];
+        PenguinChaseVideoComentModel * pengModel = self.penguinDataArr[cellIndex];
+
+        if (btnIndex == 0) {
+            [LCProgressHUD showLoading:@""];
+            dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(0.5 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+                [LCProgressHUD showSuccess:@"拉黑成功！"];
+                [WHC_ModelSqlite delete:[PenguinChaseVideoComentModel class] where:[NSString stringWithFormat:@"MoviewID = '%ld'",self.pengModel.penguinChase_MoviewID]];
+                [self.penguinDataArr removeObject:pengModel];
+                [self.PenguinChaseTableView reloadData];
+            });
+            
+        }else{
+            PenguinChaseJubaoLitsViewController * penguinVc = [[PenguinChaseJubaoLitsViewController alloc]init];
+            penguinVc.hidesBottomBarWhenPushed = YES;
+            [self.navigationController pushViewController:penguinVc animated:YES];
+        }
+        
     }
+  
 }
 -(void)PenguinSendComentBtnClick{
-    if (![PenguinChaseLoginTool PenguinChaseLoginToolCheckuserIslgoin]) {
-        [self PenguinChase_showLoginVc];
-        return;
-    }
+
+    if ([FilmFactoryAccountComponent checkLogin:YES]) {
     MJWeakSelf;
     [XHInputView showWithStyle:InputViewStyleLarge configurationBlock:^(XHInputView *inputView) {
         inputView.sendButtonBackgroundColor = LGDMianColor;
@@ -139,7 +138,7 @@ _penguinChaseHeader.pengModel = self.pengModel;
             return NO;
         }
     }];
-    
+    }
 
 }
 -(void)PenguinSendComentextwith:(NSString *)text{

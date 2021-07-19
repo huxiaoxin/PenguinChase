@@ -199,7 +199,7 @@
                         [tempArr addObject:model];
                     }
                 }
-                if ([PenguinChaseLoginTool PenguinChaseLoginToolCheckuserIslgoin]) {
+                if ([FilmFactoryAccountComponent checkLogin:NO]) {
                     
                     self.PenguinRightDataArr = tempArr.mutableCopy;
 

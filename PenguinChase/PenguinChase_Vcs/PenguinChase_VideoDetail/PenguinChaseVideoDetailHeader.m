@@ -155,13 +155,14 @@
     _PenguinTopTitle.text =  pengModel.penguinChase_MoviewTitle;
     [_PenguinDesclb setText:pengModel.penguinChase_MoviewDesc lineSpacing:3];
     [_PenguinCollectionView reloadData];
-    
-    if ([PenguinChaseLoginTool PenguinChaseLoginToolCheckuserIslgoin]) {
+    if ([FilmFactoryAccountComponent checkLogin:NO]) {
         _PenguinColltecdBtn.penguinTopimgView.image = [UIImage imageNamed:pengModel.penguinChase_isColltecd ? @"yishoucang" : @"xiangkan"];
+
     }else{
         _PenguinColltecdBtn.penguinTopimgView.image = [UIImage imageNamed:@"xiangkan"];
 
     }
+ 
 }
 - (SDCycleScrollView *)penguinThubImgView{
     if (!_penguinThubImgView) {
@@ -284,8 +285,7 @@
 }
 #pragma mar--收藏
 -(void)PenguinColltecdBtnClick{
-    if ([PenguinChaseLoginTool PenguinChaseLoginToolCheckuserIslgoin]) {
-        
+    if ([FilmFactoryAccountComponent checkLogin:NO]) {
         [LCProgressHUD showLoading:@""];
         dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(1 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
             [LCProgressHUD hide];

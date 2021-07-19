@@ -78,7 +78,7 @@
         _PenguinChaseContentlb.font = [UIFont systemFontOfSize:14];
         _PenguinChaseContentlb.textColor = LGDBLackColor;
         NSString * TempFirstStr  = @"【系统提醒】 ";
-        NSString * TempSecondStr = @"因服务器升级需要，熊猫追剧将于2021年7月29号服务器停机进行升级";
+        NSString * TempSecondStr = @"因服务器升级需要，企鹅追剧将于2021年7月29号服务器停机进行升级";
         NSMutableParagraphStyle * parStyle = [[NSMutableParagraphStyle alloc]init];
         parStyle.lineSpacing = RealWidth(3);
         NSMutableAttributedString * mutablAtt = [[NSMutableAttributedString alloc]initWithString:[NSString stringWithFormat:@"%@%@",TempFirstStr,TempSecondStr]];

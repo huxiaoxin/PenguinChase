@@ -28,10 +28,7 @@
 }
 -(void)PenguinSednBtnClick{
     
-    if (![PenguinChaseLoginTool PenguinChaseLoginToolCheckuserIslgoin]) {
-        [self PenguinChase_showLoginVc];
-        return;
-    }
+    if ([FilmFactoryAccountComponent checkLogin:YES]) {
     
     dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(0.0 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
         
@@ -50,7 +47,7 @@
         
 
     });
-    
+    }
 }
 -(void)PenguinChaseSendComentWithtext:(NSString *)text{
     [LCProgressHUD showLoading:@""];
@@ -129,10 +126,7 @@
 -(void)PenguinChaseComentListTableViewCellWithbtnClikcIndex:(NSInteger)btnIndex cellIndex:(NSInteger)CellIndex{
     PenguinChaseComentModel * pengModel = self.penguinDataArr[CellIndex];
     if (btnIndex == 0) {
-        if (![PenguinChaseLoginTool PenguinChaseLoginToolCheckuserIslgoin]) {
-            [self PenguinChase_showLoginVc];
-            return;
-        }
+        if ([FilmFactoryAccountComponent checkLogin:YES]) {
         UIAlertController * pengAlterVc =[UIAlertController alertControllerWithTitle:[NSString stringWithFormat:@"您要屏蔽《%@》用户的言论吗？",pengModel.userName] message:nil preferredStyle:UIAlertControllerStyleAlert];
         
         UIAlertAction * sureAction  =[UIAlertAction actionWithTitle:@"确定" style:UIAlertActionStyleDefault handler:^(UIAlertAction * _Nonnull action) {
@@ -155,7 +149,7 @@
         [pengAlterVc addAction:thinkingAction];
         [self presentViewController:pengAlterVc animated:YES completion:nil];
         
-        
+        }
     }else{
         PenguinChaseJubaoLitsViewController  * penguinVc = [[PenguinChaseJubaoLitsViewController alloc]init];
         penguinVc.hidesBottomBarWhenPushed = YES;

@@ -201,7 +201,7 @@
     _PenuinInfolb.text = [NSString stringWithFormat:@"%@ | %@",penguinModel.penguinChase_MoviewTime,penguinModel.penguinChase_MoviewType];
     [_PenguinContentlb setText:penguinModel.penguinChase_MoviewDesc lineSpacing:3];
     
-    if ([PenguinChaseLoginTool PenguinChaseLoginToolCheckuserIslgoin]) {
+    if ([FilmFactoryAccountComponent checkLogin:NO]) {
         _wantBtn.penguinTopimgView.image = [UIImage imageNamed:penguinModel.penguinChase_isColltecd ? @"yishoucang" : @"xiangkan"];
 
     }else{

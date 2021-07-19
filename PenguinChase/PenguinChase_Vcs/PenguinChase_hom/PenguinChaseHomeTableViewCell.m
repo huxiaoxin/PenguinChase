@@ -164,7 +164,7 @@
 
     _PenguinChaseWantNumlb.attributedText = mutableAttbute;
     
-    if ([PenguinChaseLoginTool PenguinChaseLoginToolCheckuserIslgoin]) {
+    if ([FilmFactoryAccountComponent checkLogin:NO]) {
         [_watchBtn setBackgroundColor:penguinModel.penguinChase_isColltecd ? LGDGaryColor : LGDMianColor ];
         [_watchBtn setTitle:penguinModel.penguinChase_isColltecd ? @"已看" :@"想看" forState:UIControlStateNormal];
     }else{
